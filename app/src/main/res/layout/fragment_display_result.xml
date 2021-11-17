@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2021 Ulrik Laurén
+     Part of RuinMastersTables
+     MIT License, see LICENSE file -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
 android:layout_width="match_parent"
@@ -7,33 +10,23 @@ android:padding="12dp"
 android:id="@+id/fragment_display_result">
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Result"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvTerrain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Terrain"
-        android:textSize="16sp"
+        android:text="@string/terrain"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvTerrainText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="TextView"
-        android:textSize="12sp"
+        android:paddingHorizontal="24dp"
+        android:textSize="16sp"
         android:gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,8 +37,8 @@ android:id="@+id/fragment_display_result">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Encounter"
-        android:textSize="16sp"
+        android:text="@string/encounter"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTerrainText" />
@@ -55,8 +48,8 @@ android:id="@+id/fragment_display_result">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="TextView"
-        android:textSize="12sp"
+        android:paddingHorizontal="24dp"
+        android:textSize="16sp"
         android:gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,8 +60,8 @@ android:id="@+id/fragment_display_result">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Treasure"
-        android:textSize="16sp"
+        android:text="@string/treasure"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvEncounterText" />
@@ -78,8 +71,8 @@ android:id="@+id/fragment_display_result">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="TextView"
-        android:textSize="12sp"
+        android:paddingHorizontal="24dp"
+        android:textSize="16sp"
         android:gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,7 +83,7 @@ android:id="@+id/fragment_display_result">
         android:layout_width="200dp"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
-        android:text="DISMISS"
+        android:text="@string/btnDismiss"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

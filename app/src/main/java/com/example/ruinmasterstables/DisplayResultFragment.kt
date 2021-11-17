@@ -1,4 +1,8 @@
-package com.example.ruinmastertables
+// Copyright (c) 2021 Ulrik Laurén
+// Part of RuinMastersTables
+// MIT License, see LICENSE file
+
+package com.example.ruinmasterstables
 
 import android.content.res.Resources
 import android.graphics.Rect
@@ -15,7 +19,6 @@ private const val ARG_ENCOUNTER = "ARG_ENCOUNTER"
 private const val ARG_TREASURE =  "ARG_TREASURE"
 
 class DisplayResultFragment : DialogFragment() {
-    // TODO: Rename and change types of parameters
     private var terrainText: String? = null
     private var encounterText: String? = null
     private var treasureText: String? = null
@@ -32,7 +35,7 @@ class DisplayResultFragment : DialogFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         val v: View = inflater.inflate(R.layout.fragment_display_result, container, false)
 

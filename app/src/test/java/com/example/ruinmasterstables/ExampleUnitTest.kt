@@ -1,4 +1,4 @@
-package com.example.ruinmastertables
+package com.example.ruinmasterstables
 
 import org.junit.Test
 

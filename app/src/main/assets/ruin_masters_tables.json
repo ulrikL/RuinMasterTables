@@ -23,10 +23,10 @@
       "id":101,
       "name":"B-TF.H: HAZARDS",
       "options":[
-        { "chance":5, "table":[102], "text":"Something slows you down," },
-        { "chance":2, "table":[103], "text":"Something blocks the way," },
-        { "chance":1, "table":[104], "text":"Something stops you," },
-        { "chance":1, "table":[105], "text":"Something makes you lose your way," },
+        { "chance":5, "table":[102], "text":"" },
+        { "chance":2, "table":[103], "text":"" },
+        { "chance":1, "table":[104], "text":"" },
+        { "chance":1, "table":[105], "text":"" },
         { "chance":1, "table":[106], "text":"" }
       ]
     },
@@ -34,59 +34,59 @@
       "id":102,
       "name":"B-TF.H.1: SLOW TRAVEL",
       "options":[
-        { "chance":1, "table":[], "text":"rain." },
-        { "chance":1, "table":[], "text":"strong winds." },
-        { "chance":1, "table":[], "text":"low visibility due to dust/ash." },
-        { "chance":1, "table":[], "text":"muddy roads." },
-        { "chance":1, "table":[], "text":"bad road." },
-        { "chance":1, "table":[], "text":"rocky road." },
-        { "chance":1, "table":[], "text":"herds of cattle." },
-        { "chance":1, "table":[], "text":"biting insects." },
-        { "chance":1, "table":[], "text":"glaring sun." },
-        { "chance":1, "table":[], "text":"strange mist on the ground." }
+        { "chance":1, "table":[], "text":"Rain slows you down." },
+        { "chance":1, "table":[], "text":"Strong winds slows you down." },
+        { "chance":1, "table":[], "text":"Low visibility due to dust/ash slows you down." },
+        { "chance":1, "table":[], "text":"Muddy roads slows you down." },
+        { "chance":1, "table":[], "text":"Bad road slows you down." },
+        { "chance":1, "table":[], "text":"Rocky road slows you down." },
+        { "chance":1, "table":[], "text":"Herds of cattle slows you down." },
+        { "chance":1, "table":[], "text":"Biting insects slows you down." },
+        { "chance":1, "table":[], "text":"Glaring sun slows you down." },
+        { "chance":1, "table":[], "text":"Strange mist on the ground slows you down." }
       ]
     },
     {
       "id":103,
       "name":"B-TF.H.2: WAY BLOCKED",
       "options":[
-        { "chance":1, "table":[], "text":"broken bridge." },
-        { "chance":1, "table":[], "text":"flooded river." },
-        { "chance":1, "table":[], "text":"deep crevasses after an earthquake." },
-        { "chance":1, "table":[], "text":"fallen trees." },
-        { "chance":1, "table":[], "text":"large boulders on the road." },
-        { "chance":1, "table":[], "text":"a tiberlite troupe forbids anyone to go further." },
-        { "chance":1, "table":[], "text":"landsknechts have sealed the area off." },
-        { "chance":1, "table":[], "text":"impassable roads." },
-        { "chance":1, "table":[], "text":"a landslide." },
-        { "chance":1, "table":[], "text":"a rune-encrusted stones forbidding anyone to enter the area, due to demons." }
+        { "chance":1, "table":[], "text":"Broken bridge blocks your way." },
+        { "chance":1, "table":[], "text":"Flooded river blocks your way." },
+        { "chance":1, "table":[], "text":"Deep crevasses after an earthquake blocks your way." },
+        { "chance":1, "table":[], "text":"Fallen trees blocks your way." },
+        { "chance":1, "table":[], "text":"Large boulders on the road blocks your way." },
+        { "chance":1, "table":[], "text":"A tiberlite troupe forbids anyone to go further blocks your way." },
+        { "chance":1, "table":[], "text":"Landsknechts have sealed the area off blocks your way." },
+        { "chance":1, "table":[], "text":"Impassable roads blocks your way." },
+        { "chance":1, "table":[], "text":"A landslide blocks your way." },
+        { "chance":1, "table":[], "text":"A rune-encrusted stone forbidding anyone to enter the area, due to demons, blocks your way." }
       ]
     },
     {
       "id":104,
       "name":"B-TF.H.3: STOPS",
       "options":[
-        { "chance":1, "table":[], "text":"rainstorm." },
-        { "chance":1, "table":[], "text":"thunderstorm." },
-        { "chance":1, "table":[], "text":"stuck in mud." },
-        { "chance":1, "table":[], "text":"thick undergrowth." },
-        { "chance":1, "table":[], "text":"a heavy fog." },
-        { "chance":1, "table":[], "text":"an earthquake." },
-        { "chance":1, "table":[], "text":"blisters on feet." },
-        { "chance":1, "table":[], "text":"bad food makes the heroes sick." },
-        { "chance":1, "table":[], "text":"the heroes become exhausted after passing through difficult terrain." },
-        { "chance":1, "table":[], "text":"the landsknechts stop the heroes for a day long interrogation." }
+        { "chance":1, "table":[], "text":"A rainstorm stops you." },
+        { "chance":1, "table":[], "text":"A thunderstorm stops you." },
+        { "chance":1, "table":[], "text":"Get stuck in mud and have to stop." },
+        { "chance":1, "table":[], "text":"Thick undergrowth stops you." },
+        { "chance":1, "table":[], "text":"A heavy fog stops you." },
+        { "chance":1, "table":[], "text":"An earthquake stops you." },
+        { "chance":1, "table":[], "text":"Blisters on your feet stops you." },
+        { "chance":1, "table":[], "text":"Bad food makes the heroes sick and they have to stop." },
+        { "chance":1, "table":[], "text":"The heroes become exhausted and stop after passing through difficult terrain." },
+        { "chance":1, "table":[], "text":"The landsknechts stop the heroes for a day long interrogation." }
       ]
     },
     {
       "id":105,
       "name":"B-TF.H.4: LOST",
       "options":[
-        { "chance":4, "table":[], "text":"a heavy fog." },
-        { "chance":2, "table":[], "text":"no landmarks visible for miles." },
-        { "chance":2, "table":[], "text":"twisting trails." },
-        { "chance":1, "table":[], "text":"a rainstorm." },
-        { "chance":1, "table":[], "text":"the heroes chased by predators and lose the trail." }
+        { "chance":4, "table":[], "text":"You lose your way due to a heavy fog." },
+        { "chance":2, "table":[], "text":"You lose your way due to no landmarks visible for miles." },
+        { "chance":2, "table":[], "text":"You lose your way due to twisting trails." },
+        { "chance":1, "table":[], "text":"You lose your way due to a rainstorm." },
+        { "chance":1, "table":[], "text":"The heroes are chased by predators and lose the trail." }
       ]
     },
     {
@@ -288,10 +288,10 @@
       "id":135,
       "name":"B-E.E2.5: WANDERING TRADER",
       "options":[
-        { "chance":4, "table":[], "text":"A trader that wants to trade." },
-        { "chance":2, "table":[], "text":"A trader that was robbed and has nothing to trade." },
-        { "chance":3, "table":[], "text":"A trader that needs help finding his way out of the woods.." },
-        { "chance":1, "table":[], "text":"A trader that tries to deceive the heroes." }
+        { "chance":4, "table":[], "text":"A trader, that wants to trade." },
+        { "chance":2, "table":[], "text":"A trader, that was robbed and has nothing to trade." },
+        { "chance":3, "table":[], "text":"A trader, that needs help finding his way out of the woods.." },
+        { "chance":1, "table":[], "text":"A trader, that tries to deceive the heroes." }
       ]
     },
     {
@@ -303,6 +303,168 @@
 		{ "chance":1, "table":[139], "text":"" },
 		{ "chance":1, "table":[140], "text":"" },
 		{ "chance":1, "table":[141], "text":"" }
+      ]
+    },
+    {
+      "id":137,
+      "name":"B-E.E3.1: WANDERING MONSTER LEVEL 1",
+      "options":[
+        { "chance":1, "table":[], "text":"A crazed horse." },
+        { "chance":1, "table":[], "text":"A goblin." },
+        { "chance":1, "table":[], "text":"A wild dog." },
+        { "chance":1, "table":[], "text":"A goat." },
+        { "chance":1, "table":[], "text":"A badger." },
+        { "chance":1, "table":[], "text":"A boar." },
+        { "chance":1, "table":[], "text":"A wolverine." },
+        { "chance":1, "table":[], "text":"[1d5] dogs." },
+        { "chance":1, "table":[], "text":"[1d5] goblins." },
+        { "chance":1, "table":[152], "text":"[1d5] goblins with treasure." }
+      ]
+    },
+    {
+      "id":138,
+      "name":"B-E.E3.2: WANDERING MONSTER LEVEL 2",
+      "options":[
+        { "chance":1, "table":[], "text":"[1d5] badgers." },
+        { "chance":1, "table":[], "text":"[1d5] goats." },
+        { "chance":1, "table":[], "text":"[1d5] wolverines." },
+        { "chance":1, "table":[], "text":"An orc and [1d5] goblins." },
+        { "chance":1, "table":[], "text":"[1d5] giant rats." },
+        { "chance":1, "table":[], "text":"[1d5] boars." },
+        { "chance":1, "table":[], "text":"[1d5] wolves." },
+        { "chance":1, "table":[], "text":"[1d5] giant insects." },
+        { "chance":1, "table":[], "text":"A boar followed by [1d5] wolves." },
+        { "chance":1, "table":[152], "text":"[1d5] wolves with treasure." }
+      ]
+    },
+    {
+      "id":139,
+      "name":"B-E.E3.3: WANDERING MONSTER LEVEL 3",
+      "options":[
+        { "chance":1, "table":[], "text":"A bear." },
+        { "chance":1, "table":[], "text":"[1d5] skeletons." },
+        { "chance":1, "table":[], "text":"[1d5] giant spiders." },
+        { "chance":1, "table":[], "text":"[1d10] giant rats." },
+        { "chance":1, "table":[], "text":"[1d10] giant insects." },
+        { "chance":1, "table":[], "text":"[1d5] deers." },
+        { "chance":1, "table":[], "text":"[1d10] wolverines." },
+        { "chance":1, "table":[], "text":"[1d10] badgers." },
+        { "chance":1, "table":[153], "text":"[1d10] goblins with treasure." },
+        { "chance":1, "table":[153], "text":"An orc and [1d10] goblins with treasure." }
+      ]
+    },
+    {
+      "id":140,
+      "name":"B-E.E3.4: WANDERING MONSTER LEVEL 4",
+      "options":[
+        { "chance":1, "table":[], "text":"An elk." },
+        { "chance":1, "table":[], "text":"A lion." },
+        { "chance":1, "table":[], "text":"A giant lizard." },
+        { "chance":1, "table":[], "text":"3 orcs and [1d10] goblins." },
+        { "chance":1, "table":[], "text":"[1d10] deers." },
+        { "chance":1, "table":[], "text":"A wight and [1d10] skeletons." },
+        { "chance":1, "table":[], "text":"A harpy." },
+        { "chance":1, "table":[], "text":"[1d5] orcs." },
+        { "chance":1, "table":[153], "text":"[1d5] orcs and [1d10] goblins with treasure." },
+        { "chance":1, "table":[153], "text":"[1d10] orcs with treasure." }
+      ]
+    },
+    {
+      "id":141,
+      "name":"B-E.E3.5: WANDERING MONSTER LEVEL 5",
+      "options":[
+        { "chance":1, "table":[], "text":"[1d5] harpies." },
+        { "chance":1, "table":[], "text":"[1d5] centaurs." },
+        { "chance":1, "table":[], "text":"[1d5] wolves and a giant wolf." },
+        { "chance":1, "table":[], "text":"A minotaur." },
+        { "chance":1, "table":[], "text":"A specter and [1d10] skeletons." },
+        { "chance":1, "table":[], "text":"[1d5] wights." },
+        { "chance":1, "table":[], "text":"A griffin." },
+        { "chance":1, "table":[154], "text":"A troll with treasure." },
+        { "chance":1, "table":[154], "text":"A troll and [1d5] goblins with treasure." },
+        { "chance":1, "table":[154], "text":"A troll and [1d10] goblins with treasure." }
+      ]
+    },
+    {
+      "id":150,
+      "name":"BORDERLANDS TREASURES",
+      "options":[
+        { "chance":7, "table":[], "text":"No treasure." },
+        { "chance":3, "table":[151], "text":"" }
+      ]
+    },
+    {
+      "id":151,
+      "name":"B-T: TREASURES",
+      "options":[
+        { "chance":6, "table":[152], "text":"" },
+        { "chance":2, "table":[153], "text":"" },
+        { "chance":1, "table":[154], "text":"" },
+        { "chance":1, "table":[155], "text":"" }
+      ]
+    },
+    {
+      "id":152,
+      "name":"B-T.1: TREASURE LEVEL 1",
+      "options":[
+        { "chance":1, "table":[], "text":"A shortsword." },
+        { "chance":1, "table":[], "text":"A sabre." },
+        { "chance":1, "table":[], "text":"A warhammer." },
+        { "chance":1, "table":[], "text":"A pole axe." },
+        { "chance":1, "table":[], "text":"A bow." },
+        { "chance":1, "table":[], "text":"A dagger and a shortsword." },
+        { "chance":1, "table":[], "text":"A leather pouch with 7 silver coins." },
+        { "chance":1, "table":[], "text":"A battle axe." },
+        { "chance":1, "table":[], "text":"A leather pouch with 11 silver coins." },
+        { "chance":1, "table":[152, 152], "text":"" }
+      ]
+    },
+    {
+      "id":153,
+      "name":"B-T.2: TREASURE LEVEL 2",
+      "options":[
+        { "chance":1, "table":[], "text":"." },
+        { "chance":1, "table":[], "text":"." },
+        { "chance":1, "table":[], "text":"." },
+        { "chance":1, "table":[], "text":"." },
+        { "chance":1, "table":[], "text":"." },
+        { "chance":1, "table":[], "text":"." },
+        { "chance":1, "table":[], "text":"." },
+        { "chance":1, "table":[], "text":"." },
+        { "chance":1, "table":[], "text":"." },
+        { "chance":1, "table":[], "text":"." }
+      ]
+    },
+    {
+      "id":154,
+      "name":"B-T.3: TREASURE LEVEL 3",
+      "options":[
+        { "chance":1, "table":[], "text":"A locket chest with 1440 copper coins." },
+        { "chance":1, "table":[], "text":"A scale mail and a large shield." },
+        { "chance":1, "table":[], "text":"A ring mail, battle axe and 3 silver coins." },
+        { "chance":1, "table":[], "text":"A scale mail, bastard sword, 2 daggers and 4 silver coins." },
+        { "chance":1, "table":[], "text":"A chain mail, master-made twohanded axe, large shield and 5 silver coins." },
+        { "chance":1, "table":[], "text":"A locked chest with 100 silver coins." },
+        { "chance":1, "table":[], "text":"A locked chest with a silver dagger wrapped in velvet worth 140 silver coins." },
+        { "chance":1, "table":[], "text":"A locked chest with 130 silver coins" },
+        { "chance":1, "table":[], "text":"A locked chest with a golden statue of a lion, worth 144 silver coins" },
+        { "chance":1, "table":[154, 152, 152], "text":"" }
+      ]
+    },
+    {
+      "id":155,
+      "name":"B-T.4: TREASURE LEVEL 4",
+      "options":[
+        { "chance":1, "table":[], "text":"A banded mail and a master-made two-handed sword." },
+        { "chance":1, "table":[], "text":"A banded mail, chain mail, twohanded sword, 2 master-made daggers and a leather pouch with 200 silver coins." },
+        { "chance":1, "table":[], "text":"A diamond worth 500 silver coins." },
+        { "chance":1, "table":[], "text":"A silver ring with a large gemstone, worth 700 silver coins." },
+        { "chance":1, "table":[], "text":"A magical dagger." },
+        { "chance":1, "table":[], "text":"A magical club." },
+        { "chance":1, "table":[], "text":"A magical throwing axe." },
+        { "chance":1, "table":[], "text":"A magical small shield." },
+        { "chance":1, "table":[], "text":"A magical long spear." },
+        { "chance":1, "table":[155, 153], "text":"" }
       ]
     }
   ]

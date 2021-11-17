@@ -1,5 +1,11 @@
+<!-- Copyright (c) 2021 Ulrik Laurén
+     Part of RuinMastersTables
+     MIT License, see LICENSE file -->
 <resources>
-    <string name="app_name">RuinMasterTables</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">RuinMastersTables</string>
+    <string name="app_intro">To generate a random hex press \nthe corresponding type of hex.</string>
+    <string name="terrain">Terrain</string>
+    <string name="encounter">Encounter</string>
+    <string name="treasure">Treasure</string>
+    <string name="btnDismiss">DISMISS</string>
 </resources>

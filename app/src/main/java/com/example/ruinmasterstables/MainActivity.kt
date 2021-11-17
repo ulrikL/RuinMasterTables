@@ -1,7 +1,12 @@
-package com.example.ruinmastertables
+// Copyright (c) 2021 Ulrik Laurén
+// Part of RuinMastersTables
+// MIT License, see LICENSE file
+
+package com.example.ruinmasterstables
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.module.kotlin.*
@@ -28,7 +33,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
         if (v.id == buttonId) {
-            println("Clicked button for table ${v.tag}")
+            debug("Clicked button for table ${v.tag}")
             var terrainText : String = triggerTable(configData.tables, v.tag as Int)
             terrainText = terrainText.trimStart()
             if (terrainText.isNotBlank()) terrainText = replaceDieRolls(terrainText)
@@ -49,7 +54,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        configData = loadConfiguration(assets.open("config2.json"))
+        configData = loadConfiguration(assets.open("ruin_masters_tables.json"))
         createButtons(configData.buttons)
     }
 
@@ -75,59 +80,51 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun triggerTable(tables : List<Tables>, tableId : Int) : String {
-        var resultingText : String = ""
-        var foundTable : Boolean = false
+        var resultingText  = ""
+        var foundTable  = false
 
         for (table in tables) {
             if (table.id == tableId) {
                 foundTable = true
-                println("Found table named '${table.name}' with id=$tableId")
+                debug("Found table named '${table.name}' with id=$tableId")
                 val optionResult : Pair<List<Int>,String> = getRandomOption(table.options)
 
                 if (optionResult.second.isNotBlank()) {
-                    if (resultingText.isNotBlank()) {
-                        resultingText += " ${optionResult.second}"
-                    } else {
-                        resultingText += "${optionResult.second}"
-                    }
+                    resultingText += if (resultingText.isNotBlank()) { " ${optionResult.second}" } else { optionResult.second }
                 }
 
                 if (optionResult.first.isNotEmpty()) {
                     optionResult.first.forEach {
-                        println("Continue with table id=$it")
+                        debug("Continue with table id=$it")
                         val tableText : String = triggerTable(tables, it)
                         if (tableText.isNotBlank()) {
-                            if (resultingText.isNotBlank()) {
-                                resultingText += " $tableText"
-                            } else {
-                                resultingText += "$tableText"
-                            }
+                            resultingText += if (resultingText.isNotBlank()) { " $tableText" } else { tableText }
                         }
                     }
                 }
-                break;
+                break
             }
         }
 
-        if (!foundTable) println("Did not find a table with id=$tableId")
+        if (!foundTable) warning("Did not find a table with id=$tableId")
         return resultingText
     }
 
     private fun getRandomOption(options : List<Options>) : Pair<List<Int>,String> {
-        var sumOfAllChance : Int = 0
-        var sumOfChance : Int = 0;
+        var sumOfAllChance = 0
+        var sumOfChance = 0
 
         options.forEach {
             sumOfAllChance += it.chance
         }
         val randomChance : Int = getRandomInt(1, sumOfAllChance)
-        println("Got $randomChance out of $sumOfAllChance when getting a random option")
+        debug("Got $randomChance out of $sumOfAllChance when getting a random option")
         for (option in options) {
             sumOfChance += option.chance
-            if (randomChance <= sumOfChance) return Pair<List<Int>,String>(option.table, option.text)
+            if (randomChance <= sumOfChance) return Pair(option.table, option.text)
         }
-        println("Failed to get an option")
-        return Pair<List<Int>,String>(emptyList(),"")
+        debug("Failed to get an option")
+        return Pair(emptyList(),"")
     }
 
     private fun getRandomInt(start: Int, end: Int): Int {
@@ -142,15 +139,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         var match = regex.find(localText)
 
         while (match != null) {
-            if (!match.value.isNullOrBlank()) {
+            if (match.value.isNotBlank()) {
                 val numberOfDice : Int = match.groupValues[1].toInt()
                 val diceType : Int = match.groupValues[2].toInt()
-                var dieResult : Int = 0
-                println("Found '${match.value}' with group1=$numberOfDice and group2=$diceType in string.")
+                var dieResult = 0
+                debug("Found '${match.value}' with group1=$numberOfDice and group2=$diceType in string.")
                 for (i in 1..numberOfDice) dieResult += getRandomInt(1, diceType)
-                println("Rolled $dieResult and shall replace range=${match.range} with this value.")
+                debug("Rolled $dieResult and shall replace range=${match.range} with this value.")
                 localText = localText.replaceRange(match.range, dieResult.toString())
-                println("Updated text='$localText'")
+                debug("Updated text='$localText'")
             }
             match = regex.find(localText)
         }
@@ -160,5 +157,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private fun showEditDialog(terrainText: String, encounterText: String, treasureText: String) {
         val displayResultFragment: DisplayResultFragment = DisplayResultFragment.newInstance(terrainText, encounterText, treasureText)
         displayResultFragment.show(supportFragmentManager, "fragment_display_result")
+    }
+
+    private fun warning(message: String) {
+        if (BuildConfig.DEBUG) Log.w("RuinMastersTables::MainActivity", message)
+    }
+
+    private fun debug(message: String) {
+        if (BuildConfig.DEBUG) Log.d("RuinMastersTables::MainActivity", message)
     }
 }
