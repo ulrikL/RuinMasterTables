@@ -105,8 +105,8 @@
       "name":"B-TF.R: RUINS",
       "options":[
         { "chance":7, "table":[108, 109, 110], "text":"Ruins, already explored." },
-		{ "chance":2, "table":[108, 109, 110], "text":"Ruins, partially explored." },
-		{ "chance":1, "table":[108, 109, 110], "text":"Ruins, not explored." }
+        { "chance":2, "table":[108, 109, 110], "text":"Ruins, partially explored." },
+        { "chance":1, "table":[108, 109, 110], "text":"Ruins, not explored." }
       ]
     },
     {
@@ -114,10 +114,10 @@
       "name":"B-TF.R1: RUINS TYPE",
       "options":[
         { "chance":2, "table":[], "text":"Inn" },
-		{ "chance":2, "table":[], "text":"Fortified inn" },
-		{ "chance":2, "table":[], "text":"Townlet" },
-		{ "chance":2, "table":[], "text":"Tower" },
-		{ "chance":2, "table":[], "text":"Keep" }
+        { "chance":2, "table":[], "text":"Fortified inn" },
+        { "chance":2, "table":[], "text":"Townlet" },
+        { "chance":2, "table":[], "text":"Tower" },
+        { "chance":2, "table":[], "text":"Keep" }
       ]
     },
     {
@@ -125,10 +125,10 @@
       "name":"B-TF.R1: RUINS CONDITION",
       "options":[
         { "chance":2, "table":[], "text":"partially covered with growth and" },
-		{ "chance":2, "table":[], "text":"completely covered with growth and" },
-		{ "chance":2, "table":[], "text":"partially underground and" },
-		{ "chance":2, "table":[], "text":"burnt a long time ago and" },
-		{ "chance":2, "table":[], "text":"recently ruined by goblins and trolls and" }
+        { "chance":2, "table":[], "text":"completely covered with growth and" },
+        { "chance":2, "table":[], "text":"partially underground and" },
+        { "chance":2, "table":[], "text":"burnt a long time ago and" },
+        { "chance":2, "table":[], "text":"recently ruined by goblins and trolls and" }
       ]
     },
     {
@@ -136,10 +136,10 @@
       "name":"B-TF.R1: RUINS STATE",
       "options":[
         { "chance":2, "table":[], "text":"completely in ruins." },
-		{ "chance":2, "table":[], "text":"crumbled and decayed." },
-		{ "chance":2, "table":[], "text":"twisted by magic." },
-		{ "chance":2, "table":[], "text":"collapsed." },
-		{ "chance":2, "table":[], "text":"contaminated by cataclysmic forces." }
+        { "chance":2, "table":[], "text":"crumbled and decayed." },
+        { "chance":2, "table":[], "text":"twisted by magic." },
+        { "chance":2, "table":[], "text":"collapsed." },
+        { "chance":2, "table":[], "text":"contaminated by cataclysmic forces." }
       ]
     },
     {
@@ -147,9 +147,9 @@
       "name":"Borderlands Encounters",
       "options":[
         { "chance":5, "table":[], "text":"Nothing happens." },
-		{ "chance":2, "table":[126], "text":"" },
-		{ "chance":2, "table":[130], "text":"" },
-		{ "chance":1, "table":[136], "text":"" }
+        { "chance":2, "table":[126], "text":"" },
+        { "chance":2, "table":[130], "text":"" },
+        { "chance":1, "table":[136], "text":"" }
       ]
     },
     {
@@ -157,8 +157,8 @@
       "name":"BE.E.E1: ALMOST ENCOUNTERS",
       "options":[
         { "chance":3, "table":[127], "text":"" },
-		{ "chance":4, "table":[128], "text":"" },
-		{ "chance":3, "table":[129], "text":"" }
+        { "chance":4, "table":[128], "text":"" },
+        { "chance":3, "table":[129], "text":"" }
       ]
     },
     {
@@ -299,10 +299,10 @@
       "name":"B-E.E3: WANDERING MONSTER",
       "options":[
         { "chance":5, "table":[137], "text":"" },
-		{ "chance":2, "table":[138], "text":"" },
-		{ "chance":1, "table":[139], "text":"" },
-		{ "chance":1, "table":[140], "text":"" },
-		{ "chance":1, "table":[141], "text":"" }
+        { "chance":2, "table":[138], "text":"" },
+        { "chance":1, "table":[139], "text":"" },
+        { "chance":1, "table":[140], "text":"" },
+        { "chance":1, "table":[141], "text":"" }
       ]
     },
     {
@@ -423,16 +423,16 @@
       "id":153,
       "name":"B-T.2: TREASURE LEVEL 2",
       "options":[
-        { "chance":1, "table":[], "text":"." },
-        { "chance":1, "table":[], "text":"." },
-        { "chance":1, "table":[], "text":"." },
-        { "chance":1, "table":[], "text":"." },
-        { "chance":1, "table":[], "text":"." },
-        { "chance":1, "table":[], "text":"." },
-        { "chance":1, "table":[], "text":"." },
-        { "chance":1, "table":[], "text":"." },
-        { "chance":1, "table":[], "text":"." },
-        { "chance":1, "table":[], "text":"." }
+        { "chance":1, "table":[], "text":"TODO" },
+        { "chance":1, "table":[], "text":"TODO" },
+        { "chance":1, "table":[], "text":"TODO" },
+        { "chance":1, "table":[], "text":"TODO" },
+        { "chance":1, "table":[], "text":"TODO" },
+        { "chance":1, "table":[], "text":"TODO" },
+        { "chance":1, "table":[], "text":"TODO" },
+        { "chance":1, "table":[], "text":"TODO" },
+        { "chance":1, "table":[], "text":"TODO" },
+        { "chance":1, "table":[], "text":"TODO" }
       ]
     },
     {
