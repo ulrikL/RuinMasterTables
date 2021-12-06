@@ -18,10 +18,10 @@ import java.io.BufferedReader
 import java.io.InputStream
 import kotlin.random.Random
 
-data class ConfigurationData (val buttons : List<Buttons>, val tables : List<Tables>)
-data class Buttons (val text : String, val table : Int)
-data class Tables (val id : Int, val name : String, val options : List<Options>)
-data class Options (val chance : Int, val table : List<Int>, val text : String)
+data class ConfigurationData (var buttons : List<Buttons>, var tables : List<Tables>)
+data class Buttons (var text : String, var table : Int)
+data class Tables (var id : Int, var name : String, var options : List<Options>)
+data class Options (var chance : Int, var table : ArrayList<Int>, var text : String)
 
 private const val ENCOUNTER_TABLE_OFFSET = 25
 private const val TREASURE_TABLE_OFFSET = 50
@@ -54,7 +54,34 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        configData = loadConfiguration(assets.open("ruin_masters_tables.json"))
+        val files = assets.list("")
+        if (files != null) {
+            for ((index, file) in files.withIndex()) {
+                if (file.endsWith(".json")) {
+                    debug("Found file named '${file.toString()}'")
+                    var tempConfigData = loadConfiguration(assets.open(file))
+                    //Each file get an offset to allow multiple files. This is done to make it easy to split the files
+                    tempConfigData.buttons.forEach {
+                        it.table += index*100
+                    }
+                    tempConfigData.tables.forEach {
+                        it.id += index*100
+                        it.options.forEach {
+                            it.table.forEachIndexed { pos, value -> it.table[pos] = value + index*100 }
+                        }
+                    }
+
+                    //Put all of the loaded and modified data into the data structures
+                    if (this::configData.isInitialized) {
+                        configData.buttons += tempConfigData.buttons
+                        configData.tables += tempConfigData.tables
+                    } else {
+                        configData = tempConfigData
+                    }
+                }
+            }
+        }
+        //Draw the UI based on the loaded data
         createButtons(configData.buttons)
     }
 
