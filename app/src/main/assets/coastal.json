@@ -8,8 +8,9 @@
       "name":"Coastal Terrain Features",
       "options":[
         { "chance":5, "table":[], "text":"Nothing of interest." },
-        { "chance":3, "table":[101], "text":"" },
-        { "chance":2, "table":[107], "text":"" }
+        { "chance":2, "table":[101], "text":"" },
+		{ "chance":2, "table":[107], "text":"" },
+        { "chance":1, "table":[111], "text":"" }
       ]
     },
     {
@@ -27,50 +28,53 @@
       "id":102,
       "name":"C-TF.H.1: SLOW TRAVEL",
       "options":[
-        { "chance":1, "table":[], "text":"Rain slows you down." },
-        { "chance":1, "table":[], "text":"Strong winds slows you down." },
-        { "chance":1, "table":[], "text":"Low visibility due to dust/ash slows you down." },
-        { "chance":1, "table":[], "text":"Muddy roads slows you down." },
-        { "chance":1, "table":[], "text":"Bad road slows you down." },
-        { "chance":1, "table":[], "text":"Rocky road slows you down." },
-        { "chance":1, "table":[], "text":"Herds of cattle slows you down." },
+        { "chance":1, "table":[], "text":"Weeds and rocks on the path slows you down." },
+        { "chance":1, "table":[], "text":"A heavy undergrowth slows you down." },
+        { "chance":1, "table":[], "text":"A fog slows you down." },
+        { "chance":1, "table":[], "text":"A waterlogged path slows you down." },
         { "chance":1, "table":[], "text":"Biting insects slows you down." },
-        { "chance":1, "table":[], "text":"Glaring sun slows you down." },
-        { "chance":1, "table":[], "text":"Strange mist on the ground slows you down." }
+        { "chance":1, "table":[], "text":"A flock of seagulls harass the heroes and slows you down." },
+        { "chance":1, "table":[], "text":"Unbridged branches of a river slows you down." },
+        { "chance":1, "table":[], "text":"Waves wash over the road slows you down." },
+        { "chance":1, "table":[], "text":"Climbing along high cliffs slows you down." },
+        { "chance":1, "table":[], "text":"A glaring sun slows you down." }
       ]
     },
     {
       "id":103,
       "name":"C-TF.H.2: WAY BLOCKED",
       "options":[
-        { "chance":1, "table":[], "text":"Broken bridge blocks your way." },
-        { "chance":1, "table":[], "text":"Flooded river blocks your way." },
-        { "chance":1, "table":[], "text":"Deep crevasses after an earthquake blocks your way." },
+        { "chance":1, "table":[], "text":"High tide blocks your way." },
+        { "chance":1, "table":[], "text":"A toppled lighthouse blocks your way." },
+        { "chance":1, "table":[], "text":"High impassable cliffs blocks your way." },
+        { "chance":1, "table":[], "text":"A flood in the delta blocks your way." },
         { "chance":1, "table":[], "text":"Fallen trees blocks your way." },
-        { "chance":1, "table":[], "text":"Large boulders on the road blocks your way." },
-        { "chance":1, "table":[], "text":"A tiberlite troupe forbids anyone to go further blocks your way." },
-        { "chance":1, "table":[], "text":"Landsknechts have sealed the area off blocks your way." },
-        { "chance":1, "table":[], "text":"Impassable roads blocks your way." },
-        { "chance":1, "table":[], "text":"A landslide blocks your way." },
-        { "chance":1, "table":[], "text":"A rune-encrusted stone forbidding anyone to enter the area, due to demons, blocks your way." }
+        { "chance":1, "table":[], "text":"Landsknechts block the road, no reason given." },
+        { "chance":1, "table":[], "text":"A ruined bridge blocks your way." },
+        { "chance":1, "table":[], "text":"Deep crevasses blocks your way." },
+        { "chance":1, "table":[], "text":"Sprouting geysers blocks your way." },
+        { "chance":1, "table":[], "text":"Rune-encrusted stones forbidding anyone to enter the area, due to demons, blocks your way." }
       ]
     },
     {
       "id":104,
       "name":"C-TF.H.3: STOPS",
       "options":[
-        { "chance":1, "table":[], "text":"A rainstorm stops you." },
         { "chance":1, "table":[], "text":"A thunderstorm stops you." },
-        { "chance":1, "table":[], "text":"Get stuck in mud and have to stop." },
-        { "chance":1, "table":[], "text":"Thick undergrowth stops you." },
-        { "chance":1, "table":[], "text":"A heavy fog stops you." },
-        { "chance":1, "table":[], "text":"An earthquake stops you." },
-        { "chance":1, "table":[], "text":"Blisters on your feet stops you." },
-        { "chance":1, "table":[], "text":"Bad food makes the heroes sick and they have to stop." },
-        { "chance":1, "table":[], "text":"The heroes become exhausted and stop after passing through difficult terrain." },
-        { "chance":1, "table":[], "text":"The landsknechts stop the heroes for a day long interrogation." }
+        { "chance":1, "table":[], "text":"A hurricane stops you." },
+        { "chance":1, "table":[], "text":"An unusual high tide stops you." },
+        { "chance":1, "table":[], "text":"Becoming stuck on an islet in the delta stops you." },
+        { "chance":1, "table":[], "text":"An impassable muddy path stops you." },
+        { "chance":1, "table":[], "text":"Bad food making you sick stops you." },
+        { "chance":1, "table":[], "text":"A strange foreboding arcane energy in the air stops you." },
+        { "chance":1, "table":[], "text":"Exhausted after passing through difficult terrain stops you." },
+        { "chance":1, "table":[], "text":"Blisters on feet stops you." },
+        { "chance":1, "table":[], "text":"Unsure footings stops you" }
       ]
     },
+
+
+
     {
       "id":105,
       "name":"C-TF.H.4: LOST",
@@ -93,8 +97,17 @@
         { "chance":2, "table":[], "text":"The heroes come to a fire moss field, which causes severe rashes. The heroes take 1d5 HP damage if they fail the Survival skill roll." }
       ]
     },
-    {
+	{
       "id":107,
+      "name":"C-TF.S: SETTLEMENTS",
+      "options":[
+        { "chance":7, "table":[108, 109, 110], "text":"Ruins, already explored." },
+        { "chance":2, "table":[108, 109, 110], "text":"Ruins, partially explored." },
+        { "chance":1, "table":[108, 109, 110], "text":"Ruins, not explored." }
+      ]
+    },
+    {
+      "id":111,
       "name":"C-TF.R: RUINS",
       "options":[
         { "chance":7, "table":[108, 109, 110], "text":"Ruins, already explored." },
@@ -102,6 +115,8 @@
         { "chance":1, "table":[108, 109, 110], "text":"Ruins, not explored." }
       ]
     },
+
+
     {
       "id":108,
       "name":"C-TF.R1: RUINS TYPE",
