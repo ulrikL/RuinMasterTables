@@ -416,16 +416,16 @@
       "id":153,
       "name":"B-T.2: TREASURE LEVEL 2",
       "options":[
-        { "chance":1, "table":[], "text":"TODO" },
-        { "chance":1, "table":[], "text":"TODO" },
-        { "chance":1, "table":[], "text":"TODO" },
-        { "chance":1, "table":[], "text":"TODO" },
-        { "chance":1, "table":[], "text":"TODO" },
-        { "chance":1, "table":[], "text":"TODO" },
-        { "chance":1, "table":[], "text":"TODO" },
-        { "chance":1, "table":[], "text":"TODO" },
-        { "chance":1, "table":[], "text":"TODO" },
-        { "chance":1, "table":[], "text":"TODO" }
+        { "chance":1, "table":[], "text":"A short sword and 6 silver coins." },
+        { "chance":1, "table":[], "text":"A long spear and 12 silver coins." },
+        { "chance":1, "table":[], "text":"A sabre and and 6 silver coins." },
+        { "chance":1, "table":[], "text":"A leather armor and 6 silver coins." },
+        { "chance":1, "table":[], "text":"A leather pouch with 22 silver coins." },
+        { "chance":1, "table":[], "text":"A sabre and a leather armour." },
+        { "chance":1, "table":[], "text":"A warhammer with 14 silver coins." },
+        { "chance":1, "table":[], "text":"A leather pouch with 24 silver coins." },
+        { "chance":1, "table":[], "text":"A broadsword and 10 silver coins." },
+        { "chance":1, "table":[152,153], "text":"" }
       ]
     },
     {
