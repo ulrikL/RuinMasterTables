@@ -147,7 +147,7 @@
     },
     {
       "id":126,
-      "name":"BE.E.E1: ALMOST ENCOUNTERS",
+      "name":"B-E.E1: ALMOST ENCOUNTERS",
       "options":[
         { "chance":3, "table":[127], "text":"" },
         { "chance":4, "table":[128], "text":"" },
