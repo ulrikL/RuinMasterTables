@@ -26,6 +26,7 @@ data class Options (var chance : Int, var table : ArrayList<Int>, var text : Str
 private const val ENCOUNTER_TABLE_OFFSET = 25
 private const val TREASURE_TABLE_OFFSET = 50
 private const val CONFIG_FILE_TABLE_ID_OFFSET = 100
+private const val DEFAULT_CHANCE_SUM = 10
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private inline fun <reified T> ObjectMapper.readValue(s: String): T = this.readValue(s, object : TypeReference<T>() {})
@@ -120,6 +121,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             error("There are options using undefined table IDs!")
             missingTableIds.forEach {
                 error(getTableNameFromUsedOptionsTableReferences(it))
+            }
+        }
+        configData.tables.forEach{ table ->
+            var sumOfChance = 0
+            table.options.forEach{ option ->
+                sumOfChance += option.chance
+            }
+            if (sumOfChance != DEFAULT_CHANCE_SUM) {
+                warning("'${table.name}' in '${getConfigFileName(table.id)}' does not use a default chance (sum is $sumOfChance).")
             }
         }
     }
