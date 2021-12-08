@@ -2,7 +2,7 @@
 This is an Android application to help roll on all the tables used
 in the TTRPG Ruin Masters.
 
-The tables are described in a app\src\main\assets\*.json file.
+The tables are described in a `app\src\main\assets\*.json` file.
 
 The *.json files are designed to be done one for each button to be
 pressed in the UI.
