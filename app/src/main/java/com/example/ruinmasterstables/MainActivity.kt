@@ -196,7 +196,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             dynamicButton.text = button.text
             dynamicButton.id = buttonId
             dynamicButton.tag = button.table
-            dynamicButton.minimumWidth = 500
+            dynamicButton.minimumWidth = 600
+            dynamicButton.textSize = 18.0F
             dynamicButton.setOnClickListener(this)
             linearLayout.addView(dynamicButton)
         }
