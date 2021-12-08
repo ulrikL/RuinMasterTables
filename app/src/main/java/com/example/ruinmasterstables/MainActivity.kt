@@ -127,9 +127,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             var sumOfChance = 0
             table.options.forEach{ option ->
                 sumOfChance += option.chance
+                if (option.text.count { c -> c == '[' } > option.text.count { c -> c == ']' }) {
+                    error("'${table.name}' (${table.id}) in '${getConfigFileName(table.id)}' seem to miss a ']' in '${option.text}'.")
+                } else if (option.text.count { c -> c == '[' } < option.text.count { c -> c == ']' }) {
+                    error("'${table.name}' (${table.id}) in '${getConfigFileName(table.id)}' seem to miss a '[' in '${option.text}'.")
+                }
             }
             if (sumOfChance != DEFAULT_CHANCE_SUM) {
-                warning("'${table.name}' in '${getConfigFileName(table.id)}' does not use a default chance (sum is $sumOfChance).")
+                warning("'${table.name}' (${table.id}) in '${getConfigFileName(table.id)}' does not use a default chance (sum is $sumOfChance).")
             }
         }
     }
