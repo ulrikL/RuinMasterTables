@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             treasureText = treasureText.trimStart()
             if (treasureText.isNotBlank()) treasureText = replaceDieRolls(treasureText)
 
-            showEditDialog(terrainText, encounterText, treasureText)
+            showEditDialog((v as Button).text.toString(), terrainText, encounterText, treasureText)
         }
     }
 
@@ -269,7 +269,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 var dieResult = 0
                 debug("Found '${match.value}' with group1=$numberOfDice and group2=$diceType in string.")
                 for (i in 1..numberOfDice) dieResult += getRandomInt(1, diceType)
-                debug("Rolled $dieResult and shall replace range=${match.range} with this value.")
+                debug("Rolled $dieResult and replace $match with this value.")
                 localText = localText.replaceRange(match.range, dieResult.toString())
                 debug("Updated text='$localText'")
             }
@@ -278,8 +278,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         return localText
     }
 
-    private fun showEditDialog(terrainText: String, encounterText: String, treasureText: String) {
-        val displayResultFragment: DisplayResultFragment = DisplayResultFragment.newInstance(terrainText, encounterText, treasureText)
+    private fun showEditDialog(headerText: String, terrainText: String, encounterText: String, treasureText: String) {
+        val displayResultFragment: DisplayResultFragment = DisplayResultFragment.newInstance(headerText, terrainText, encounterText, treasureText)
         displayResultFragment.show(supportFragmentManager, "fragment_display_result")
     }
 

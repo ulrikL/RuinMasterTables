@@ -14,11 +14,13 @@ import androidx.fragment.app.DialogFragment
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 
+private const val ARG_HEADER = "ARG_HEADER"
 private const val ARG_TERRAIN = "ARG_TERRAIN"
 private const val ARG_ENCOUNTER = "ARG_ENCOUNTER"
 private const val ARG_TREASURE =  "ARG_TREASURE"
 
 class DisplayResultFragment : DialogFragment() {
+    private var headerText: String? = null
     private var terrainText: String? = null
     private var encounterText: String? = null
     private var treasureText: String? = null
@@ -26,6 +28,7 @@ class DisplayResultFragment : DialogFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
+            headerText = it.getString(ARG_HEADER)
             terrainText = it.getString(ARG_TERRAIN)
             encounterText = it.getString(ARG_ENCOUNTER)
             treasureText = it.getString(ARG_TREASURE)
@@ -39,6 +42,7 @@ class DisplayResultFragment : DialogFragment() {
         // Inflate the layout for this fragment
         val v: View = inflater.inflate(R.layout.fragment_display_result, container, false)
 
+        (v.findViewById<View>(R.id.tvHeaderText) as TextView).text = arguments?.getString(ARG_HEADER)
         (v.findViewById<View>(R.id.tvTerrainText) as TextView).text = arguments?.getString(ARG_TERRAIN)
         (v.findViewById<View>(R.id.tvEncounterText) as TextView).text = arguments?.getString(ARG_ENCOUNTER)
         (v.findViewById<View>(R.id.tvTreasureText) as TextView).text = arguments?.getString(ARG_TREASURE)
@@ -66,9 +70,10 @@ class DisplayResultFragment : DialogFragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance(terrainText: String, encounterText: String, treasureText: String) =
+        fun newInstance(headerText: String, terrainText: String, encounterText: String, treasureText: String) =
             DisplayResultFragment().apply {
                 arguments = Bundle().apply {
+                    putString(ARG_HEADER, headerText)
                     putString(ARG_TERRAIN, terrainText)
                     putString(ARG_ENCOUNTER, encounterText)
                     putString(ARG_TREASURE, treasureText)

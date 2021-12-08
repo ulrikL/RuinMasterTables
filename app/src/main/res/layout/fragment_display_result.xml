@@ -9,6 +9,18 @@ android:layout_height="wrap_content"
 android:padding="12dp"
 android:id="@+id/fragment_display_result">
 
+    <TextView
+        android:id="@+id/tvHeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:paddingHorizontal="24dp"
+        android:textSize="32sp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvTerrain"
         android:layout_width="wrap_content"
@@ -18,7 +30,7 @@ android:id="@+id/fragment_display_result">
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tvHeaderText" />
 
     <TextView
         android:id="@+id/tvTerrainText"
