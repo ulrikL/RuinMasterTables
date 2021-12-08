@@ -1,4 +1,4 @@
-#RuinMastersTables
+# RuinMastersTables
 
 This is an Android application to help roll on all the tables used
 in the TTRPG Ruin Masters.
@@ -8,7 +8,7 @@ The tables are described in a app\src\main\assets\*.json file.
 The *.json files are designed to be done one for each button to be
 pressed in the UI.
 
-##Table format
+## Table format
 
 Each table is represented with an Id, a name and a set of Options.
 The Ids use an offset to separate terrain, encounter and treasure tables
@@ -25,7 +25,7 @@ result.
 
 Text contain the description from the tables in Ruin Masters.
 
-##Text string format
+## Text string format
 
 The logic will replace '[<int>d<int>]' in the text strings with random
 values according to the number of dice and die type.
