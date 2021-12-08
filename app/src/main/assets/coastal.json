@@ -5,7 +5,7 @@
   "tables":[
     {
       "id":100,
-      "name":"Coastal Terrain Features",
+      "name":"Coastal Lands Terrain Features",
       "options":[
         { "chance":5, "table":[], "text":"Nothing of interest." },
         { "chance":2, "table":[101], "text":"" },
@@ -15,7 +15,7 @@
     },
     {
       "id":101,
-      "name":"C-TF.H: HAZARDS",
+      "name":"CL-TF.H: HAZARDS",
       "options":[
         { "chance":5, "table":[102], "text":"" },
         { "chance":2, "table":[103], "text":"" },
@@ -26,7 +26,7 @@
     },
     {
       "id":102,
-      "name":"C-TF.H.1: SLOW TRAVEL",
+      "name":"CL-TF.H.1: SLOW TRAVEL",
       "options":[
         { "chance":1, "table":[], "text":"Weeds and rocks on the path slows you down." },
         { "chance":1, "table":[], "text":"A heavy undergrowth slows you down." },
@@ -42,7 +42,7 @@
     },
     {
       "id":103,
-      "name":"C-TF.H.2: WAY BLOCKED",
+      "name":"CL-TF.H.2: WAY BLOCKED",
       "options":[
         { "chance":1, "table":[], "text":"High tide blocks your way." },
         { "chance":1, "table":[], "text":"A toppled lighthouse blocks your way." },
@@ -58,7 +58,7 @@
     },
     {
       "id":104,
-      "name":"C-TF.H.3: STOPS",
+      "name":"CL-TF.H.3: STOPS",
       "options":[
         { "chance":1, "table":[], "text":"A thunderstorm stops you." },
         { "chance":1, "table":[], "text":"A hurricane stops you." },
@@ -72,76 +72,114 @@
         { "chance":1, "table":[], "text":"Unsure footings stops you" }
       ]
     },
-
-
-
     {
       "id":105,
-      "name":"C-TF.H.4: LOST",
+      "name":"CL-TF.H.4: LOST",
       "options":[
         { "chance":4, "table":[], "text":"You lose your way due to a heavy fog." },
         { "chance":2, "table":[], "text":"You lose your way due to no landmarks visible for miles." },
-        { "chance":2, "table":[], "text":"You lose your way due to twisting trails." },
-        { "chance":1, "table":[], "text":"You lose your way due to a rainstorm." },
-        { "chance":1, "table":[], "text":"The heroes are chased by predators and lose the trail." }
+        { "chance":2, "table":[], "text":"You lose your way due to being chased by bandits." },
+        { "chance":1, "table":[], "text":"You lose your way due to a hurricane." },
+        { "chance":1, "table":[], "text":"A high tide and waves pull the heroes out." }
       ]
     },
     {
       "id":106,
-      "name":"C-TF.H.5: TRAPS",
+      "name":"CL-TF.H.5: TRAPS",
       "options":[
         { "chance":2, "table":[], "text":"A quicksand. The heroes take 2d10 HP damage if they fail the Survivals skill roll and lose their backpacks." },
-        { "chance":2, "table":[], "text":"The ground falls in from under the heroes’ feet due to erosion. The heroes take 1d10 HP damage if they fail the Survival skill roll and are stuck for 2 days in this hex." },
-        { "chance":2, "table":[], "text":"A hunter’s rusty bear trap. The heroes take 2d10 HP damage if they fail the Survival skill roll." },
-        { "chance":2, "table":[], "text":"The heroes step into a wasp nest. The heroes take 1d10 HP damage if they fail the Survival skill roll." },
-        { "chance":2, "table":[], "text":"The heroes come to a fire moss field, which causes severe rashes. The heroes take 1d5 HP damage if they fail the Survival skill roll." }
+        { "chance":2, "table":[], "text":"The heroes get stuck in old crab traps. The heroes take 1d10 HP damage if they fail the Survival skill roll." },
+        { "chance":2, "table":[], "text":"A bridge breaks while the heroes are passing over it. The heroes take 1d10 HP damage if they fail the Survival skill roll." },
+        { "chance":2, "table":[], "text":"A flock of seagulls attack the heroes. The heroes take 1d5 HP damage if they fail the Survival skill roll." },
+        { "chance":2, "table":[], "text":"The heroes get stuck in old nets. The heroes take 1d5 HP damage if they fail the Survival skill roll." }
       ]
     },
 	{
       "id":107,
-      "name":"C-TF.S: SETTLEMENTS",
+      "name":"CL-TF.S: SETTLEMENTS",
       "options":[
-        { "chance":7, "table":[108, 109, 110], "text":"Ruins, already explored." },
-        { "chance":2, "table":[108, 109, 110], "text":"Ruins, partially explored." },
-        { "chance":1, "table":[108, 109, 110], "text":"Ruins, not explored." }
+        { "chance":2, "table":[108], "text":"" },
+        { "chance":3, "table":[109], "text":"" },
+        { "chance":5, "table":[110], "text":"" }
       ]
     },
-    {
-      "id":111,
-      "name":"C-TF.R: RUINS",
-      "options":[
-        { "chance":7, "table":[108, 109, 110], "text":"Ruins, already explored." },
-        { "chance":2, "table":[108, 109, 110], "text":"Ruins, partially explored." },
-        { "chance":1, "table":[108, 109, 110], "text":"Ruins, not explored." }
-      ]
-    },
-
-
     {
       "id":108,
-      "name":"C-TF.R1: RUINS TYPE",
+      "name":"CL-TF.S.1: MANOR",
       "options":[
-        { "chance":2, "table":[], "text":"Inn" },
-        { "chance":2, "table":[], "text":"Fortified inn" },
-        { "chance":2, "table":[], "text":"Townlet" },
-        { "chance":2, "table":[], "text":"Tower" },
-        { "chance":2, "table":[], "text":"Keep" }
+        { "chance":1, "table":[152], "text":"A recently abandoned manor house." },
+        { "chance":1, "table":[136], "text":"A long abandoned manor house." },
+        { "chance":1, "table":[], "text":"A run-down manor house - single caretaker." },
+        { "chance":1, "table":[], "text":"A small manor house - human lesser noble family - not present." },
+        { "chance":1, "table":[], "text":"A small manor house - human noble family - not present." },
+        { "chance":1, "table":[], "text":"A manor house - human noble family - not present." },
+        { "chance":1, "table":[], "text":"A manor house - human noble family - present and friendly." },
+        { "chance":1, "table":[], "text":"A manor house - human noble family - present and indifferent." },
+        { "chance":1, "table":[], "text":"A large manor house - human noble family - present and friendly." },
+        { "chance":1, "table":[], "text":"A large manor house - human noble family - present and indifferent." }
       ]
     },
     {
       "id":109,
-      "name":"C-TF.R1: RUINS CONDITION",
+      "name":"CL-TF.S.2: MONASTERY",
       "options":[
-        { "chance":2, "table":[], "text":"partially covered with growth and" },
-        { "chance":2, "table":[], "text":"completely covered with growth and" },
-        { "chance":2, "table":[], "text":"partially underground and" },
-        { "chance":2, "table":[], "text":"burnt a long time ago and" },
-        { "chance":2, "table":[], "text":"recently ruined by goblins and trolls and" }
+        { "chance":1, "table":[152], "text":"A small tiberlite monastery, recently abandoned." },
+        { "chance":1, "table":[136], "text":"A small tiberlite monastery, long abandoned." },
+        { "chance":1, "table":[], "text":"A small tiberlite monastery, 5 old monks, friendly." },
+        { "chance":1, "table":[], "text":"A small tiberlite monastery, 10 monks, only open to priests or monks." },
+        { "chance":1, "table":[], "text":"A tiberlite monastery, 15 monks, friendly." },
+        { "chance":1, "table":[], "text":"A tiberlite monastery, 15 monks, only open to priests and monks." },
+        { "chance":1, "table":[], "text":"A large tiberlite monastery, 20 monks, friendly, library." },
+        { "chance":1, "table":[], "text":"A large tiberlite monastery, 20 monks, only open to priests and monks, library." },
+        { "chance":1, "table":[], "text":"A very large tiberlite monastery, 30 monks, friendly, library, church and brewery." },
+        { "chance":1, "table":[], "text":"A very large tiberlite monastery, 30 monks, only open to priests and monks, library, church and brewery." }
       ]
     },
     {
       "id":110,
-      "name":"C-TF.R1: RUINS STATE",
+      "name":"CL-TF.S.3: TOWNLET WITH A LIGHTHOUSE",
+      "options":[
+        { "chance":3, "table":[], "text":"A townlet with a lighthouse and 50 inhabitants, no inn." },
+		{ "chance":3, "table":[], "text":"A townlet with a lighthouse and 100 inhabitants, decent inn." },
+		{ "chance":2, "table":[], "text":"A townlet with a lighthouse and 100 habitants, decent inn and docks." },
+		{ "chance":2, "table":[], "text":"A townlet with a lighthouse and 150 habitants, decent inn, shop and docks." }
+      ]
+    },
+    {
+      "id":111,
+      "name":"CL-TF.R: RUINS",
+      "options":[
+        { "chance":5, "table":[112, 113, 114], "text":"Ruins, already explored." },
+        { "chance":3, "table":[112, 113, 114], "text":"Ruins, partially explored." },
+        { "chance":1, "table":[112, 113, 114], "text":"Ruins, not explored." },
+		{ "chance":1, "table":[112, 113, 114, 139], "text":"Ruins, not explored and inhabitated." }
+      ]
+    },
+    {
+      "id":112,
+      "name":"CL-TF.R1: RUINS TYPE",
+      "options":[
+        { "chance":2, "table":[], "text":"Manor" },
+        { "chance":2, "table":[], "text":"Monastery" },
+        { "chance":2, "table":[], "text":"Townlet" },
+        { "chance":2, "table":[], "text":"Keep" },
+        { "chance":2, "table":[], "text":"Keep with a dungeon" }
+      ]
+    },
+    {
+      "id":113,
+      "name":"CL-TF.R1: RUINS CONDITION",
+      "options":[
+        { "chance":2, "table":[], "text":"burnt a long time ago and" },
+        { "chance":2, "table":[], "text":"recently ruined by orcs and" },
+        { "chance":2, "table":[], "text":"partially covered with growth and" },
+        { "chance":2, "table":[], "text":"completely covered with growth and" },
+        { "chance":2, "table":[], "text":"partially covered by sea and" }
+      ]
+    },
+    {
+      "id":114,
+      "name":"CL-TF.R1: RUINS STATE",
       "options":[
         { "chance":2, "table":[], "text":"completely in ruins." },
         { "chance":2, "table":[], "text":"crumbled and decayed." },
@@ -152,17 +190,17 @@
     },
     {
       "id":125,
-      "name":"Coastal Encounters",
+      "name":"Coastal Lands Encounters",
       "options":[
         { "chance":5, "table":[], "text":"Nothing happens." },
-        { "chance":2, "table":[126], "text":"" },
-        { "chance":2, "table":[130], "text":"" },
+        { "chance":3, "table":[126], "text":"" },
+        { "chance":1, "table":[130], "text":"" },
         { "chance":1, "table":[136], "text":"" }
       ]
     },
     {
       "id":126,
-      "name":"BE.E.E1: ALMOST ENCOUNTERS",
+      "name":"CL-E.E1: ALMOST ENCOUNTERS",
       "options":[
         { "chance":3, "table":[127], "text":"" },
         { "chance":4, "table":[128], "text":"" },
@@ -171,55 +209,55 @@
     },
     {
       "id":127,
-      "name":"C-E.E1.1: SIGHTS",
+      "name":"CL-E.E1.1: SIGHTS",
       "options":[
-        { "chance":1, "table":[], "text":"A giant eagle passes by overhead, looking for prey." },
-        { "chance":1, "table":[], "text":"A troll shakes its fist at the heroes, then turns around and runs off." },
-        { "chance":1, "table":[], "text":"A pack of wolves follow the heroes for a while, before losing interest." },
-        { "chance":1, "table":[], "text":"A pair of griffons soar high in the sky, looking for prey." },
-        { "chance":1, "table":[], "text":"Two dragons battle fiercely far away." },
-        { "chance":1, "table":[], "text":"A large bear feasts on honey and warns the heroes to come any closer." },
-        { "chance":1, "table":[], "text":"Three goblin riders pass the heroes, shouting curses at them." },
-        { "chance":1, "table":[], "text":"A chimera fights a young griffon, tearing it to pieces on a hill not far from the heroes." },
-        { "chance":1, "table":[], "text":"Twelve zombies wander aimlessly away from the heroes." },
-        { "chance":1, "table":[], "text":"A giant passes by the heroes, not noticing them." }
+        { "chance":1, "table":[], "text":"A pirate ship on the horizon, headed for the next coastal hex." },
+        { "chance":1, "table":[], "text":"A dragon attacking a ship." },
+        { "chance":1, "table":[], "text":"A large sea monster attacking a merchant vessel." },
+        { "chance":1, "table":[], "text":"A pirate ship attacking a merchant vessel." },
+        { "chance":1, "table":[], "text":"Three griffons soar above, heading inland." },
+        { "chance":1, "table":[], "text":"A tribe of goblins cutting open and eating the carcass of a beached whale." },
+        { "chance":1, "table":[], "text":"An orc warband planning on attacking the nearest settlement." },
+        { "chance":1, "table":[], "text":"Two trolls attacking a tribe of goblins, that is feasting on the carcass of a beached whale." },
+        { "chance":1, "table":[], "text":"Four large wolves pick up the heroes’ scent and howl in the distance, but eventually lose interest." },
+        { "chance":1, "table":[], "text":"The heroes stumble upon a manticore eating an orc, the manticore roars and takes to the air, leaving the dead orc behind." }
       ]
     },
     {
       "id":128,
-      "name":"C-E.E1.2: SOUNDS",
+      "name":"CL-E.E1.2: SOUNDS",
       "options":[
-        { "chance":1, "table":[], "text":"Somewhere a large predator roars." },
-        { "chance":1, "table":[], "text":"A harpy’s screech echoes." },
-        { "chance":1, "table":[], "text":"Heavy footsteps coming towards the heroes." },
-        { "chance":1, "table":[], "text":"Heavy footsteps moving away from the heroes." },
-        { "chance":1, "table":[], "text":"Beatings of leathery wings behind the heroes." },
-        { "chance":1, "table":[], "text":"War drums echo far away." },
-        { "chance":1, "table":[], "text":"Horns being blown not far away." },
-        { "chance":1, "table":[], "text":"Howling wolves up ahead." },
-        { "chance":1, "table":[], "text":"Somewhere a large horde runs away from the heroes, followed by a deep and malignant roar." },
-        { "chance":1, "table":[], "text":"Strange droning sound coming from the earth." }
+        { "chance":1, "table":[], "text":"Dark breed’s war drums sound in the distance." },
+        { "chance":1, "table":[], "text":"Beatings of large leathery wings." },
+        { "chance":1, "table":[], "text":"Many creatures marching towards the heroes." },
+        { "chance":1, "table":[], "text":"Many creatures marching away from the heroes." },
+        { "chance":1, "table":[], "text":"A hollow laughter fills the air." },
+        { "chance":1, "table":[], "text":"The echo of a large predator’s roar." },
+        { "chance":1, "table":[], "text":"The dying screech of a griffon." },
+        { "chance":1, "table":[], "text":"Orc horns being sounded." },
+        { "chance":1, "table":[], "text":"A fiery explosion somewhere near." },
+        { "chance":1, "table":[], "text":"Strange arcane mutterings on the wind." }
       ]
     },
     {
       "id":129,
-      "name":"C-E.E1.3: LEAVINGS",
+      "name":"CL-E.E1.3: LEAVINGS",
       "options":[
-        { "chance":1, "table":[], "text":"A dead orc, his head has been bitten off by a dragon." },
-        { "chance":1, "table":[], "text":"A tree stump on which a dead goblin has been nailed." },
-        { "chance":1, "table":[], "text":"A large stone with deep claw marks." },
-        { "chance":1, "table":[], "text":"A single claw of a griffon." },
-        { "chance":1, "table":[], "text":"Three rotting limbs of a zombie." },
-        { "chance":1, "table":[], "text":"A broken skull of a troll." },
-        { "chance":1, "table":[], "text":"A dozen of human heads on spears." },
-        { "chance":1, "table":[], "text":"A large funeral pyre, still cooling." },
-        { "chance":1, "table":[], "text":"An elf impaled on a large pole." },
-        { "chance":1, "table":[], "text":"Two tusks, decorated and engraved with dark breed symbols." }
+        { "chance":1, "table":[], "text":"A beached whale with deep wounds left by a sea monster." },
+        { "chance":1, "table":[], "text":"A large tree with a troll’s hand nailed to it." },
+        { "chance":1, "table":[], "text":"Six impaled orc heads." },
+        { "chance":1, "table":[], "text":"The spike of a manticore lodged in a dead goblin’s head." },
+        { "chance":1, "table":[], "text":"Large tracks left by a giant, headed inland." },
+        { "chance":1, "table":[], "text":"A large scorched spot, left by a dragon’s fiery breath." },
+        { "chance":1, "table":[], "text":"Broken shells of large reptilian eggs." },
+        { "chance":1, "table":[], "text":"The cast-off skin of a giant snake." },
+        { "chance":1, "table":[], "text":"A bridge post with deep claw marks." },
+        { "chance":1, "table":[], "text":"A broken shield, orc design, with a large sharp dragon tooth stuck in it." }
       ]
     },
     {
       "id":130,
-      "name":"C-E.E2: WANDERER",
+      "name":"CL-E.E2: WANDERER",
       "options":[
         { "chance":2, "table":[131], "text":"" },
         { "chance":2, "table":[132], "text":"" },
@@ -230,81 +268,81 @@
     },
     {
       "id":131,
-      "name":"C-E.E2.1: WANDERING KNIGHT",
+      "name":"CL-E.E2.1: PIRATE",
       "options":[
-        { "chance":1, "table":[], "text":"A knight returning from the nearest mountain hex, where she was running an errand for the crown." },
-        { "chance":1, "table":[], "text":"A young knight on his first mission, but he lost his shield." },
-        { "chance":1, "table":[], "text":"An elf knight headed for the next city, coming from the nearest forest hex." },
-        { "chance":1, "table":[], "text":"A veteran knight returning from fighting undead in the nearest wilderness hex." },
-        { "chance":1, "table":[], "text":"A veteran knight headed for the next coastal hex, hunting for a pirate leader." },
-        { "chance":1, "table":[], "text":"A veteran knight on a quest, she is seeking the dragon that killed her father." },
-        { "chance":1, "table":[], "text":"A knight lord, with a retinue of 12 knights, headed for the next city." },
-        { "chance":1, "table":[], "text":"A knight lord, with a retinue of 15 knights, seeking an orc warlord, supposedly in the nearest wilderness hex." },
-        { "chance":1, "table":[], "text":"A wounded knight after battling three trolls." },
-        { "chance":1, "table":[], "text":"A dying knight after battling a manticore." }
+        { "chance":1, "table":[], "text":"An injured pirate that needs healing." },
+        { "chance":1, "table":[], "text":"A dying pirate that has a false map leading to a treasure in the next coastal hex." },
+        { "chance":1, "table":[], "text":"A dying pirate that has a map leading to a treasure in the next coastal hex." },
+        { "chance":1, "table":[], "text":"A dying pirate that has a map leading to a treasure in the next coastal hex, guarded by a dragon." },
+        { "chance":1, "table":[], "text":"A pirate that was cast off his ship and is looking for a crew to reclaim it." },
+        { "chance":1, "table":[], "text":"A pirate that was aboard a pirate ship that was taken down by another pirate ship." },
+        { "chance":1, "table":[], "text":"A pirate that was aboard a pirate ship that sunk in bad weather." },
+        { "chance":1, "table":[], "text":"A pirate that is wanted by the landsknechts." },
+        { "chance":1, "table":[], "text":"A pirate that falsely needs helps but tries to rob the heroes." },
+        { "chance":1, "table":[], "text":"A pirate that is a compulsive liar and a thief." }
       ]
     },
     {
       "id":132,
-      "name":"C-E.E2.2: WANDERING TIBERLITE",
+      "name":"CL-E.E2.2: SEAMAN",
       "options":[
-        { "chance":1, "table":[], "text":"A young tiberlite monk headed for a monastery in the nearest city." },
-        { "chance":1, "table":[], "text":"A young tiberlite on a mission to a monastery in the nearest costal hex." },
-        { "chance":1, "table":[], "text":"A young tiberlite seeking a lost artifact, believed to be in the nearest forest hex." },
-        { "chance":1, "table":[], "text":"A young tiberlite lost and needs help returning to the nearest city." },
-        { "chance":1, "table":[], "text":"A tiberlite that got waylaid by bandits in the nearest farmlands hex." },
-        { "chance":1, "table":[], "text":"A fanatic tiberlite that got separated from her caravan." },
-        { "chance":1, "table":[], "text":"A tiberlite that needs healing, after fighting goblins." },
-        { "chance":1, "table":[], "text":"An old tiberlite looking for a ruined monastery in the nearest mountain hex." },
-        { "chance":1, "table":[], "text":"An old tiberlite with a false map showing a ruined fortified monastery in the nearest marshlands hex." },
-        { "chance":1, "table":[], "text":"An old tiberlite with a real map showing a ruined castle in the nearest wilderness hex." }
+        { "chance":1, "table":[], "text":"A seaman that knows the area well and can give the heroes direction to the nearest townlet." },
+        { "chance":1, "table":[], "text":"A seaman that knows the area well and warns the heroes about wandering monsters in the next coastal hex." },
+        { "chance":1, "table":[], "text":"A seaman that is not native to the area." },
+        { "chance":1, "table":[], "text":"A seaman that knows stories of a huge treasure in the next borderlands hex." },
+        { "chance":1, "table":[], "text":"A seaman that knows false stories of a huge treasure in the next wilderness hex." },
+        { "chance":1, "table":[], "text":"A seaman that is lost and needs help finding the next town." },
+        { "chance":1, "table":[], "text":"A seaman that is injured and needs healing." },
+        { "chance":1, "table":[], "text":"A seaman that is exhausted and out of food." },
+        { "chance":1, "table":[], "text":"A seaman that is eager to get the heroes to help her defend the carcass of a beached whale while she gets help from the next townlet." },
+        { "chance":1, "table":[], "text":"A seaman that wants the heroes to help him get his stranded boat back to sea." }
       ]
     },
     {
       "id":133,
-      "name":"C-E.E2.3: WANDERING HOODED TRAVELLER",
+      "name":"CL-E.E2.3: VILLAGER",
       "options":[
-        { "chance":1, "table":[], "text":"A hooded man that warns the heroes about a band of orcs nearby." },
-        { "chance":1, "table":[], "text":"A hooded woman that speaks in strange language and points, cackling, a gnarly finger at one of the heroes." },
-        { "chance":1, "table":[], "text":"A hooded man that tells the heroes where to find an unexplored dungeon (true)." },
-        { "chance":1, "table":[], "text":"A hooded man that tells the heroes where to find an unexplored dungeon (false)." },
-        { "chance":1, "table":[], "text":"A hooded woman that tells the heroes where to find a dragon’s lair (true)." },
-        { "chance":1, "table":[], "text":"A hooded woman that tells the heroes where to find a dragon’s lair (false)." },
-        { "chance":1, "table":[], "text":"A hooded man that was attacked by a griffon, but is remarkably unharmed." },
-        { "chance":1, "table":[], "text":"A hooded woman that was attacked by a harpy, but is unharmed." },
-        { "chance":1, "table":[], "text":"A hooded man that was attacked by wildknechts but refuses all healing. Warns the heroes to go near the nearest mountain hex." },
-        { "chance":1, "table":[], "text":"A hooded woman that was attacked by a troll, but as soon as the heroes touch her, she turns to ash." }
+        { "chance":1, "table":[], "text":"A villager that is lost and exhausted." },
+        { "chance":1, "table":[], "text":"A villager that is injured and needs healing." },
+        { "chance":1, "table":[], "text":"A villager that is terrified because there’s a manticore in the area." },
+        { "chance":1, "table":[], "text":"A villager that is terrified because she heard that there were trolls about." },
+        { "chance":1, "table":[], "text":"A villager that is looking for heroes to help her and the town fight off an undead plague." },
+        { "chance":1, "table":[], "text":"A villager that is looking for heroes to help her and the town to battle orcs that besiege the town." },
+        { "chance":1, "table":[], "text":"A villager that is gravely wounded after being waylaid by wildknechts." },
+        { "chance":1, "table":[], "text":"A villager that is looking for her lost brother, taken by goblins hours ago." },
+        { "chance":1, "table":[], "text":"A villager that is seeking help for his husband, which is ill." },
+        { "chance":1, "table":[], "text":"A villager that is seeking cure for a strange plague that is festering in her village." }
       ]
     },
     {
       "id":134,
-      "name":"C-E.E2.4: WANDERING ADVENTURER",
+      "name":"CL-E.E2.4: NOBLE",
       "options":[
-        { "chance":1, "table":[], "text":"A young adventurer, dirty and exhausted, after escaping from an orc camp." },
-        { "chance":1, "table":[], "text":"A young adventurer, wet behind the ears, seeking glory and fame." },
-        { "chance":1, "table":[], "text":"A young adventurer, returning home after a failed ruin exploration in the nearest mountain hex, where all her friends died." },
-        { "chance":1, "table":[], "text":"A young adventurer, returning home, after a successful ruin exploration in the nearest wilderness hex." },
-        { "chance":1, "table":[], "text":"An adventurer in dire need of healing, after fleeing from a manticore, still spikes lodged in his back." },
-        { "chance":1, "table":[], "text":"An adventurer heading home after a long trek through the nearest forest." },
-        { "chance":1, "table":[], "text":"An adventurer headed for the nearest city, where she hopes to join a new band of adventurers." },
-        { "chance":1, "table":[], "text":"An old adventurer, tired from a long walk, returning home after an unsuccessful ruin exploration in the nearest wilderness hex." },
-        { "chance":1, "table":[], "text":"An old adventurer, retiring and returning to his estates in the nearest farmlands hex." },
-        { "chance":1, "table":[], "text":"An old and crazed adventurer, seeking a certain dragon that slew his friends, who he believes lairs in the nearest mountain hex." }
+        { "chance":1, "table":[], "text":"A noble on her way back from her seaside manor, travelling alone." },
+        { "chance":1, "table":[], "text":"A noble on his way to his seaside manor, with 2 guards." },
+        { "chance":1, "table":[], "text":"A noble that is lost and needs direction." },
+        { "chance":1, "table":[], "text":"A noble that is injured and needs healing." },
+        { "chance":1, "table":[], "text":"A noble that is seeking heroes to clear out her manor of undead." },
+        { "chance":1, "table":[], "text":"A noble that is seeking heroes to clear out his manor of goblins." },
+        { "chance":1, "table":[], "text":"A noble that is headed for the nearest city with 4 guards." },
+        { "chance":1, "table":[], "text":"A noble that is headed for the nearest city with 5 guards and a large chest filled with gold." },
+        { "chance":1, "table":[], "text":" A noble that is headed for the nearest city but has lost all guards and needs help guarding a large chest filled with gold." },
+        { "chance":1, "table":[], "text":"A noble that is headed for the nearest city, guards betrayed her and stole her large chest of gold and headed for the next borderlands hex." }
       ]
     },
     {
       "id":135,
-      "name":"C-E.E2.5: WANDERING TRADER",
+      "name":"CL-E.E2.5: TRADER",
       "options":[
         { "chance":4, "table":[], "text":"A trader, that wants to trade." },
         { "chance":2, "table":[], "text":"A trader, that was robbed and has nothing to trade." },
-        { "chance":3, "table":[], "text":"A trader, that needs help finding his way out of the woods.." },
+        { "chance":3, "table":[], "text":"A trader, that needs help finding his way." },
         { "chance":1, "table":[], "text":"A trader, that tries to deceive the heroes." }
       ]
     },
     {
       "id":136,
-      "name":"C-E.E3: WANDERING MONSTER",
+      "name":"CL-E.E3: WANDERING MONSTER",
       "options":[
         { "chance":5, "table":[137], "text":"" },
         { "chance":2, "table":[138], "text":"" },
@@ -315,82 +353,82 @@
     },
     {
       "id":137,
-      "name":"C-E.E3.1: WANDERING MONSTER LEVEL 1",
+      "name":"CL-E.E3.1: WANDERING MONSTER LEVEL 1",
       "options":[
-        { "chance":1, "table":[], "text":"A crazed horse." },
-        { "chance":1, "table":[], "text":"A goblin." },
-        { "chance":1, "table":[], "text":"A wild dog." },
-        { "chance":1, "table":[], "text":"A goat." },
-        { "chance":1, "table":[], "text":"A badger." },
-        { "chance":1, "table":[], "text":"A boar." },
-        { "chance":1, "table":[], "text":"A wolverine." },
-        { "chance":1, "table":[], "text":"[1d5] dogs." },
+		{ "chance":1, "table":[], "text":"A giant crab." },
+		{ "chance":1, "table":[], "text":"A giant frog." },
+		{ "chance":1, "table":[], "text":"A giant rat." },
+		{ "chance":1, "table":[], "text":"A goblin." },
+		{ "chance":1, "table":[], "text":"A poisonous snake." },
+		{ "chance":1, "table":[], "text":"An eagle." },
+		{ "chance":1, "table":[], "text":"A badger." },
+		{ "chance":1, "table":[], "text":"[1d5] giant crabs." },
         { "chance":1, "table":[], "text":"[1d5] goblins." },
         { "chance":1, "table":[152], "text":"[1d5] goblins with treasure." }
       ]
     },
     {
       "id":138,
-      "name":"C-E.E3.2: WANDERING MONSTER LEVEL 2",
+      "name":"CL-E.E3.2: WANDERING MONSTER LEVEL 2",
       "options":[
+        { "chance":1, "table":[], "text":"[1d5] giant crabs." },
+        { "chance":1, "table":[], "text":"[1d5] giant frogs." },
+        { "chance":1, "table":[], "text":"[1d5] giant rats." },
+        { "chance":1, "table":[], "text":"[1d5] poisonous snakes." },
         { "chance":1, "table":[], "text":"[1d5] badgers." },
         { "chance":1, "table":[], "text":"[1d5] goats." },
-        { "chance":1, "table":[], "text":"[1d5] wolverines." },
-        { "chance":1, "table":[], "text":"An orc and [1d5] goblins." },
-        { "chance":1, "table":[], "text":"[1d5] giant rats." },
-        { "chance":1, "table":[], "text":"[1d5] boars." },
         { "chance":1, "table":[], "text":"[1d5] wolves." },
-        { "chance":1, "table":[], "text":"[1d5] giant insects." },
-        { "chance":1, "table":[], "text":"A boar followed by [1d5] wolves." },
-        { "chance":1, "table":[152], "text":"[1d5] wolves with treasure." }
+        { "chance":1, "table":[], "text":"[1d5] boars." },
+        { "chance":1, "table":[], "text":"[1d5] goblins and an orc." },
+        { "chance":1, "table":[152], "text":"[1d5] goblins and an orc with treasure." }
       ]
     },
-    {
+	{
       "id":139,
-      "name":"C-E.E3.3: WANDERING MONSTER LEVEL 3",
+      "name":"CL-E.E3.3: WANDERING MONSTER LEVEL 3",
       "options":[
-        { "chance":1, "table":[], "text":"A bear." },
+        { "chance":1, "table":[], "text":"[1d10] giant crabs." },
+        { "chance":1, "table":[], "text":"[1d10] giant rats." },
+        { "chance":1, "table":[], "text":"[1d10] poisonous snakes." },
         { "chance":1, "table":[], "text":"[1d5] skeletons." },
         { "chance":1, "table":[], "text":"[1d5] giant spiders." },
-        { "chance":1, "table":[], "text":"[1d10] giant rats." },
-        { "chance":1, "table":[], "text":"[1d10] giant insects." },
-        { "chance":1, "table":[], "text":"[1d5] deers." },
+        { "chance":1, "table":[], "text":"A bear." },
         { "chance":1, "table":[], "text":"[1d10] wolverines." },
-        { "chance":1, "table":[], "text":"[1d10] badgers." },
-        { "chance":1, "table":[153], "text":"[1d10] goblins with treasure." },
-        { "chance":1, "table":[153], "text":"An orc and [1d10] goblins with treasure." }
+        { "chance":1, "table":[], "text":"A wight." },
+        { "chance":1, "table":[], "text":"[1d10] goblins." },
+        { "chance":1, "table":[153], "text":"[1d10] goblins and an orc with treasure." }
       ]
     },
     {
       "id":140,
-      "name":"C-E.E3.4: WANDERING MONSTER LEVEL 4",
+      "name":"CL-E.E3.4: WANDERING MONSTER LEVEL 4",
       "options":[
-        { "chance":1, "table":[], "text":"An elk." },
-        { "chance":1, "table":[], "text":"A lion." },
-        { "chance":1, "table":[], "text":"A giant lizard." },
-        { "chance":1, "table":[], "text":"3 orcs and [1d10] goblins." },
-        { "chance":1, "table":[], "text":"[1d10] deers." },
-        { "chance":1, "table":[], "text":"A wight and [1d10] skeletons." },
-        { "chance":1, "table":[], "text":"A harpy." },
-        { "chance":1, "table":[], "text":"[1d5] orcs." },
-        { "chance":1, "table":[153], "text":"[1d5] orcs and [1d10] goblins with treasure." },
-        { "chance":1, "table":[153], "text":"[1d10] orcs with treasure." }
+		{ "chance":1, "table":[], "text":"A lion." },
+		{ "chance":1, "table":[], "text":"A giant lizard." },
+		{ "chance":1, "table":[], "text":"[1d5] crocodiles." },
+		{ "chance":1, "table":[], "text":"[1d10] skeletons." },
+		{ "chance":1, "table":[], "text":"[1d5] orcs." },
+		{ "chance":1, "table":[], "text":"[1d10] goblins and [1d5] orcs." },
+		{ "chance":1, "table":[], "text":"[1d10] orcs." },
+		{ "chance":1, "table":[], "text":"A harpy." },
+		{ "chance":1, "table":[], "text":"[1d5] goblins and a harpy." },
+        { "chance":1, "table":[153], "text":"[1d5] goblins and a harpy with treasure." }
       ]
     },
     {
       "id":141,
-      "name":"C-E.E3.5: WANDERING MONSTER LEVEL 5",
+      "name":"CL-E.E3.5: WANDERING MONSTER LEVEL 5",
       "options":[
         { "chance":1, "table":[], "text":"[1d5] harpies." },
-        { "chance":1, "table":[], "text":"[1d5] centaurs." },
         { "chance":1, "table":[], "text":"[1d5] wolves and a giant wolf." },
         { "chance":1, "table":[], "text":"A minotaur." },
-        { "chance":1, "table":[], "text":"A specter and [1d10] skeletons." },
         { "chance":1, "table":[], "text":"[1d5] wights." },
+        { "chance":1, "table":[], "text":"[1d10] skeletons and a specter." },
         { "chance":1, "table":[], "text":"A griffin." },
-        { "chance":1, "table":[154], "text":"A troll with treasure." },
-        { "chance":1, "table":[154], "text":"A troll and [1d5] goblins with treasure." },
-        { "chance":1, "table":[154], "text":"A troll and [1d10] goblins with treasure." }
+        { "chance":1, "table":[], "text":"A giant." },
+        { "chance":1, "table":[], "text":"[1d5] griffins." },
+        { "chance":1, "table":[], "text":"[1d10] orcs and a troll." },
+        { "chance":1, "table":[154], "text":"[1d10] orcs and a troll with treasure." }
       ]
     },
     {
@@ -403,7 +441,7 @@
     },
     {
       "id":151,
-      "name":"C-T: TREASURES",
+      "name":"CL-T: TREASURES",
       "options":[
         { "chance":6, "table":[152], "text":"" },
         { "chance":2, "table":[153], "text":"" },
@@ -413,65 +451,65 @@
     },
     {
       "id":152,
-      "name":"C-T.1: TREASURE LEVEL 1",
+      "name":"CL-T.1: TREASURE LEVEL 1",
       "options":[
-        { "chance":1, "table":[], "text":"A shortsword." },
-        { "chance":1, "table":[], "text":"A sabre." },
-        { "chance":1, "table":[], "text":"A warhammer." },
-        { "chance":1, "table":[], "text":"A pole axe." },
-        { "chance":1, "table":[], "text":"A bow." },
-        { "chance":1, "table":[], "text":"A dagger and a shortsword." },
-        { "chance":1, "table":[], "text":"A leather pouch with 7 silver coins." },
-        { "chance":1, "table":[], "text":"A battle axe." },
-        { "chance":1, "table":[], "text":"A leather pouch with 11 silver coins." },
+        { "chance":1, "table":[], "text":"2 silver coins." },
+        { "chance":1, "table":[], "text":"6 silver coins." },
+        { "chance":1, "table":[], "text":"A dagger." },
+        { "chance":1, "table":[], "text":"A club." },
+        { "chance":1, "table":[], "text":"A shortbow." },
+        { "chance":1, "table":[], "text":"A sling." },
+        { "chance":1, "table":[], "text":"A throwing spear." },
+        { "chance":1, "table":[], "text":"A large shield." },
+        { "chance":1, "table":[], "text":"A long spear." },
         { "chance":1, "table":[152, 152], "text":"" }
       ]
     },
     {
       "id":153,
-      "name":"C-T.2: TREASURE LEVEL 2",
+      "name":"CL-T.2: TREASURE LEVEL 2",
       "options":[
-        { "chance":1, "table":[], "text":"TODO" },
-        { "chance":1, "table":[], "text":"TODO" },
-        { "chance":1, "table":[], "text":"TODO" },
-        { "chance":1, "table":[], "text":"TODO" },
-        { "chance":1, "table":[], "text":"TODO" },
-        { "chance":1, "table":[], "text":"TODO" },
-        { "chance":1, "table":[], "text":"TODO" },
-        { "chance":1, "table":[], "text":"TODO" },
-        { "chance":1, "table":[], "text":"TODO" },
-        { "chance":1, "table":[], "text":"TODO" }
+        { "chance":1, "table":[], "text":"A shorsword and 3 silver coins." },
+        { "chance":1, "table":[], "text":"A sabre and 2 copper coins." },
+        { "chance":1, "table":[], "text":"A flail." },
+        { "chance":1, "table":[], "text":"A long spear and 4 silver coins." },
+        { "chance":1, "table":[], "text":"A leather armor." },
+        { "chance":1, "table":[], "text":"A leather pouch with 7 silver coins." },
+        { "chance":1, "table":[], "text":"A leather pouch with 9 silver coins." },
+        { "chance":1, "table":[], "text":"A leather pouch with 11 silver coins." },
+        { "chance":1, "table":[], "text":"A battle axe." },
+        { "chance":1, "table":[153,152], "text":"" }
       ]
     },
     {
       "id":154,
-      "name":"C-T.3: TREASURE LEVEL 3",
+      "name":"CL-T.3: TREASURE LEVEL 3",
       "options":[
-        { "chance":1, "table":[], "text":"A locket chest with 1440 copper coins." },
-        { "chance":1, "table":[], "text":"A scale mail and a large shield." },
-        { "chance":1, "table":[], "text":"A ring mail, battle axe and 3 silver coins." },
-        { "chance":1, "table":[], "text":"A scale mail, bastard sword, 2 daggers and 4 silver coins." },
-        { "chance":1, "table":[], "text":"A chain mail, master-made twohanded axe, large shield and 5 silver coins." },
-        { "chance":1, "table":[], "text":"A locked chest with 100 silver coins." },
-        { "chance":1, "table":[], "text":"A locked chest with a silver dagger wrapped in velvet worth 140 silver coins." },
-        { "chance":1, "table":[], "text":"A locked chest with 130 silver coins" },
-        { "chance":1, "table":[], "text":"A locked chest with a golden statue of a lion, worth 144 silver coins" },
+        { "chance":1, "table":[], "text":"A locked chest with 360 copper coins." },
+        { "chance":1, "table":[], "text":"A longsword and a small shield." },
+        { "chance":1, "table":[], "text":"A leather pouch with 29 silver coins." },
+        { "chance":1, "table":[], "text":"A two-handed sword and a padded armor." },
+        { "chance":1, "table":[], "text":"A leather pouch with 30 silver coins." },
+        { "chance":1, "table":[], "text":"A two-handed axe and a large shield." },
+        { "chance":1, "table":[], "text":"A leather pouch with 32 silver coins." },
+        { "chance":1, "table":[], "text":"A crossbow." },
+        { "chance":1, "table":[], "text":"A two-handed axe and a leather pouch with 10 silver coins." },
         { "chance":1, "table":[154, 152, 152], "text":"" }
       ]
     },
     {
       "id":155,
-      "name":"C-T.4: TREASURE LEVEL 4",
+      "name":"CL-T.4: TREASURE LEVEL 4",
       "options":[
-        { "chance":1, "table":[], "text":"A banded mail and a master-made two-handed sword." },
-        { "chance":1, "table":[], "text":"A banded mail, chain mail, twohanded sword, 2 master-made daggers and a leather pouch with 200 silver coins." },
-        { "chance":1, "table":[], "text":"A diamond worth 500 silver coins." },
-        { "chance":1, "table":[], "text":"A silver ring with a large gemstone, worth 700 silver coins." },
-        { "chance":1, "table":[], "text":"A magical dagger." },
-        { "chance":1, "table":[], "text":"A magical club." },
-        { "chance":1, "table":[], "text":"A magical throwing axe." },
-        { "chance":1, "table":[], "text":"A magical small shield." },
-        { "chance":1, "table":[], "text":"A magical long spear." },
+        { "chance":1, "table":[], "text":"A long sword and a ring mail." },
+        { "chance":1, "table":[], "text":"A chain mail and a two-handed sword." },
+        { "chance":1, "table":[], "text":"A ring mail, battle axe and 3 silver coins." },
+        { "chance":1, "table":[], "text":"A chain mail, broadsword, small shield and 4 silver coins." },
+        { "chance":1, "table":[], "text":"A locket chest with 110 silver coins." },
+        { "chance":1, "table":[], "text":"A chain mail, master-made twohanded axe, large shield and 5 silver coins." },
+        { "chance":1, "table":[], "text":"A scale mail, master-made bastard sword, 2 daggers and 4 silver coins." },
+        { "chance":1, "table":[], "text":"A locket chest with a golden statue of a lion, worth 144 silver coins." },
+        { "chance":1, "table":[], "text":"A locket chest with 140 silver coins." },
         { "chance":1, "table":[155, 153], "text":"" }
       ]
     }
