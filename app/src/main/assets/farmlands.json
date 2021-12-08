@@ -1,0 +1,381 @@
+{
+  "buttons":[
+    { "text":"Farmlands", "table":100 }
+  ],
+  "tables":[
+    {
+      "id":100,
+      "name":"Farmlands Terrain Features",
+      "options":[
+        { "chance":6, "table":[], "text":"Nothing of interest." },
+        { "chance":2, "table":[101], "text":"" },
+		{ "chance":2, "table":[105], "text":"" }
+      ]
+    },
+    {
+      "id":101,
+      "name":"F-TF.H: HAZARDS",
+      "options":[
+        { "chance":5, "table":[102], "text":"" },
+        { "chance":2, "table":[103], "text":"" },
+        { "chance":3, "table":[104], "text":"" }
+      ]
+    },
+    {
+      "id":102,
+      "name":"F-TF.H.1: SLOW TRAVEL",
+      "options":[
+        { "chance":2, "table":[], "text":"A muddy road slows you down." },
+        { "chance":2, "table":[], "text":"A heavy wind slows you down." },
+        { "chance":2, "table":[], "text":"A downpour slows you down." },
+        { "chance":2, "table":[], "text":"A rocky road slows you down." },
+        { "chance":2, "table":[], "text":"Heavy traffic on road slows you down." }
+      ]
+    },
+    {
+      "id":103,
+      "name":"F-TF.H.2: WAY BLOCKED",
+      "options":[
+        { "chance":1, "table":[], "text":"A overturned cart blocks your way." },
+        { "chance":1, "table":[], "text":"Landknechts blocks your way." },
+        { "chance":1, "table":[], "text":"An untrustworthy bridge blocks your way." },
+        { "chance":1, "table":[], "text":"A local festival blocks your way." },
+        { "chance":1, "table":[], "text":"Farmers fixing the road blocks your way." },
+        { "chance":1, "table":[], "text":"A troll found dead on the road, causing interested people to gather on the road blocks your way." },
+        { "chance":1, "table":[], "text":"A knight’s horse dead on the road, no knight in sight blocks your way." },
+        { "chance":1, "table":[], "text":"Fallen trees blocks your way." },
+        { "chance":1, "table":[], "text":"Large boulders  blocks your way." },
+        { "chance":1, "table":[], "text":"A flooded river blocks your way." }
+      ]
+    },
+    {
+      "id":104,
+      "name":"F-TF.H.3: STOPS",
+      "options":[
+        { "chance":3, "table":[], "text":"A thunderstorm stops you." },
+        { "chance":2, "table":[], "text":"A thick fog stops you." },
+        { "chance":2, "table":[], "text":"The heroes become stuck in mud stops you." },
+        { "chance":2, "table":[], "text":"The heroes’ mounts become sick stops you." },
+        { "chance":1, "table":[], "text":"The landsknechts stop the heroes for a day long interrogation." }
+      ]
+    },
+	{
+      "id":105,
+      "name":"F-TF.S: SETTLEMENTS",
+      "options":[
+        { "chance":3, "table":[106], "text":"" },
+        { "chance":4, "table":[107], "text":"" },
+        { "chance":3, "table":[108], "text":"" }
+      ]
+    },
+    {
+      "id":106,
+      "name":"F-TF.S.1: FARM",
+      "options":[
+        { "chance":1, "table":[], "text":"A hermit’s hut, the heroes can stay." },
+        { "chance":1, "table":[], "text":"A hermit’s hut, the heroes can’t stay." },
+        { "chance":1, "table":[], "text":"An old couple’s farm, the heroes can stay." },
+        { "chance":1, "table":[], "text":"An old couple’s farm, the heroes can’t stay." },
+        { "chance":1, "table":[], "text":"A poor human farm, the heroes can stay in the barn." },
+        { "chance":1, "table":[], "text":"A poor human farm, not willing to let the heroes to stay." },
+        { "chance":1, "table":[], "text":"A decent human farm, the heroes can stay." },
+        { "chance":1, "table":[], "text":"A decent human farm, the heroes are not allowed to stay." },
+        { "chance":1, "table":[], "text":"A well standing human farm, the heroes are welcome to stay." },
+        { "chance":1, "table":[], "text":"A well standing human farm, the heroes are not welcome." }
+      ]
+    },
+    {
+      "id":107,
+      "name":"F-TF.S.2: OUTPOST",
+      "options":[
+        { "chance":1, "table":[], "text":"A run-down inn, run by a single human." },
+        { "chance":1, "table":[], "text":"A fortified inn, run by a dwarf." },
+        { "chance":1, "table":[], "text":"A landsknecht wooden outpost." },
+        { "chance":1, "table":[], "text":"A landsknecht walled stone fort." },
+        { "chance":1, "table":[], "text":"A merchant prince’s walled station." },
+        { "chance":1, "table":[], "text":"A merchant prince’s walled station fort." },
+        { "chance":1, "table":[], "text":"A tiberlite shrine." },
+        { "chance":1, "table":[], "text":"A tiberlite church." },
+        { "chance":1, "table":[], "text":"A tiberlite walled church." },
+        { "chance":1, "table":[], "text":"A tiberlite walled monastery." }
+      ]
+    },
+    {
+      "id":108,
+      "name":"F-TF.S.3: TOWNLET",
+      "options":[
+        { "chance":3, "table":[], "text":"A townlet with a small walled community, 50 inhabitants, good inn." },
+		{ "chance":3, "table":[], "text":"A townlet with a small walled community, indifferent, 50 inhabitants, bad inn." },
+		{ "chance":2, "table":[], "text":"A townlet with a small walled community, unfriendly, 50 inhabitants, decent inn." },
+		{ "chance":2, "table":[], "text":"A townlet with a small walled community in need of help, 50 inhabitants, good inn and a shop." }
+      ]
+    },
+    {
+      "id":125,
+      "name":"Farmlands Encounters",
+      "options":[
+        { "chance":6, "table":[], "text":"Nothing happens." },
+        { "chance":3, "table":[126], "text":"" },
+        { "chance":1, "table":[132], "text":"" }
+      ]
+    },
+    {
+      "id":126,
+      "name":"F-E.E1: WANDERER",
+      "options":[
+        { "chance":2, "table":[127], "text":"" },
+        { "chance":2, "table":[128], "text":"" },
+		{ "chance":2, "table":[129], "text":"" },
+		{ "chance":2, "table":[130], "text":"" },
+        { "chance":2, "table":[131], "text":"" }
+      ]
+    },
+    {
+      "id":127,
+      "name":"F-E.E1.1: TRAVELING BARD",
+      "options":[
+        { "chance":1, "table":[], "text":"A young inexperienced bard, eager to hear the heroes’ tales." },
+        { "chance":1, "table":[], "text":"A bard headed the other way and can share with the heroes a tale or two of what they might expect on the road." },
+        { "chance":1, "table":[], "text":"A bard in need of cash, headed the other way, can tell the heroes a tale or two of what they might expect on the road, but for a price." },
+        { "chance":1, "table":[], "text":"A bard headed in the same direction as the heroes, but for the next city, in hope of making money on singing songs and telling tales." },
+        { "chance":1, "table":[], "text":"A middle aged bard, still adventuring, that has a fake map that shows where to find ruins filled with treasure." },
+        { "chance":1, "table":[], "text":"A middle aged bard, still adventuring, that has a real map showing where to find ruins filled with treasure." },
+        { "chance":1, "table":[], "text":"A middle aged bard, down on his luck, and has lost a map that showed where to find ruins filled with treasure." },
+        { "chance":1, "table":[], "text":"An old bard and retired adventurer, eager to share stories with the heroes." },
+        { "chance":1, "table":[], "text":"An old bard and retired adventurer, eager to sell the heroes information and leads to where to find unexplored ruins." },
+        { "chance":1, "table":[], "text":"An old and senile bard and retired adventurer, eager to share stories with the heroes, though most of them are not true." }
+      ]
+    },
+    {
+      "id":128,
+      "name":"F-E.E1.2: CARAVAN",
+      "options":[
+        { "chance":1, "table":[], "text":"A three-wagon wool merchant’s caravan." },
+        { "chance":1, "table":[], "text":"A three-wagon dwarven silver merchant’s caravan, that was attacked by a troll." },
+        { "chance":1, "table":[], "text":"A two-wagon elven woodworker’s caravan." },
+        { "chance":1, "table":[], "text":"A three-wagon merchant’s caravan, that has had misfortune and most of the corn is ruined." },
+        { "chance":1, "table":[], "text":"A five-wagon carnival caravan." },
+        { "chance":1, "table":[], "text":"An unharmed four-wagon mason’s caravan." },
+        { "chance":1, "table":[], "text":"A four-wagon tiberlite caravan that was attacked by wildknechts." },
+        { "chance":1, "table":[], "text":"A five-wagon iron merchant’s caravan that has been attacked twice by orcs." },
+        { "chance":1, "table":[], "text":"A six-wagon tax collector’s caravan that was attacked by bandits earlier that day." },
+        { "chance":1, "table":[], "text":"A six-wagon noble’s caravan with knight escorts." }
+      ]
+    },
+    {
+      "id":129,
+      "name":"F-E.E1.3: FARMER",
+      "options":[
+        { "chance":1, "table":[], "text":"A local farmer’s son who saw a dragon fly by three days ago, headed towards the nearest forest hex." },
+        { "chance":1, "table":[], "text":"A local farmer’s daughter who saw a griffon swoop a horse off the road yesterday." },
+        { "chance":1, "table":[], "text":"A local farmer that saw an ogre pass through his field yesterday, headed towards the nearest borderland hex." },
+        { "chance":1, "table":[], "text":"A local farmer’s son who has heard stories about a ruined castle in the nearest mountain hex." },
+        { "chance":1, "table":[], "text":"A local farmer’s daughter who has heard stories about an unexplored barrow in the nearest wilderness hex." },
+        { "chance":1, "table":[], "text":"A local farmer’s wife who has heard stories about an arch-sorcerer’s tower in the nearest marshlands hex." },
+        { "chance":1, "table":[], "text":"A travelling farmer that saw a ruined castle in the distance in the nearest mountain hex." },
+        { "chance":1, "table":[], "text":"A travelling farmer that saw three trolls heading for an overgrown tower in the nearest forest hex." },
+        { "chance":1, "table":[], "text":"A travelling farmer that saw a dragon fly from its lair in the nearest borderlands hex." },
+        { "chance":1, "table":[], "text":"A local farmer’s wife, interested in one of the heroes, begging him/her to run off with her." }
+      ]
+    },
+    {
+      "id":130,
+      "name":"F-E.E1.4: ADVENTURER",
+      "options":[
+        { "chance":1, "table":[], "text":"A drunk and violent adventurer, looking for a fight." },
+        { "chance":1, "table":[], "text":"A drunk and merry adventurer, eager to chat with the heroes." },
+        { "chance":1, "table":[], "text":"A drunk and depressed adventurer, lost everything on the last adventure." },
+        { "chance":1, "table":[], "text":"A drunk and exhausted adventurer, just returned from exploring ruins in the nearest mountain hex." },
+        { "chance":1, "table":[], "text":"An angry adventurer after being betrayed by his former comrades." },
+        { "chance":1, "table":[], "text":"A merry adventurer after a successful ruin exploration." },
+        { "chance":1, "table":[], "text":"A depressed adventurer after losing everything on the last adventure." },
+        { "chance":1, "table":[], "text":"An exhausted adventurer after the last ruin exploration in the nearest forest hex." },
+        { "chance":1, "table":[], "text":"An adventurer on edge, after betraying his former comrades and running off with everything they found exploring ruins in the nearest borderlands hex." },
+        { "chance":1, "table":[], "text":"An adventurer on edge, after murdering his former comrades and running off with everything they found exploring ruins in the nearest wildeness hex." }
+      ]
+    },
+    {
+      "id":131,
+      "name":"F-E.E2.5: TRADER",
+      "options":[
+        { "chance":4, "table":[], "text":"A trader, that wants to trade." },
+        { "chance":2, "table":[], "text":"A trader, that was robbed and has nothing to trade." },
+        { "chance":3, "table":[], "text":"A trader, that needs help finding his way." },
+        { "chance":1, "table":[], "text":"A trader, that tries to deceive the heroes." }
+      ]
+    },
+    {
+      "id":132,
+      "name":"F-E.E2: WANDERING MONSTER",
+      "options":[
+        { "chance":6, "table":[133], "text":"" },
+        { "chance":1, "table":[134], "text":"" },
+        { "chance":1, "table":[135], "text":"" },
+        { "chance":1, "table":[136], "text":"" },
+        { "chance":1, "table":[137], "text":"" }
+      ]
+    },
+    {
+      "id":133,
+      "name":"F-E.E2.1: WANDERING MONSTER LEVEL 1",
+      "options":[
+        { "chance":1, "table":[], "text":"A wild horse." },
+        { "chance":1, "table":[], "text":"A wild dog." },
+        { "chance":1, "table":[], "text":"A goat." },
+        { "chance":1, "table":[], "text":"A badger." },
+        { "chance":1, "table":[], "text":"A boar." },
+        { "chance":1, "table":[], "text":"A wolverine." },
+        { "chance":1, "table":[], "text":"[1d5] dogs." },
+        { "chance":1, "table":[], "text":"[1d5] goblins." },
+        { "chance":1, "table":[], "text":"[1d5] goblins and 1 wolf." },
+        { "chance":1, "table":[152], "text":"[1d5] goblins and 1 wolf with treasure." }
+      ]
+    },
+    {
+      "id":134,
+      "name":"F-E.E2.2: WANDERING MONSTER LEVEL 2",
+      "options":[
+        { "chance":1, "table":[], "text":"[1d5] goats." },
+        { "chance":1, "table":[], "text":"[1d10] horses." },
+        { "chance":1, "table":[], "text":"[1d10] deer." },
+        { "chance":1, "table":[], "text":"[1d5] badgers." },
+        { "chance":1, "table":[], "text":"[1d5] goblins and an orc." },
+        { "chance":1, "table":[], "text":"[1d5] wolverines." },
+        { "chance":1, "table":[], "text":"[1d5] giant insects." },
+        { "chance":1, "table":[], "text":"1 boar followed by [1d5] wolves." },
+        { "chance":1, "table":[], "text":"[1d5] goblins and a wolf." },
+        { "chance":1, "table":[152], "text":"[1d5] goblins and a wolf with treasure." }
+      ]
+    },
+	{
+      "id":135,
+      "name":"F-E.E2.3: WANDERING MONSTER LEVEL 3",
+      "options":[
+        { "chance":1, "table":[], "text":"[1d10] wolverines." },
+        { "chance":1, "table":[], "text":"[1d10] badgers." },
+        { "chance":1, "table":[], "text":"[1d5] giant spiders." },
+        { "chance":1, "table":[], "text":"A bear." },
+        { "chance":1, "table":[], "text":"[1d5] skeletons." },
+        { "chance":1, "table":[], "text":"[1d10] goblins." },
+        { "chance":1, "table":[], "text":"[1d10] giant rats." },
+        { "chance":1, "table":[], "text":"[1d10] goblins and 1 orc." },
+        { "chance":1, "table":[], "text":"A wight." },
+        { "chance":1, "table":[153], "text":"A wight with treasure." }
+      ]
+    },
+    {
+      "id":136,
+      "name":"F-E.E3.4: WANDERING MONSTER LEVEL 4",
+      "options":[
+        { "chance":1, "table":[], "text":"A lion." },
+        { "chance":1, "table":[], "text":"[1d10] goblins and 3 orcs." },
+        { "chance":1, "table":[], "text":"[1d10] deer." },
+        { "chance":1, "table":[], "text":"An elk." },
+        { "chance":1, "table":[], "text":"[1d10] goblins and [1d5] orcs." },
+        { "chance":1, "table":[], "text":"A harpy." },
+        { "chance":1, "table":[], "text":"[1d10] skeletons." },
+        { "chance":1, "table":[], "text":"[1d10] skeletons and a wight." },
+        { "chance":1, "table":[], "text":"[1d5] goblins and a harpy." },
+        { "chance":1, "table":[153], "text":"[1d5] goblins and a harpy with treasure." }
+      ]
+    },
+    {
+      "id":137,
+      "name":"F-E.E3.5: WANDERING MONSTER LEVEL 5",
+      "options":[
+        { "chance":1, "table":[], "text":"[1d5] centaurs." },
+        { "chance":1, "table":[], "text":"[1d5] wolves and a giant wolf." },
+        { "chance":1, "table":[], "text":"A griffin." },
+        { "chance":1, "table":[], "text":"[1d5] wights." },
+        { "chance":1, "table":[], "text":"[1d5] griffins." },
+        { "chance":1, "table":[], "text":"A minotaur." },
+        { "chance":1, "table":[], "text":"A minotaur and [1d5] goblins." },
+        { "chance":1, "table":[], "text":"[1d10] goblins and a troll." },
+        { "chance":1, "table":[], "text":"A giant." },
+        { "chance":1, "table":[154], "text":"A giant with treasure." }
+      ]
+    },
+    {
+      "id":150,
+      "name":"Farmlands TREASURES",
+      "options":[
+        { "chance":9, "table":[], "text":"No treasure." },
+        { "chance":1, "table":[151], "text":"" }
+      ]
+    },
+    {
+      "id":151,
+      "name":"F-T: TREASURES",
+      "options":[
+        { "chance":7, "table":[152], "text":"" },
+        { "chance":1, "table":[153], "text":"" },
+        { "chance":1, "table":[154], "text":"" },
+        { "chance":1, "table":[155], "text":"" }
+      ]
+    },
+    {
+      "id":152,
+      "name":"F-T.1: TREASURE LEVEL 1",
+      "options":[
+        { "chance":1, "table":[], "text":"1 copper coin." },
+        { "chance":1, "table":[], "text":"A club." },
+        { "chance":1, "table":[], "text":"2 copper coins." },
+        { "chance":1, "table":[], "text":"A throwing knife." },
+        { "chance":1, "table":[], "text":"7 copper coins." },
+        { "chance":1, "table":[], "text":"A padded armor." },
+        { "chance":1, "table":[], "text":"1 silver coin." },
+        { "chance":1, "table":[], "text":"A dagger." },
+        { "chance":1, "table":[], "text":"A shortspear." },
+        { "chance":1, "table":[152, 152], "text":"" }
+      ]
+    },
+    {
+      "id":153,
+      "name":"F-T.2: TREASURE LEVEL 2",
+      "options":[
+        { "chance":1, "table":[], "text":"A leather pouch with 6 silver coins." },
+        { "chance":1, "table":[], "text":"A sabre." },
+        { "chance":1, "table":[], "text":"A leather pouch with 7 silver coins." },
+        { "chance":1, "table":[], "text":"A warhammer." },
+        { "chance":1, "table":[], "text":"A flail." },
+        { "chance":1, "table":[], "text":"A leather pouch with 10 silver coins." },
+        { "chance":1, "table":[], "text":"A leather armor." },
+        { "chance":1, "table":[], "text":"A morning star." },
+        { "chance":1, "table":[], "text":"A dagger and a shortsword." },
+        { "chance":1, "table":[153,152], "text":"" }
+      ]
+    },
+    {
+      "id":154,
+      "name":"F-T.3: TREASURE LEVEL 3",
+      "options":[
+        { "chance":1, "table":[], "text":"A locked chest with 360 copper coins." },
+        { "chance":1, "table":[], "text":"A longsword." },
+        { "chance":1, "table":[], "text":"A longsword and a small shield." },
+        { "chance":1, "table":[], "text":"A two-handed sword." },
+        { "chance":1, "table":[], "text":"A two-handed sword and a padded armor." },
+        { "chance":1, "table":[], "text":"A two-handed axe." },
+        { "chance":1, "table":[], "text":"A crossbow." },
+        { "chance":1, "table":[], "text":"A two-handed sword and a bow." },
+        { "chance":1, "table":[], "text":"A leather pouch with 30 silver coins." },
+        { "chance":1, "table":[154, 152, 152], "text":"" }
+      ]
+    },
+    {
+      "id":155,
+      "name":"F-T.4: TREASURE LEVEL 4",
+      "options":[
+        { "chance":1, "table":[], "text":"A long sword and a ring mail." },
+        { "chance":1, "table":[], "text":"A scale mail and a large shield." },
+        { "chance":1, "table":[], "text":"A locket chest with 1440 copper coins." },
+        { "chance":1, "table":[], "text":"A chain mail and a two-handed sword." },
+        { "chance":1, "table":[], "text":"A ring mail, battle axe and 3 silver coins." },
+        { "chance":1, "table":[], "text":"A chain mail, broadsword, small shield and 4 silver coins." },
+        { "chance":1, "table":[], "text":"A locket chest with 100 silver coins." },
+        { "chance":1, "table":[], "text":"A scale mail, master-made twohanded sword, short spear, 2 daggers and 10 silver coins." },
+        { "chance":1, "table":[], "text":"A locket chest with a necklace holding a large ruby worth 100 silver coins." },
+        { "chance":1, "table":[155, 153], "text":"" }
+      ]
+    }
+  ]
+}
