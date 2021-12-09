@@ -58,13 +58,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val files = assets.list("")
+        val files = assets.list("data")
         if (files != null) {
             for ((index, file) in files.withIndex()) {
                 if (file.endsWith(".json")) {
                     debug("Found configuration file named '${file.toString()}'")
                     configFiles += file.toString()
-                    val tempConfigData = loadConfiguration(assets.open(file))
+                    val tempConfigData = loadConfiguration(assets.open("data/$file"))
                     //Each file get an offset to allow multiple files. This is done to make it easy to split the files
                     tempConfigData.buttons.forEach { button ->
                         button.table += index*CONFIG_FILE_TABLE_ID_OFFSET

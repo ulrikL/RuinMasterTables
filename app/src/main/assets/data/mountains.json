@@ -130,7 +130,7 @@
         { "chance":1, "table":[], "text":"A recent landsknecht outpost, manned." },
         { "chance":1, "table":[], "text":"A manned dwarven fort." },
         { "chance":1, "table":[], "text":"A manned human merchant trading-station." },
-        { "chance":1, "table":[], "text":"An on-alert landknecht outpost." },
+        { "chance":1, "table":[], "text":"An on-alert landsknecht outpost." },
         { "chance":1, "table":[], "text":"An on-alert dwarven fort." },
         { "chance":1, "table":[], "text":"An on-alert human trading-station.." }
       ]
@@ -140,7 +140,7 @@
       "name":"M-TF.S.3: MINE",
       "options":[
         { "chance":3, "table":[], "text":"An abandoned human silver mine." },
-		{ "chance":3, "table":[], "text":"An abandoned dwarven coppermine." },
+		{ "chance":3, "table":[], "text":"An abandoned dwarven copper mine." },
 		{ "chance":2, "table":[], "text":"A human iron mine." },
 		{ "chance":2, "table":[], "text":"A dwarven iron mine." }
       ]
@@ -277,7 +277,7 @@
         { "chance":1, "table":[], "text":"A dwarven craftsman that needs help returning to his family’s mine." },
         { "chance":1, "table":[], "text":"A dwarven craftsman that needs healing after being ambushed by two orcs." },
         { "chance":1, "table":[], "text":"A dwarven craftsman that knows these mountains and can give the heroes directions." },
-        { "chance":1, "table":[], "text":"A dwarven craftsman that is on his way to the nearest village to sell his craftmanship." },
+        { "chance":1, "table":[], "text":"A dwarven craftsman that is on his way to the nearest village to sell his craftsmanship." },
         { "chance":1, "table":[], "text":"A dwarven craftsman that is returning from a nearby dwarven mine where he was an apprentice to a master craftsman." },
         { "chance":1, "table":[139], "text":"A dwarven craftsman that is being tracked by monsters." }
       ]
@@ -455,7 +455,7 @@
       "options":[
         { "chance":1, "table":[], "text":"A shortsword." },
         { "chance":1, "table":[], "text":"A leather pouch with 6 silver coins." },
-        { "chance":1, "table":[], "text":"A shorsword and 3 silver coins." },
+        { "chance":1, "table":[], "text":"A shortsword and 3 silver coins." },
         { "chance":1, "table":[], "text":"A sabre." },
         { "chance":1, "table":[], "text":"A leather pouch with 7 silver coins." },
         { "chance":1, "table":[], "text":"A sabre and 2 copper coins." },

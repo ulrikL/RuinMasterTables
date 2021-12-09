@@ -433,7 +433,7 @@
     },
     {
       "id":150,
-      "name":"Coastal TREASURES",
+      "name":"Coastal Lands TREASURES",
       "options":[
         { "chance":7, "table":[], "text":"No treasure." },
         { "chance":3, "table":[151], "text":"" }
