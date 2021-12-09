@@ -1,0 +1,377 @@
+{
+  "buttons":[
+    { "text":"Marshlands", "table":100 }
+  ],
+  "tables":[
+    {
+      "id":100,
+      "name":"Marshlands Terrain Features",
+      "options":[
+        { "chance":3, "table":[], "text":"Nothing of interest." },
+        { "chance":5, "table":[101], "text":"" },
+		{ "chance":2, "table":[107], "text":"" }
+      ]
+    },
+    {
+      "id":101,
+      "name":"ML-TF.H: HAZARDS",
+      "options":[
+        { "chance":5, "table":[102], "text":"" },
+        { "chance":1, "table":[103], "text":"" },
+        { "chance":1, "table":[104], "text":"" },
+        { "chance":2, "table":[105], "text":"" },
+        { "chance":1, "table":[106], "text":"" }
+      ]
+    },
+    {
+      "id":102,
+      "name":"ML-TF.H.1: SLOW TRAVEL",
+      "options":[
+        { "chance":1, "table":[], "text":"Muddy cold water slows you down." },
+        { "chance":1, "table":[], "text":"A muddy trail slows you down." },
+        { "chance":1, "table":[], "text":"A downpour slows you down." },
+        { "chance":1, "table":[], "text":"Mosquitoes slows you down." },
+        { "chance":1, "table":[], "text":"Grasping vines slows you down." },
+        { "chance":1, "table":[], "text":"Blazing sun slows you down." },
+        { "chance":1, "table":[], "text":"Horde of snakes, frogs and toads slows you down." },
+        { "chance":1, "table":[], "text":"A soggy ground slows you down." },
+        { "chance":1, "table":[], "text":"Ponds and creeks slows you down." },
+        { "chance":1, "table":[], "text":"Far between firm ground slows you down." }
+      ]
+    },
+    {
+      "id":103,
+      "name":"ML-TF.H.2: WAY BLOCKED",
+      "options":[
+        { "chance":1, "table":[], "text":"A deep lake blocks your way." },
+        { "chance":1, "table":[], "text":"A peat bog blocks your way." },
+        { "chance":1, "table":[], "text":"An undercut water course blocks your way." },
+        { "chance":1, "table":[], "text":"Alligator/poisonous snakes breeding ground blocks your way." },
+        { "chance":1, "table":[], "text":"Giant’s rotting corpse blocks your way." },
+        { "chance":1, "table":[], "text":"A massive hive of aggressive wasps blocks your way." },
+        { "chance":1, "table":[], "text":"Deep slow-moving river, peat bottom blocks your way." },
+        { "chance":1, "table":[], "text":"Burning poison trees blocks your way." },
+        { "chance":1, "table":[], "text":"A poisonous fog blocks your way." },
+        { "chance":1, "table":[], "text":"Poison ivies blocks your way." }
+      ]
+    },
+    {
+      "id":104,
+      "name":"ML-TF.H.3: STOPS",
+      "options":[
+        { "chance":1, "table":[], "text":"Stuck in mud stops you." },
+        { "chance":1, "table":[], "text":"Lost equipment (choose randomly) stops you." },
+        { "chance":1, "table":[], "text":"A heavy fog stops you." },
+        { "chance":1, "table":[], "text":"An unsanitary water stops you." },
+        { "chance":1, "table":[], "text":"A blanket bog stops you." },
+        { "chance":1, "table":[], "text":"A flood stops you." },
+        { "chance":1, "table":[], "text":"An unpredictable weather stops you." },
+        { "chance":1, "table":[], "text":"A rainstorm stops you." },
+        { "chance":1, "table":[], "text":"Blisters on feet stops you." },
+        { "chance":1, "table":[], "text":"Exhaustion stops you" }
+      ]
+    },
+    {
+      "id":105,
+      "name":"ML-TF.H.4: LOST",
+      "options":[
+        { "chance":4, "table":[], "text":"You lose your way due to no landmarks in sight." },
+        { "chance":3, "table":[], "text":"You lose your way due to will-o-wisps." },
+        { "chance":3, "table":[], "text":"You lose your way due to a heavy fog." }
+      ]
+    },
+    {
+      "id":106,
+      "name":"ML-TF.H.5: TRAPS",
+      "options":[
+        { "chance":4, "table":[], "text":"A quicksand. The heroes take 2d10 HP damage if they fail the Survival skill roll and lose their backpacks." },
+        { "chance":2, "table":[], "text":"A hidden rusty bear trap. The heroes take 1d10 HP damage if they fail the Survival skill roll and are stuck in this hex for 2 days." },
+        { "chance":2, "table":[], "text":"A poison ivy field. The heroes take 2d10 HP damage if they fail the Survival skill roll." },
+        { "chance":2, "table":[], "text":"A man-eater plant. The heroes take 1d10 HP damage if they fail the Survival skill roll." }
+      ]
+    },
+    {
+      "id":107,
+      "name":"ML-TF.R: RUINS",
+      "options":[
+        { "chance":2, "table":[108, 109, 110], "text":"Ruins, already explored." },
+        { "chance":3, "table":[108, 109, 110], "text":"Ruins, partially explored." },
+        { "chance":3, "table":[108, 109, 110], "text":"Ruins, not explored." },
+		{ "chance":2, "table":[108, 109, 110, 133], "text":"Ruins, not explored and inhabitated." }
+      ]
+    },
+    {
+      "id":108,
+      "name":"ML-TF.R1: RUINS TYPE",
+      "options":[
+        { "chance":2, "table":[], "text":"A tower" },
+        { "chance":2, "table":[], "text":"A mausoleum" },
+        { "chance":2, "table":[], "text":"An ancient City" },
+        { "chance":2, "table":[], "text":"A castle" },
+        { "chance":2, "table":[], "text":"A castle with a dungeon" }
+      ]
+    },
+    {
+      "id":109,
+      "name":"ML-TF.R1: RUINS CONDITION",
+      "options":[
+        { "chance":2, "table":[], "text":"partially sunken and" },
+        { "chance":2, "table":[], "text":"covered with moss and" },
+        { "chance":2, "table":[], "text":"on an island and" },
+        { "chance":2, "table":[], "text":"sunken and" },
+        { "chance":2, "table":[], "text":"covered with mud and" }
+      ]
+    },
+    {
+      "id":110,
+      "name":"ML-TF.R1: RUINS STATE",
+      "options":[
+        { "chance":2, "table":[], "text":"completely in ruins." },
+        { "chance":2, "table":[], "text":"crumbled and decayed." },
+        { "chance":2, "table":[], "text":"twisted by magic." },
+        { "chance":2, "table":[], "text":"collapsed." },
+        { "chance":2, "table":[], "text":"contaminated by cataclysmic forces." }
+      ]
+    },
+    {
+      "id":125,
+      "name":"Marshlands Encounters",
+      "options":[
+        { "chance":4, "table":[], "text":"Nothing happens." },
+        { "chance":3, "table":[126], "text":"" },
+        { "chance":3, "table":[130], "text":"" }
+      ]
+    },
+    {
+      "id":126,
+      "name":"ML-E.E1: ALMOST ENCOUNTERS",
+      "options":[
+        { "chance":2, "table":[127], "text":"" },
+        { "chance":6, "table":[128], "text":"" },
+        { "chance":2, "table":[129], "text":"" }
+      ]
+    },
+    {
+      "id":127,
+      "name":"ML-E.E1.1: SIGHTS",
+      "options":[
+        { "chance":1, "table":[], "text":"Large predators ripple the water before disappearing, never showing themselves." },
+        { "chance":1, "table":[], "text":"A mother swan chases the heroes away from her younglings." },
+        { "chance":1, "table":[], "text":"A large snake hisses at the heroes, but slithers away before the heroes react." },
+        { "chance":1, "table":[], "text":"An orc spots the heroes in the distance, stares at them for a short while before turning on his heels and run away." },
+        { "chance":1, "table":[], "text":"A large tribe of goblins navigate between dry spots, never noticing the heroes." },
+        { "chance":1, "table":[], "text":"A huge eagle fests on a dead goblin." },
+        { "chance":1, "table":[], "text":"Giant chasing a prey in the distance." },
+        { "chance":1, "table":[], "text":"Dragon swoops over the wetlands." },
+        { "chance":1, "table":[], "text":"A zombie stumbles towards the heroes but sinks into the bog." },
+        { "chance":1, "table":[], "text":"An orc charges at the heroes, before a dragon snatches it up and flies away with it." }
+      ]
+    },
+    {
+      "id":128,
+      "name":"ML-E.E1.2: SOUNDS",
+      "options":[
+        { "chance":1, "table":[], "text":"Strange mutterings echo in the wind." },
+        { "chance":1, "table":[], "text":"Somewhere a large predator roars." },
+        { "chance":1, "table":[], "text":"Beatings of large leathery wings." },
+        { "chance":1, "table":[], "text":"Whispers in the guttural tongue of dark breeds." },
+        { "chance":1, "table":[], "text":"Somewhere something large wades through the mud towards the heroes." },
+        { "chance":1, "table":[], "text":"Somewhere something large wades through the mud away from the heroes." },
+        { "chance":1, "table":[], "text":"A hoarse, deep rumbling laughter." },
+        { "chance":1, "table":[], "text":"A piercing scream, probably a human woman." },
+        { "chance":1, "table":[], "text":"Something heavy falls into the wet ground." },
+        { "chance":1, "table":[], "text":"An orcish war cry." }
+      ]
+    },
+    {
+      "id":129,
+      "name":"ML-E.E1.3: LEAVINGS",
+      "options":[
+        { "chance":1, "table":[], "text":"Large tracks left by a giant." },
+        { "chance":1, "table":[], "text":"A dead goblin with three black arrows in its body." },
+        { "chance":1, "table":[], "text":"A half-eaten deer, its body torn asunder by something very strong." },
+        { "chance":1, "table":[], "text":"A broken shield with orcish design, with huge claw marks." },
+        { "chance":1, "table":[], "text":"A dying goblin with a manticore spike in its eye and large gaping wound in its chest." },
+        { "chance":1, "table":[], "text":"Fresh tracks left by three trolls." },
+        { "chance":1, "table":[], "text":"Large feathers from a griffon." },
+        { "chance":1, "table":[], "text":"Broken trees and heavy trail, left by a dragon." },
+        { "chance":1, "table":[], "text":"A single head of a hydra." },
+        { "chance":1, "table":[], "text":"Scorched grass left by a dragon’s fiery breath." }
+      ]
+    },
+    {
+      "id":130,
+      "name":"ML-E.E2: WANDERING MONSTER",
+      "options":[
+        { "chance":3, "table":[131], "text":"" },
+        { "chance":2, "table":[132], "text":"" },
+        { "chance":2, "table":[133], "text":"" },
+        { "chance":2, "table":[134], "text":"" },
+        { "chance":1, "table":[135], "text":"" }
+      ]
+    },
+    {
+      "id":131,
+      "name":"ML-E.E2.1: WANDERING MONSTER LEVEL 1",
+      "options":[
+        { "chance":1, "table":[], "text":"A Crocodile." },
+        { "chance":1, "table":[], "text":"A giant frog." },
+        { "chance":1, "table":[], "text":"A poisonous snake." },
+        { "chance":1, "table":[], "text":"A giant insect." },
+        { "chance":1, "table":[], "text":"[1d5] poisonous snakes." },
+        { "chance":1, "table":[], "text":"[1d5] goblins." },
+        { "chance":1, "table":[], "text":"[1d5] giant rats." },
+        { "chance":1, "table":[], "text":"[1d5] giant insects." },
+        { "chance":1, "table":[], "text":"[1d5] giant frogs." },
+        { "chance":1, "table":[152], "text":"[1d5] goblins with treasure." }
+      ]
+    },
+    {
+      "id":132,
+      "name":"ML-E.E2.2: WANDERING MONSTER LEVEL 2",
+      "options":[
+        { "chance":1, "table":[], "text":"[1d5] giant spiders." },
+        { "chance":1, "table":[], "text":"[1d10] giant rats." },
+        { "chance":1, "table":[], "text":"[1d10] goblins." },
+        { "chance":1, "table":[], "text":"[1d10] giant insects." },
+        { "chance":1, "table":[], "text":"[1d10] giant rats." },
+        { "chance":1, "table":[], "text":"[1d10] poisonous snakes." },
+        { "chance":1, "table":[], "text":"[1d5] skeletons." },
+        { "chance":1, "table":[], "text":"A bear." },
+        { "chance":1, "table":[], "text":"A wight." },
+        { "chance":1, "table":[152], "text":"A wight with treasure." }
+      ]
+    },
+	{
+      "id":133,
+      "name":"ML-E.E2.3: WANDERING MONSTER LEVEL 3",
+      "options":[
+        { "chance":1, "table":[], "text":"A giant lizard." },
+        { "chance":1, "table":[], "text":"[1d10] skeletons." },
+        { "chance":1, "table":[], "text":"[1d5] crocodiles." },
+        { "chance":1, "table":[], "text":"[1d10] goblins and [1d5] orcs." },
+        { "chance":1, "table":[], "text":"A harpy." },
+        { "chance":1, "table":[], "text":"[1d10] goblins and 3 orcs." },
+        { "chance":1, "table":[], "text":"[1d10] skeletons and a wight." },
+        { "chance":1, "table":[], "text":"[1d5] goblins and a harpy." },
+        { "chance":1, "table":[], "text":"[1d10] goblins and a harpy." },
+        { "chance":1, "table":[153], "text":"[1d10] goblins and a harpy with treasure." }
+      ]
+    },
+    {
+      "id":134,
+      "name":"ML-E.E2.4: WANDERING MONSTER LEVEL 4",
+      "options":[
+        { "chance":1, "table":[], "text":"[1d5] harpies." },
+        { "chance":1, "table":[], "text":"[1d5] wolves and a giant wolf." },
+        { "chance":1, "table":[], "text":"A griffin." },
+        { "chance":1, "table":[], "text":"A troll." },
+        { "chance":1, "table":[], "text":"[1d5] goblins and a troll." },
+        { "chance":1, "table":[], "text":"[1d10] goblins and a troll." },
+        { "chance":1, "table":[], "text":"[1d5] griffins." },
+        { "chance":1, "table":[], "text":"A manticore." },
+        { "chance":1, "table":[], "text":"A minotaur and [1d5] goblins." },
+        { "chance":1, "table":[153], "text":"A minotaur and [1d5] goblins with treasure." }
+      ]
+    },
+    {
+      "id":135,
+      "name":"ML-E.E2.5: WANDERING MONSTER LEVEL 5",
+      "options":[
+        { "chance":1, "table":[], "text":"[1d5] trolls." },
+        { "chance":1, "table":[], "text":"[1d10] harpies." },
+        { "chance":1, "table":[], "text":"[1d10] orcs and [1d10] goblins." },
+        { "chance":1, "table":[], "text":"[1d10] skeletons and [1d5] wights." },
+        { "chance":1, "table":[], "text":"An ogre." },
+        { "chance":1, "table":[], "text":"An ogre and [1d10] goblins." },
+        { "chance":1, "table":[], "text":"A giant." },
+        { "chance":1, "table":[], "text":"A giant and [1d10] goblins." },
+        { "chance":1, "table":[], "text":"A dragon." },
+        { "chance":1, "table":[154], "text":"A dragon with treasure." }
+      ]
+    },
+    {
+      "id":150,
+      "name":"Marshlands TREASURES",
+      "options":[
+        { "chance":8, "table":[], "text":"No treasure." },
+        { "chance":2, "table":[151], "text":"" }
+      ]
+    },
+    {
+      "id":151,
+      "name":"ML-T: TREASURES",
+      "options":[
+        { "chance":4, "table":[152], "text":"" },
+        { "chance":2, "table":[153], "text":"" },
+        { "chance":2, "table":[154], "text":"" },
+        { "chance":2, "table":[155], "text":"" }
+      ]
+    },
+    {
+      "id":152,
+      "name":"ML-T.1: TREASURE LEVEL 1",
+      "options":[
+        { "chance":1, "table":[], "text":"A crossbow." },
+        { "chance":1, "table":[], "text":"A two-handed axe." },
+        { "chance":1, "table":[], "text":"A leather pouch with 29 silver coins." },
+        { "chance":1, "table":[], "text":"A two-handed axe and a leather pouch with 10 silver coins." },
+        { "chance":1, "table":[], "text":"A leather pouch with 33 silver coins." },
+        { "chance":1, "table":[], "text":"A two-handed sword and a padded armor." },
+        { "chance":1, "table":[], "text":"A leather pouch with 34 silver coins." },
+        { "chance":1, "table":[], "text":"A longsword, dagger, small shield and a handaxe." },
+        { "chance":1, "table":[], "text":"A leather pouch with 35 silver coins." },
+        { "chance":1, "table":[152, 152], "text":"" }
+      ]
+    },
+    {
+      "id":153,
+      "name":"ML-T.2: TREASURE LEVEL 2",
+      "options":[
+        { "chance":1, "table":[], "text":"A scale mail, two-handed sword, short spear, 2 daggers and 10 silver coins." },
+        { "chance":1, "table":[], "text":"A locket chest with 120 silver coins." },
+        { "chance":1, "table":[], "text":"A ring mail, large shield, broadsword, dagger and 5 silver coins." },
+        { "chance":1, "table":[], "text":"A chain mail and a two-handed sword." },
+        { "chance":1, "table":[], "text":"A locket chest with 140 silver coins." },
+        { "chance":1, "table":[], "text":"A locket chest with 1440 copper coins." },
+        { "chance":1, "table":[], "text":"A scale mail and a large shield." },
+        { "chance":1, "table":[], "text":"A chain mail, master-made twohanded axe, large shield and 5 silver coins." },
+        { "chance":1, "table":[], "text":"A locket chest with an ivory statue worth 140 silver coins." },
+        { "chance":1, "table":[153,152], "text":"" }
+      ]
+    },
+    {
+      "id":154,
+      "name":"ML-T.3: TREASURE LEVEL 3",
+      "options":[
+        { "chance":1, "table":[], "text":"A master-made plate mail and a large shield." },
+        { "chance":1, "table":[], "text":"A magical padded armor." },
+        { "chance":1, "table":[], "text":"A legendary plate mail, large shield, longsword." },
+        { "chance":1, "table":[], "text":"A magical throwing axe." },
+        { "chance":1, "table":[], "text":"A golden statue showing a regal knight, worth 600 silver coins." },
+        { "chance":1, "table":[], "text":"A magical throwing spear." },
+        { "chance":1, "table":[], "text":"An iron crown with rubies, worth 750 silver coins." },
+        { "chance":1, "table":[], "text":"silver coins." },
+        { "chance":1, "table":[], "text":"A magical small shield." },
+        { "chance":1, "table":[], "text":"A magical short spear." },
+        { "chance":1, "table":[154, 152, 152], "text":"" }
+      ]
+    },
+    {
+      "id":155,
+      "name":"ML-T.4: TREASURE LEVEL 4",
+      "options":[
+        { "chance":1, "table":[], "text":"A magical broadsword." },
+        { "chance":1, "table":[], "text":"A magical longsword." },
+        { "chance":1, "table":[], "text":"A magical staff." },
+        { "chance":1, "table":[], "text":"A magical chain mail." },
+        { "chance":1, "table":[], "text":"A magical scale mail." },
+        { "chance":1, "table":[], "text":"A magical ring." },
+        { "chance":1, "table":[], "text":"A magical necklace." },
+        { "chance":1, "table":[], "text":"A magical battle axe." },
+        { "chance":1, "table":[], "text":"A magical two-handed sword." },
+        { "chance":1, "table":[155, 153], "text":"" }
+      ]
+    }
+  ]
+}

@@ -4,6 +4,7 @@
 
 package com.example.ruinmasterstables
 
+import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -198,6 +199,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             dynamicButton.tag = button.table
             dynamicButton.minimumWidth = 600
             dynamicButton.textSize = 18.0F
+            dynamicButton.typeface = Typeface.createFromAsset(assets, "BarcelonaITCStd-Medium.otf")
             dynamicButton.setOnClickListener(this)
             linearLayout.addView(dynamicButton)
         }
