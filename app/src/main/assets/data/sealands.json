@@ -1,0 +1,206 @@
+{
+  "buttons":[
+    { "text":"Sealands", "table":100 }
+  ],
+  "tables":[
+    {
+      "id":100,
+      "name":"Sealands Terrain Features",
+      "options":[
+        { "chance":6, "table":[], "text":"Nothing of interest." },
+        { "chance":4, "table":[101], "text":"" }
+      ]
+    },
+    {
+      "id":101,
+      "name":"S-TF.H: HAZARDS",
+      "options":[
+        { "chance":6, "table":[102], "text":"" },
+        { "chance":3, "table":[103], "text":"" },
+        { "chance":1, "table":[104], "text":"" }
+      ]
+    },
+    {
+      "id":102,
+      "name":"S-TF.H.1: SLOW TRAVEL",
+      "options":[
+        { "chance":2, "table":[], "text":"A pod of whales slows you down." },
+        { "chance":2, "table":[], "text":"Almost no wind slows you down." },
+        { "chance":2, "table":[], "text":"A fog slows you down." },
+        { "chance":2, "table":[], "text":"Icebergs slows you down." },
+        { "chance":2, "table":[], "text":"Tidal waves slows you down." }
+      ]
+    },
+    {
+      "id":103,
+      "name":"S-TF.H.2: WAY BLOCKED",
+      "options":[
+        { "chance":2, "table":[], "text":"An underwater eruption blocks your way." },
+        { "chance":2, "table":[], "text":"A maelstrom blocks your way." },
+        { "chance":2, "table":[], "text":"A thunderstorm blocks your way." },
+        { "chance":2, "table":[], "text":"No wind stops you." },
+        { "chance":2, "table":[], "text":"Reefs blocks your way." }
+      ]
+    },
+    {
+      "id":104,
+      "name":"S-TF.H.3: LOST",
+      "options":[
+        { "chance":4, "table":[], "text":"You lose your way due to a heavy fog." },
+        { "chance":2, "table":[], "text":"You lose your way due to being chased by pirates." },
+        { "chance":2, "table":[], "text":"You lose your way due to a storm throwing you off course." },
+        { "chance":1, "table":[], "text":"You lose your way due to bad maps." },
+        { "chance":1, "table":[], "text":"You lose your way due to bad navigation." }
+      ]
+    },
+    {
+      "id":125,
+      "name":"Sealands Encounters",
+      "options":[
+        { "chance":5, "table":[], "text":"Nothing happens." },
+        { "chance":4, "table":[126], "text":"" },
+        { "chance":1, "table":[130], "text":"" }
+      ]
+    },
+    {
+      "id":126,
+      "name":"S-E.E1: ALMOST ENCOUNTERS",
+      "options":[
+        { "chance":3, "table":[127], "text":"" },
+        { "chance":4, "table":[128], "text":"" },
+        { "chance":3, "table":[129], "text":"" }
+      ]
+    },
+    {
+      "id":127,
+      "name":"S-E.E1.1: SIGHTS",
+      "options":[
+        { "chance":1, "table":[], "text":"A pair of griffons soaring above." },
+        { "chance":1, "table":[], "text":"A large underwater monster breaks the water." },
+        { "chance":1, "table":[], "text":"Ghost ship follows the heroes’ ship during the night." },
+        { "chance":1, "table":[], "text":"Sharks chase the heroes’ ship." },
+        { "chance":1, "table":[], "text":"A dragon circles above the ship but leaves." },
+        { "chance":1, "table":[], "text":"A sperm whale cow with calf breaks the water, chased by orcas." },
+        { "chance":1, "table":[], "text":"A dead griffon falls from the sky." },
+        { "chance":3, "table":[], "text":"A pirate ship on the horizon." }
+      ]
+    },
+    {
+      "id":128,
+      "name":"S-E.E1.2: SOUNDS",
+      "options":[
+        { "chance":1, "table":[], "text":"Your hear an explosion." },
+        { "chance":1, "table":[], "text":"Splashing sounds." },
+        { "chance":1, "table":[], "text":"A thunderous dragon roar." },
+        { "chance":1, "table":[], "text":"A mermaid’s song." },
+        { "chance":1, "table":[], "text":"A pirates’ song." },
+        { "chance":1, "table":[], "text":"Strange arcane murmurings on the wind." },
+        { "chance":1, "table":[], "text":"A harpy’s wailing." },
+        { "chance":1, "table":[], "text":"A griffon’s screech." },
+        { "chance":1, "table":[], "text":"A manticore’s roar." },
+        { "chance":1, "table":[], "text":"Something heavy hits the water." }
+      ]
+    },
+    {
+      "id":129,
+      "name":"S-E.E1.3: LEAVINGS",
+      "options":[
+        { "chance":1, "table":[], "text":"A sinking merchant’s ship." },
+        { "chance":1, "table":[], "text":"A dead whale." },
+        { "chance":1, "table":[], "text":"Large blood stain in the water." },
+        { "chance":1, "table":[], "text":"Seabirds feasting on a dead griffon." },
+        { "chance":1, "table":[], "text":"Human bodies floating in the water." },
+        { "chance":1, "table":[], "text":"A single flag bearing the crest of the nearest city." },
+        { "chance":4, "table":[151], "text":"Debris in the water." }
+      ]
+    },
+    {
+      "id":130,
+      "name":"S-E.E2: WANDERING MONSTER",
+      "options":[
+        { "chance":5, "table":[131], "text":"" },
+        { "chance":5, "table":[132], "text":"" }
+      ]
+    },
+    {
+      "id":131,
+      "name":"S-E.E2.1: WANDERING MONSTER LEVEL 1",
+      "options":[
+        { "chance":1, "table":[], "text":"An eagle." },
+        { "chance":1, "table":[], "text":"A giant crab." },
+        { "chance":1, "table":[], "text":"A killer whale." },
+        { "chance":1, "table":[], "text":"A giant shark." },
+        { "chance":1, "table":[], "text":"[1d5] eagles." },
+        { "chance":1, "table":[], "text":"[1d5] giant crabs." },
+        { "chance":1, "table":[], "text":"[1d10] giant crabs." },
+        { "chance":1, "table":[], "text":"[1d10] eagles." },
+        { "chance":1, "table":[], "text":"[1d5] killer whales." },
+        { "chance":1, "table":[131, 131], "text":"" }
+      ]
+    },
+    {
+      "id":132,
+      "name":"S-E.E2.2: WANDERING MONSTER LEVEL 2",
+      "options":[
+        { "chance":1, "table":[], "text":"[1d10] killer whales." },
+        { "chance":1, "table":[], "text":"[1d5] giant sharks." },
+        { "chance":1, "table":[], "text":"Wight." },
+        { "chance":1, "table":[], "text":"Giant octopus." },
+        { "chance":1, "table":[], "text":"[1d5] wights." },
+        { "chance":1, "table":[], "text":"[1d5] wights and [1d5] skeletons." },
+        { "chance":1, "table":[], "text":"[1d5] giant octopuses." },
+        { "chance":1, "table":[], "text":"1 griffin." },
+        { "chance":1, "table":[], "text":"[1d5] griffins." },
+        { "chance":1, "table":[152], "text":"1 dragon with treasure." }
+      ]
+    },
+    {
+      "id":150,
+      "name":"Sealands TREASURES",
+      "options":[
+        { "chance":9, "table":[], "text":"No treasure." },
+        { "chance":1, "table":[151], "text":"" }
+      ]
+    },
+    {
+      "id":151,
+      "name":"S-T: TREASURES",
+      "options":[
+        { "chance":5, "table":[152], "text":"" },
+        { "chance":5, "table":[153], "text":"" }
+      ]
+    },
+    {
+      "id":152,
+      "name":"S-T.1: TREASURE LEVEL 1",
+      "options":[
+        { "chance":1, "table":[], "text":"A leather pouch with 6 silver coins." },
+        { "chance":1, "table":[], "text":"A leather pouch with 7 silver coins." },
+        { "chance":1, "table":[], "text":"A leather pouch with 8 silver coins." },
+        { "chance":1, "table":[], "text":"A crossbow." },
+        { "chance":1, "table":[], "text":"A locked chest with 360 copper coins." },
+        { "chance":1, "table":[], "text":"A leather pouch with 28 silver coins." },
+        { "chance":1, "table":[], "text":"A leather pouch with 29 silver coins." },
+        { "chance":1, "table":[], "text":"A leather pouch with 31 silver coins." },
+        { "chance":1, "table":[], "text":"A leather pouch with 34 silver coins." },
+        { "chance":1, "table":[152, 152], "text":"" }
+      ]
+    },
+    {
+      "id":153,
+      "name":"S-T.2: TREASURE LEVEL 2",
+      "options":[
+        { "chance":1, "table":[], "text":"A locket chest with 100 silver coins." },
+        { "chance":1, "table":[], "text":"A locket chest with 130 silver coins." },
+        { "chance":1, "table":[], "text":"A locket chest with a silver dagger wrapped in velvet worth 140 sc." },
+        { "chance":1, "table":[], "text":"A locket chest with a necklace holding a large ruby worth 100 silver coins." },
+        { "chance":1, "table":[], "text":"A locket chest with 1440 copper coins." },
+        { "chance":1, "table":[], "text":"A magical club." },
+        { "chance":1, "table":[], "text":"A magical small shield." },
+        { "chance":1, "table":[], "text":"A magical long spear." },
+        { "chance":1, "table":[], "text":"A magical dagger and 300 silver pieces." },
+        { "chance":1, "table":[153,152], "text":"" }
+      ]
+    }
+  ]
+}
