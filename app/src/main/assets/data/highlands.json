@@ -1,0 +1,368 @@
+{
+  "buttons":[
+    { "text":"Highlands", "table":100 }
+  ],
+  "tables":[
+    {
+      "id":100,
+      "name":"Highlands Terrain Features",
+      "options":[
+        { "chance":4, "table":[], "text":"Nothing of interest." },
+        { "chance":4, "table":[101], "text":"" },
+		{ "chance":2, "table":[106], "text":"" }
+      ]
+    },
+    {
+      "id":101,
+      "name":"W-TF.H: HAZARDS",
+      "options":[
+        { "chance":4, "table":[102], "text":"" },
+        { "chance":2, "table":[103], "text":"" },
+        { "chance":2, "table":[104], "text":"" },
+        { "chance":2, "table":[105], "text":"" }
+      ]
+    },
+    {
+      "id":102,
+      "name":"W-TF.H.1: SLOW TRAVEL",
+      "options":[
+        { "chance":1, "table":[], "text":"No path or trail to follow slows you down." },
+        { "chance":1, "table":[], "text":"Rocky badlands slows you down." },
+        { "chance":1, "table":[], "text":"Rock outcroppings slows you down." },
+        { "chance":1, "table":[], "text":"A thick undergrowth slows you down." },
+        { "chance":1, "table":[], "text":"A slippery ground slows you down." },
+        { "chance":1, "table":[], "text":"Dust/ash making it hard to see slows you down." },
+        { "chance":1, "table":[], "text":"Many creeks across the path slows you down." },
+        { "chance":1, "table":[], "text":"Thorny bushes slows you down." },
+        { "chance":1, "table":[], "text":"A heavy rain slows you down." },
+        { "chance":1, "table":[], "text":"Biting insects slows you down." }
+      ]
+    },
+    {
+      "id":103,
+      "name":"W-TF.H.2: WAY BLOCKED",
+      "options":[
+        { "chance":1, "table":[], "text":"Sheer cliffs blocks your way." },
+        { "chance":1, "table":[], "text":"Fallen trees blocks your way." },
+        { "chance":1, "table":[], "text":"Large boulders blocks your way." },
+        { "chance":1, "table":[], "text":"A fossilized skeleton of a dragon blocks your way." },
+        { "chance":1, "table":[], "text":"A deep impassable river blocks your way." },
+        { "chance":1, "table":[], "text":"A thunderstorm blocks your way." },
+        { "chance":1, "table":[], "text":"A ruined bridge blocks your way." },
+        { "chance":1, "table":[], "text":"Dark woods blocks your way." },
+        { "chance":1, "table":[], "text":"Boiling mud pits blocks your way." },
+        { "chance":1, "table":[], "text":"Geothermal hot spring area blocks your way." }
+      ]
+    },
+    {
+      "id":104,
+      "name":"W-TF.H.3: STOPS",
+      "options":[
+        { "chance":1, "table":[], "text":"A heavy fog stops you." },
+        { "chance":1, "table":[], "text":"A torrential rainstorm stops you." },
+        { "chance":1, "table":[], "text":"Getting stuck in mud stops you." },
+        { "chance":1, "table":[], "text":"Large rune encrusted boulders stops you." },
+        { "chance":1, "table":[], "text":"An earthquake stops you." },
+        { "chance":1, "table":[], "text":"Deep crevasses stops you." },
+        { "chance":1, "table":[], "text":"Poisoned berries stops you." },
+        { "chance":1, "table":[], "text":"An unsanitary water stops you." },
+        { "chance":1, "table":[], "text":"Getting entangled in undergrowth stops you." },
+        { "chance":1, "table":[], "text":"Blisters on your feet stops you" }
+      ]
+    },
+    {
+      "id":105,
+      "name":"W-TF.H.4: LOST",
+      "options":[
+        { "chance":4, "table":[], "text":"You lose your way due to fog." },
+        { "chance":2, "table":[], "text":"You lose your way due to no landmarks in sight." },
+        { "chance":2, "table":[], "text":"You lose your way due to twisting trails." },
+        { "chance":1, "table":[], "text":"You lose your way due to a rainstorm." },
+        { "chance":1, "table":[], "text":"You lose your way due to losing the trail." }
+      ]
+    },
+
+    {
+      "id":106,
+      "name":"W-TF.R: RUINS",
+      "options":[
+        { "chance":5, "table":[107, 108, 109], "text":"Ruins, partially explored." },
+        { "chance":3, "table":[107, 108, 109, 132], "text":"Ruins, not explored and inhabited." },
+        { "chance":1, "table":[107, 108, 109, 133], "text":"Ruins, not explored and inhabited." },
+		{ "chance":1, "table":[107, 108, 109, 134], "text":"Ruins, not explored and inhabited." }
+      ]
+    },
+    {
+      "id":107,
+      "name":"W-TF.R1: RUINS TYPE",
+      "options":[
+        { "chance":2, "table":[], "text":"A tower with dungeon" },
+        { "chance":2, "table":[], "text":"A dwarven keep" },
+        { "chance":2, "table":[], "text":"A human castle" },
+        { "chance":2, "table":[], "text":"A village" },
+        { "chance":2, "table":[], "text":"A city" }
+      ]
+    },
+    {
+      "id":108,
+      "name":"W-TF.R1: RUINS CONDITION",
+      "options":[
+        { "chance":2, "table":[], "text":"partially covered with growth and" },
+        { "chance":2, "table":[], "text":"completely covered with growth and" },
+        { "chance":2, "table":[], "text":"partially underground and" },
+        { "chance":2, "table":[], "text":"partially covered with water and" },
+        { "chance":2, "table":[], "text":"completely underground and" }
+      ]
+    },
+    {
+      "id":109,
+      "name":"W-TF.R1: RUINS STATE",
+      "options":[
+        { "chance":2, "table":[], "text":"completely in ruins." },
+        { "chance":2, "table":[], "text":"crumbled and decayed." },
+        { "chance":2, "table":[], "text":"twisted by magic." },
+        { "chance":2, "table":[], "text":"collapsed." },
+        { "chance":2, "table":[], "text":"contaminated by cataclysmic forces." }
+      ]
+    },
+    {
+      "id":125,
+      "name":"Highlands Encounters",
+      "options":[
+        { "chance":2, "table":[], "text":"Nothing happens." },
+        { "chance":4, "table":[126], "text":"" },
+        { "chance":4, "table":[130], "text":"" }
+      ]
+    },
+    {
+      "id":126,
+      "name":"W-E.E1: ALMOST ENCOUNTERS",
+      "options":[
+        { "chance":3, "table":[127], "text":"" },
+        { "chance":4, "table":[128], "text":"" },
+        { "chance":3, "table":[129], "text":"" }
+      ]
+    },
+    {
+      "id":127,
+      "name":"W-E.E1.1: SIGHTS",
+      "options":[
+        { "chance":1, "table":[], "text":"A manticore flies high up in the sky." },
+        { "chance":1, "table":[], "text":"Strange arcane lights flutter in the distance." },
+        { "chance":1, "table":[], "text":"Three goblins wolf riders pass by the heroes, shaking their spears angrily at them." },
+        { "chance":1, "table":[], "text":"A pack of wolves pick up the heroes’ scent and follow them for a while, before losing interest." },
+        { "chance":1, "table":[], "text":"Grimwings fly low across the horizon and circle for a short while over the heroes before moving on." },
+        { "chance":1, "table":[], "text":"Two orc hunters spot the heroes from a distance and run off." },
+        { "chance":1, "table":[], "text":"A mother bear with two cups raises her self up on two legs and roars at the heroes alarmingly, before moving on." },
+        { "chance":1, "table":[], "text":"A group of warg-riding orks chase an unlucky adventurer, chase him down and run him through with spears. When they notice the heroes, they turn around and gallop away laughing." },
+        { "chance":1, "table":[], "text":"A dragon flies lazily across the sky." },
+        { "chance":1, "table":[], "text":"A dragon picks up a goblin wolf rider and tears the wolf apart, the goblin falls screaming to the ground next to the heroes. The dragon flies on." }
+      ]
+    },
+    {
+      "id":128,
+      "name":"W-E.E1.2: SOUNDS",
+      "options":[
+        { "chance":1, "table":[], "text":"The roar of a large predator echoes from the distance." },
+        { "chance":1, "table":[], "text":"Alien and strange cooing sounds come from nearby glade, harpies are about." },
+        { "chance":1, "table":[], "text":"Heavy beatings of wings coming towards the heroes." },
+        { "chance":1, "table":[], "text":"Heavy beatings of leathery wings moving away from the heroes." },
+        { "chance":1, "table":[], "text":"Strange words uttered somewhere near in the guttural tongue of the dark breeds." },
+        { "chance":1, "table":[], "text":"Heavy footsteps moving closer to the heroes." },
+        { "chance":1, "table":[], "text":"Heavy footsteps moving away from the heroes." },
+        { "chance":1, "table":[], "text":"The roar of a griffon." },
+        { "chance":1, "table":[], "text":"Fiery explosions somewhere near." },
+        { "chance":1, "table":[], "text":"The dying screech of a troll." }
+      ]
+    },
+    {
+      "id":129,
+      "name":"W-E.E1.3: LEAVINGS",
+      "options":[
+        { "chance":1, "table":[], "text":"Three burnt goblins." },
+        { "chance":1, "table":[], "text":"Trees with large claw marks." },
+        { "chance":1, "table":[], "text":"Fresh tracks by a hydra." },
+        { "chance":1, "table":[], "text":"A troll arm lying in the dirt." },
+        { "chance":1, "table":[], "text":"A heavy rotting scent of the undead." },
+        { "chance":1, "table":[], "text":"The broken nest of a harpy." },
+        { "chance":1, "table":[], "text":"A dead grimwing, killed by something larger." },
+        { "chance":1, "table":[], "text":"Old giant tracks." },
+        { "chance":1, "table":[], "text":"A sacrificial altar devoted to the dark gods with a fresh blood on it." },
+        { "chance":1, "table":[], "text":"Thousands of dead birds on the ground, drained of blood." }
+      ]
+    },
+    {
+      "id":130,
+      "name":"W-E.E2: WANDERING MONSTER",
+      "options":[
+        { "chance":5, "table":[131], "text":"" },
+        { "chance":2, "table":[132], "text":"" },
+        { "chance":1, "table":[133], "text":"" },
+        { "chance":1, "table":[134], "text":"" },
+        { "chance":1, "table":[135], "text":"" }
+      ]
+    },
+    {
+      "id":131,
+      "name":"W-E.E2.1: WANDERING MONSTER LEVEL 1",
+      "options":[
+        { "chance":1, "table":[], "text":"[1d5] giant spiders." },
+        { "chance":1, "table":[], "text":"[1d10] giant rats." },
+        { "chance":1, "table":[], "text":"[1d10] giant insects." },
+        { "chance":1, "table":[], "text":"[1d10] goblins." },
+        { "chance":1, "table":[], "text":"A bear." },
+        { "chance":1, "table":[], "text":"[1d5] skeletons." },
+        { "chance":1, "table":[], "text":"A wight." },
+        { "chance":1, "table":[], "text":"A grimwing." },
+        { "chance":1, "table":[], "text":"[1d10] goblins and 1 orc." },
+        { "chance":1, "table":[152], "text":"[1d10] goblins and 1 orc with treasure." }
+      ]
+    },
+    {
+      "id":132,
+      "name":"W-E.E2.2: WANDERING MONSTER LEVEL 2",
+      "options":[
+        { "chance":1, "table":[], "text":"[1d10] goblins and 3 orcs." },
+        { "chance":1, "table":[], "text":"[1d10] skeletons and a wight." },
+        { "chance":1, "table":[], "text":"[1d5] orcs." },
+        { "chance":1, "table":[], "text":"[1d10] goblins and [1d5] orcs." },
+        { "chance":1, "table":[], "text":"[1d10] orcs." },
+        { "chance":1, "table":[], "text":"[1d10] skeletons." },
+        { "chance":1, "table":[], "text":"[1d10] skeletons and a wight." },
+        { "chance":1, "table":[], "text":"[1d5] goblins and a harpy." },
+        { "chance":1, "table":[], "text":"[1d10] goblins and a harpy." },
+        { "chance":1, "table":[152], "text":"[1d10] goblins and a harpy with treasure." }
+      ]
+    },
+	{
+      "id":133,
+      "name":"W-E.E2.3: WANDERING MONSTER LEVEL 3",
+      "options":[
+        { "chance":1, "table":[], "text":"[1d5] harpies." },
+        { "chance":1, "table":[], "text":"[1d5] centaurs." },
+        { "chance":1, "table":[], "text":"[1d5] wolves and a giant wolf." },
+        { "chance":1, "table":[], "text":"A minotaur." },
+        { "chance":1, "table":[], "text":"[1d10] skeletons and a specter." },
+        { "chance":1, "table":[], "text":"[1d5] wights." },
+        { "chance":1, "table":[], "text":"A troll." },
+		{ "chance":1, "table":[], "text":"A griffin." },
+        { "chance":1, "table":[], "text":"[1d5] goblins and a troll." },
+        { "chance":1, "table":[153], "text":"[1d5] goblins and a troll with treasure." }
+      ]
+    },
+    {
+      "id":134,
+      "name":"W-E.E2.4: WANDERING MONSTER LEVEL 4",
+      "options":[
+        { "chance":1, "table":[], "text":"A manticore." },
+        { "chance":1, "table":[], "text":"A giant." },
+        { "chance":1, "table":[], "text":"A minotaur." },
+        { "chance":1, "table":[], "text":"A minotaur and [1d5] goblins." },
+        { "chance":1, "table":[], "text":"[1d5] grimwings." },
+        { "chance":1, "table":[], "text":"[1d10] goblins and a troll." },
+        { "chance":1, "table":[], "text":"[1d5] wights." },
+        { "chance":1, "table":[], "text":"[1d10] skeletons and a specter." },
+        { "chance":1, "table":[], "text":"[1d5] griffins." },
+        { "chance":1, "table":[153], "text":"A giant with treasure." }
+      ]
+    },
+    {
+      "id":135,
+      "name":"W-E.E2.5: WANDERING MONSTER LEVEL 5",
+      "options":[
+        { "chance":1, "table":[], "text":"[1d5] trolls." },
+        { "chance":1, "table":[], "text":"[1d10] harpies." },
+        { "chance":1, "table":[], "text":"[1d10] orcs and [1d10] goblins." },
+        { "chance":1, "table":[], "text":"[1d10] skeletons and [1d5] wights." },
+        { "chance":1, "table":[], "text":"An ogre." },
+        { "chance":1, "table":[], "text":"[1d10] centaurs." },
+        { "chance":1, "table":[], "text":"An ogre and [1d10] goblins." },
+        { "chance":1, "table":[], "text":"A giant and [1d10] goblins." },
+        { "chance":1, "table":[], "text":"A dragon." },
+        { "chance":1, "table":[154], "text":"A dragon and [1d10] goblins with treasure." }
+      ]
+    },
+    {
+      "id":150,
+      "name":"Highlands TREASURES",
+      "options":[
+        { "chance":6, "table":[], "text":"No treasure." },
+        { "chance":4, "table":[151], "text":"" }
+      ]
+    },
+    {
+      "id":151,
+      "name":"W-T: TREASURES",
+      "options":[
+        { "chance":4, "table":[152], "text":"" },
+        { "chance":2, "table":[153], "text":"" },
+        { "chance":2, "table":[154], "text":"" },
+        { "chance":2, "table":[155], "text":"" }
+      ]
+    },
+    {
+      "id":152,
+      "name":"W-T.1: TREASURE LEVEL 1",
+      "options":[
+        { "chance":1, "table":[], "text":"A shortsword." },
+        { "chance":1, "table":[], "text":"A shortsword and 3 silver coins." },
+        { "chance":1, "table":[], "text":"A sabre." },
+        { "chance":1, "table":[], "text":"A sabre and 2 copper coins." },
+        { "chance":1, "table":[], "text":"A warhammer." },
+        { "chance":1, "table":[], "text":"A flail." },
+        { "chance":1, "table":[], "text":"A pole axe." },
+        { "chance":1, "table":[], "text":"A long spear and 4 silver coins." },
+        { "chance":1, "table":[], "text":"A bow." },
+        { "chance":1, "table":[152, 152], "text":"" }
+      ]
+    },
+    {
+      "id":153,
+      "name":"W-T.2: TREASURE LEVEL 2",
+      "options":[
+        { "chance":1, "table":[], "text":"A longsword." },
+        { "chance":1, "table":[], "text":"A longsword and a small shield." },
+        { "chance":1, "table":[], "text":"A two-handed sword." },
+        { "chance":1, "table":[], "text":"A two-handed sword and a padded armor." },
+        { "chance":1, "table":[], "text":"A two-handed axe." },
+        { "chance":1, "table":[], "text":"A two-handed axe and a large shield." },
+        { "chance":1, "table":[], "text":"A master-made crossbow." },
+        { "chance":1, "table":[], "text":"A longsword, dagger, small shield and a handaxe." },
+        { "chance":1, "table":[], "text":"A two-handed sword and a bow." },
+        { "chance":1, "table":[153,152], "text":"" }
+      ]
+    },
+    {
+      "id":154,
+      "name":"W-T.3: TREASURE LEVEL 3",
+      "options":[
+        { "chance":1, "table":[], "text":"A master-made longsword and a ring mail." },
+        { "chance":1, "table":[], "text":"A scale mail and a large shield." },
+        { "chance":1, "table":[], "text":"A chain mail and a two-handed sword." },
+        { "chance":1, "table":[], "text":"A ring mail, battle axe and 3 silver coins." },
+        { "chance":1, "table":[], "text":"A chain mail, master-made broadsword, small shield and 4 silver coins." },
+        { "chance":1, "table":[], "text":"A scale mail, bastard sword, 2 daggers and 4 silver coins." },
+        { "chance":1, "table":[], "text":"A ring mail, master-made large shield, broadsword, dagger and 5 silver coins." },
+        { "chance":1, "table":[], "text":"A chain mail, two-handed axe, large shield and 5 silver coins." },
+        { "chance":1, "table":[], "text":"A scale mail, master-made twohanded sword, short spear, 2 daggers and 10 silver coins." },
+        { "chance":1, "table":[154, 152, 152], "text":"" }
+      ]
+    },
+    {
+      "id":155,
+      "name":"W-T.4: TREASURE LEVEL 4",
+      "options":[
+        { "chance":1, "table":[], "text":"A banded mail and a master-made two-handed sword." },
+        { "chance":1, "table":[], "text":"A master-made plate mail and a large shield." },
+        { "chance":1, "table":[], "text":"A banded mail, chain mail, twohanded sword, 2 daggers and a leather pouch with 200 silver coins." },
+        { "chance":1, "table":[], "text":"A plate mail, large shield, longsword, 3 handaxes and a leather pouch with 240 silver coins." },
+        { "chance":1, "table":[], "text":"A magical padded armor." },
+        { "chance":1, "table":[], "text":"A magical broadsword." },
+        { "chance":1, "table":[], "text":"A magical battle axe." },
+        { "chance":1, "table":[], "text":"A magical two-handed sword." },
+        { "chance":1, "table":[], "text":"A magical flail." },
+        { "chance":1, "table":[155, 153], "text":"" }
+      ]
+    }
+  ]
+}
