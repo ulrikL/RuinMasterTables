@@ -1,0 +1,517 @@
+{
+  "buttons":[
+    { "text":"Mountains", "table":100 }
+  ],
+  "tables":[
+    {
+      "id":100,
+      "name":"Mountains Terrain Features",
+      "options":[
+        { "chance":6, "table":[], "text":"Nothing of interest." },
+        { "chance":2, "table":[101], "text":"" },
+		{ "chance":1, "table":[107], "text":"" },
+        { "chance":1, "table":[111], "text":"" }
+      ]
+    },
+    {
+      "id":101,
+      "name":"M-TF.H: HAZARDS",
+      "options":[
+        { "chance":3, "table":[102], "text":"" },
+        { "chance":2, "table":[103], "text":"" },
+        { "chance":2, "table":[104], "text":"" },
+        { "chance":2, "table":[105], "text":"" },
+        { "chance":1, "table":[106], "text":"" }
+      ]
+    },
+    {
+      "id":102,
+      "name":"M-TF.H.1: SLOW TRAVEL",
+      "options":[
+        { "chance":1, "table":[], "text":"Small rocks on the trail slows you down." },
+        { "chance":1, "table":[], "text":"Snow and sleet slows you down." },
+        { "chance":1, "table":[], "text":"Wet and slippery stones slows you down." },
+        { "chance":1, "table":[], "text":"Steep slopes slows you down." },
+        { "chance":1, "table":[], "text":"Razor-like rocks slows you down." },
+        { "chance":1, "table":[], "text":"Deep narrow valleys slows you down." },
+        { "chance":1, "table":[], "text":"Glaring sun slows you down." },
+        { "chance":1, "table":[], "text":"Deep gravel slows you down." },
+        { "chance":1, "table":[], "text":"Murder of crows slows you down." },
+        { "chance":1, "table":[], "text":"Muddy ground slows you down." }
+      ]
+    },
+    {
+      "id":103,
+      "name":"M-TF.H.2: WAY BLOCKED",
+      "options":[
+        { "chance":1, "table":[], "text":"A toppled dwarven statue blocks your way." },
+        { "chance":1, "table":[], "text":"Large boulders blocks your way." },
+        { "chance":1, "table":[], "text":"White-water creeks in deep gorges blocks your way." },
+        { "chance":1, "table":[], "text":"A trail ruined by spring water blocks your way." },
+        { "chance":1, "table":[], "text":"A fallen bridge blocks your way." },
+        { "chance":1, "table":[], "text":"A deep ravine blocks your way." },
+        { "chance":1, "table":[], "text":"Sheer cliffs blocks your way." },
+        { "chance":1, "table":[], "text":"A tightrope bridge blocks your way." },
+        { "chance":1, "table":[], "text":"Boiling mud pits blocks your way." },
+        { "chance":1, "table":[], "text":"An avalanche blocks your way." }
+      ]
+    },
+    {
+      "id":104,
+      "name":"M-TF.H.3: STOPS",
+      "options":[
+        { "chance":1, "table":[], "text":"A snowstorm stops you." },
+        { "chance":1, "table":[], "text":"A landslide stops you." },
+        { "chance":1, "table":[], "text":"A great canyon stops you." },
+        { "chance":1, "table":[], "text":"A hot lava field stops you." },
+        { "chance":1, "table":[], "text":"A flooded river stops you." },
+        { "chance":1, "table":[], "text":"Stones formed by ancient magic stops you." },
+        { "chance":1, "table":[], "text":"An Earthquake stops you." },
+        { "chance":1, "table":[], "text":"A sudden downpour stops you." },
+        { "chance":1, "table":[], "text":"Geothermal geysers stops you." },
+        { "chance":1, "table":[], "text":"Hot lava pits stops you" }
+      ]
+    },
+    {
+      "id":105,
+      "name":"M-TF.H.4: LOST",
+      "options":[
+        { "chance":4, "table":[], "text":"You lose your way due to a thick ash cloud." },
+        { "chance":2, "table":[], "text":"You lose your way due to a heavy fog." },
+        { "chance":2, "table":[], "text":"You lose your way due to losing the trail." },
+        { "chance":1, "table":[], "text":"You lose your way due to winding rocky trails." },
+        { "chance":1, "table":[], "text":"You lose your way due to no landmarks in sigh." }
+      ]
+    },
+    {
+      "id":106,
+      "name":"M-TF.H.5: TRAPS",
+      "options":[
+        { "chance":2, "table":[], "text":"The heroes trigger a dwarven spear trap. The heroes take 1d10 HP damage if they fail the Survival skill roll." },
+        { "chance":2, "table":[], "text":"A hidden hot spring. The heroes take 1d5 HP damage if they fail the Survival skill roll." },
+        { "chance":2, "table":[], "text":"A landslide hits the heroes. The heroes take 2d10 HP damage if they fail the Survival skill roll." },
+        { "chance":2, "table":[139], "text":"A falling boulder. The heroes take 1d10 HP damage if they fail the Survival skill roll and the noise attracts a nearby monster." },
+        { "chance":2, "table":[], "text":"A bridge falls from under the heroes. The heroes take 3d10 HP damage if they fail the Survival skill roll." }
+      ]
+    },
+	{
+      "id":107,
+      "name":"M-TF.S: SETTLEMENTS",
+      "options":[
+        { "chance":2, "table":[108], "text":"" },
+        { "chance":6, "table":[109], "text":"" },
+        { "chance":2, "table":[110], "text":"" }
+      ]
+    },
+    {
+      "id":108,
+      "name":"M-TF.S.1: CAVE",
+      "options":[
+        { "chance":1, "table":[], "text":"A small cave where a friendly dwarven hermit lives." },
+        { "chance":1, "table":[], "text":"A large cave where a friendly nomad human tribe lives." },
+        { "chance":1, "table":[], "text":"A large cave where a friendly dwarven tribe of craftsmen lives." },
+        { "chance":1, "table":[], "text":"A small cave where a friendly human sorcerer lives." },
+        { "chance":1, "table":[], "text":"A small cave where an indifferent dwarven hermit lives." },
+        { "chance":1, "table":[], "text":"A large cave where an indifferent nomad human tribe lives." },
+        { "chance":1, "table":[], "text":"A large cave where an indifferent dwarven tribe of craftsmen lives." },
+        { "chance":1, "table":[], "text":"A small cave where an indifferent human sorcerer lives." },
+        { "chance":1, "table":[], "text":"A large cave where an unfriendly nomad human tribe lives." },
+        { "chance":1, "table":[], "text":"A large cave where an unfriendly dwarven tribe of craftsmen lives." }
+      ]
+    },
+    {
+      "id":109,
+      "name":"M-TF.S.2: OUTPOST",
+      "options":[
+        { "chance":1, "table":[], "text":"An abandoned dwarven outpost." },
+        { "chance":1, "table":[], "text":"An abandoned landsknecht outpost." },
+        { "chance":1, "table":[], "text":"An abandoned orcish outpost." },
+        { "chance":1, "table":[], "text":"An old outpost where a retired landsknecht lives." },
+        { "chance":1, "table":[], "text":"A recent landsknecht outpost, manned." },
+        { "chance":1, "table":[], "text":"A manned dwarven fort." },
+        { "chance":1, "table":[], "text":"A manned human merchant trading-station." },
+        { "chance":1, "table":[], "text":"An on-alert landknecht outpost." },
+        { "chance":1, "table":[], "text":"An on-alert dwarven fort." },
+        { "chance":1, "table":[], "text":"An on-alert human trading-station.." }
+      ]
+    },
+    {
+      "id":110,
+      "name":"M-TF.S.3: MINE",
+      "options":[
+        { "chance":3, "table":[], "text":"An abandoned human silver mine." },
+		{ "chance":3, "table":[], "text":"An abandoned dwarven coppermine." },
+		{ "chance":2, "table":[], "text":"A human iron mine." },
+		{ "chance":2, "table":[], "text":"A dwarven iron mine." }
+      ]
+    },
+    {
+      "id":111,
+      "name":"M-TF.R: RUINS",
+      "options":[
+        { "chance":5, "table":[112, 113, 114], "text":"Ruins, already explored." },
+        { "chance":2, "table":[112, 113, 114], "text":"Ruins, partially explored." },
+        { "chance":2, "table":[112, 113, 114], "text":"Ruins, not explored." },
+		{ "chance":1, "table":[112, 113, 114, 139], "text":"Ruins, not explored and inhabited." }
+      ]
+    },
+    {
+      "id":112,
+      "name":"M-TF.R1: RUINS TYPE",
+      "options":[
+        { "chance":2, "table":[], "text":"An abandoned silver mine" },
+        { "chance":2, "table":[], "text":"A crypt" },
+        { "chance":2, "table":[], "text":"A dwarven cave village" },
+        { "chance":2, "table":[], "text":"A castle" },
+        { "chance":2, "table":[], "text":"A castle with a dungeon" }
+      ]
+    },
+    {
+      "id":113,
+      "name":"M-TF.R1: RUINS CONDITION",
+      "options":[
+        { "chance":2, "table":[], "text":"partially covered with ash and" },
+        { "chance":2, "table":[], "text":"completely covered with ash and" },
+        { "chance":2, "table":[], "text":"partially underground and" },
+        { "chance":2, "table":[], "text":"completely underground and" },
+        { "chance":2, "table":[], "text":"partially underwater and" }
+      ]
+    },
+    {
+      "id":114,
+      "name":"M-TF.R1: RUINS STATE",
+      "options":[
+        { "chance":2, "table":[], "text":"completely in ruins." },
+        { "chance":2, "table":[], "text":"crumbled and decayed." },
+        { "chance":2, "table":[], "text":"twisted by magic." },
+        { "chance":2, "table":[], "text":"collapsed." },
+        { "chance":2, "table":[], "text":"contaminated by cataclysmic forces." }
+      ]
+    },
+    {
+      "id":125,
+      "name":"Mountains Encounters",
+      "options":[
+        { "chance":4, "table":[], "text":"Nothing happens." },
+        { "chance":2, "table":[126], "text":"" },
+        { "chance":2, "table":[130], "text":"" },
+        { "chance":2, "table":[136], "text":"" }
+      ]
+    },
+    {
+      "id":126,
+      "name":"M-E.E1: ALMOST ENCOUNTERS",
+      "options":[
+        { "chance":3, "table":[127], "text":"" },
+        { "chance":4, "table":[128], "text":"" },
+        { "chance":3, "table":[129], "text":"" }
+      ]
+    },
+    {
+      "id":127,
+      "name":"M-E.E1.1: SIGHTS",
+      "options":[
+        { "chance":1, "table":[], "text":"A large eagle crashes to the ground not far from the heroes. It spreads it wings again and takes off, without noticing the heroes." },
+        { "chance":1, "table":[], "text":"Three orcs spot the heroes across a gorge. They shake their fists at the heroes, before turning back the way they came." },
+        { "chance":1, "table":[], "text":"A cave lion feasts on a goblin, it growls angrily and warns the heroes to come any closer." },
+        { "chance":1, "table":[], "text":"A pair of griffons flying high in the sky, miles away from the heroes." },
+        { "chance":1, "table":[], "text":"Two goblins chase down a goat far below the heroes." },
+        { "chance":1, "table":[], "text":"A troll comes crashing down the mountain side and falls dead at the heroes’ feet." },
+        { "chance":1, "table":[], "text":"A black arrow thuds in the ground not far from the heroes, obviously made by orcs, though none are in sight." },
+        { "chance":1, "table":[], "text":"A large ram is startled by the heroes. It shakes it head and seems ready to charge the heroes, then suddenly turns tails and runs." },
+        { "chance":1, "table":[], "text":"Three grimwings circle above the heroes for a while before losing interest and flying away." },
+        { "chance":1, "table":[], "text":"A saddled horse, covered in blood, comes galloping down the path. It charges wildeyed past the heroes." }
+      ]
+    },
+    {
+      "id":128,
+      "name":"M-E.E1.2: SOUNDS",
+      "options":[
+        { "chance":1, "table":[], "text":"Somewhere near, someone snores loudly." },
+        { "chance":1, "table":[], "text":"The roar of a cave lion echoes in the mountains." },
+        { "chance":1, "table":[], "text":"The echo of a large boulder hitting something, which screams in agony." },
+        { "chance":1, "table":[], "text":"Heavy footsteps coming the heroes’ way." },
+        { "chance":1, "table":[], "text":"Heavy footsteps moving away from the heroes." },
+        { "chance":1, "table":[], "text":"Heavy beatings of leathery wings." },
+        { "chance":1, "table":[], "text":"Somewhere near an orc warlord issues commands to his subordinates." },
+        { "chance":1, "table":[], "text":"The bellowing of a large ram." },
+        { "chance":1, "table":[], "text":"Arcane whispers on the wind." },
+        { "chance":1, "table":[], "text":"The sound of hammers pounding on an anvil." }
+      ]
+    },
+    {
+      "id":129,
+      "name":"M-E.E1.3: LEAVINGS",
+      "options":[
+        { "chance":1, "table":[], "text":"A bloody human handprint on a large stone, still wet." },
+        { "chance":1, "table":[], "text":"Tracks left by a very large humanoid." },
+        { "chance":1, "table":[], "text":"Large griffon feathers on a bloody ground." },
+        { "chance":1, "table":[], "text":"An abandoned orc camp." },
+        { "chance":1, "table":[], "text":"A dead goat, killed by a cave lion." },
+        { "chance":1, "table":[], "text":"The mutilated corpse of a troll." },
+        { "chance":1, "table":[], "text":"Dragon scales." },
+        { "chance":1, "table":[], "text":"Three black arrows stuck in a tree stump." },
+        { "chance":1, "table":[], "text":"An overturned wagon, stripped clean of valuables." },
+        { "chance":1, "table":[], "text":"A single finger of a dwarf, seemingly torn off the hand." }
+      ]
+    },
+    {
+      "id":130,
+      "name":"M-E.E2: WANDERER",
+      "options":[
+        { "chance":3, "table":[131], "text":"" },
+        { "chance":2, "table":[132], "text":"" },
+        { "chance":2, "table":[133], "text":"" },
+        { "chance":2, "table":[134], "text":"" },
+        { "chance":1, "table":[135], "text":"" }
+      ]
+    },
+    {
+      "id":131,
+      "name":"M-E.E2.1: DWARVEN CRAFTSMAN",
+      "options":[
+        { "chance":1, "table":[], "text":"A dwarven craftsman that is returning home from the nearest city." },
+        { "chance":1, "table":[], "text":"A dwarven craftsman that is looking for a certain type of rock for his work." },
+        { "chance":1, "table":[], "text":"A dwarven craftsman that lost his way after spying on a tribe of goblins." },
+        { "chance":1, "table":[], "text":"A dwarven craftsman that is looking for the tools his father had and lost in these mountains." },
+        { "chance":1, "table":[], "text":"A dwarven craftsman that needs help returning to his family’s mine." },
+        { "chance":1, "table":[], "text":"A dwarven craftsman that needs healing after being ambushed by two orcs." },
+        { "chance":1, "table":[], "text":"A dwarven craftsman that knows these mountains and can give the heroes directions." },
+        { "chance":1, "table":[], "text":"A dwarven craftsman that is on his way to the nearest village to sell his craftmanship." },
+        { "chance":1, "table":[], "text":"A dwarven craftsman that is returning from a nearby dwarven mine where he was an apprentice to a master craftsman." },
+        { "chance":1, "table":[139], "text":"A dwarven craftsman that is being tracked by monsters." }
+      ]
+    },
+    {
+      "id":132,
+      "name":"M-E.E2.2: ADVENTURING PARTY",
+      "options":[
+        { "chance":1, "table":[], "text":"An adventuring party that has lost half its members to ambushing trolls." },
+        { "chance":1, "table":[], "text":"An adventuring party that is returning home after finding a possible magical item." },
+        { "chance":1, "table":[], "text":"An adventuring party that is on a quest for one of the merchant princes." },
+        { "chance":1, "table":[], "text":"An adventuring party that was betrayed by a tiberlite and are on the run." },
+        { "chance":1, "table":[], "text":"An adventuring party that contains a wanted criminal." },
+        { "chance":1, "table":[], "text":"An adventuring party that is looking for a wanted criminal." },
+        { "chance":1, "table":[], "text":"An adventuring party that is returning home after an unsuccessful adventure." },
+        { "chance":1, "table":[], "text":"An adventuring party that is out of rations and food." },
+        { "chance":1, "table":[], "text":"An adventuring party that needs healing." },
+        { "chance":1, "table":[139], "text":"An adventuring party that is followed by monsters." }
+      ]
+    },
+    {
+      "id":133,
+      "name":"M-E.E2.3: LANDSKNECHT",
+      "options":[
+        { "chance":1, "table":[], "text":"A landsknecht that is seeking a known bandit leader." },
+        { "chance":1, "table":[], "text":"A landsknecht that is on an errand for the crown." },
+        { "chance":1, "table":[], "text":"A landsknecht that was guarding a caravan that got hit by an avalanche." },
+        { "chance":1, "table":[], "text":"A landsknecht that needs healing after being hit by a falling boulder." },
+        { "chance":1, "table":[], "text":"A landsknecht that is in fact a wildknecht, that plans to rob the heroes when they fall asleep." },
+        { "chance":1, "table":[], "text":"A landsknecht that is lost and needs directions." },
+        { "chance":1, "table":[], "text":"A landsknecht that is seeking a wanted criminal that one of the heroes fit the description for." },
+        { "chance":1, "table":[], "text":"A landsknecht that is on a mission for the tiberlites." },
+        { "chance":1, "table":[], "text":"A landsknecht that has lost all his equipment." },
+        { "chance":1, "table":[139], "text":"A landsknecht that is followed by monsters." }
+      ]
+    },
+    {
+      "id":134,
+      "name":"M-E.E2.4: MINERS",
+      "options":[
+        { "chance":1, "table":[], "text":"Miners that know the mountains and can give the heroes directions." },
+        { "chance":1, "table":[], "text":"Miners that have lost their food." },
+        { "chance":1, "table":[], "text":"Miners that are headed for the nearest town with a wagon load of unworked metal." },
+        { "chance":1, "table":[], "text":"Miners that have lost their equipment and need help finding it." },
+        { "chance":1, "table":[], "text":"Miners that have lost one of their companions and need help finding him." },
+        { "chance":1, "table":[], "text":"Miners that are in need of healing after a bear attacked them." },
+        { "chance":1, "table":[], "text":"Miners that are headed back for their mine, one of their members is a wanted criminal." },
+        { "chance":1, "table":[], "text":"Miners that warn the heroes about a group of cave lions close by." },
+        { "chance":1, "table":[], "text":"Miners that killed their mine leaders and are on the run." },
+        { "chance":1, "table":[139], "text":"Miners that are followed by monsters." }
+      ]
+    },
+    {
+      "id":135,
+      "name":"M-E.E2.5: TRADER",
+      "options":[
+        { "chance":4, "table":[], "text":"A trader, that wants to trade." },
+        { "chance":2, "table":[], "text":"A trader, that was robbed and has nothing to trade." },
+        { "chance":3, "table":[], "text":"A trader, that needs help finding his way." },
+        { "chance":1, "table":[], "text":"A trader, that tries to deceive the heroes." }
+      ]
+    },
+    {
+      "id":136,
+      "name":"M-E.E3: WANDERING MONSTER",
+      "options":[
+        { "chance":4, "table":[137], "text":"" },
+        { "chance":2, "table":[138], "text":"" },
+        { "chance":2, "table":[139], "text":"" },
+        { "chance":1, "table":[140], "text":"" },
+        { "chance":1, "table":[141], "text":"" }
+      ]
+    },
+    {
+      "id":137,
+      "name":"M-E.E3.1: WANDERING MONSTER LEVEL 1",
+      "options":[
+        { "chance":1, "table":[], "text":"[1d5] badgers." },
+        { "chance":1, "table":[], "text":"[1d5] goats." },
+        { "chance":1, "table":[], "text":"[1d5] wolverines." },
+        { "chance":1, "table":[], "text":"[1d5] goblins." },
+        { "chance":1, "table":[], "text":"An eagle." },
+        { "chance":1, "table":[], "text":"[1d5] goblins and 1 wolf." },
+        { "chance":1, "table":[], "text":"[1d5] boars." },
+        { "chance":1, "table":[], "text":"[1d5] wolves." },
+        { "chance":1, "table":[], "text":"[1d5] giant insects." },
+        { "chance":1, "table":[152], "text":"[1d5] goblins with treasure." }
+      ]
+    },
+    {
+      "id":138,
+      "name":"M-E.E3.2: WANDERING MONSTER LEVEL 2",
+      "options":[
+        { "chance":1, "table":[], "text":"A bear." },
+        { "chance":1, "table":[], "text":"[1d5] giant spiders." },
+        { "chance":1, "table":[], "text":"[1d10] giant insects." },
+        { "chance":1, "table":[], "text":"[1d10] wolverines." },
+        { "chance":1, "table":[], "text":"[1d10] goblins." },
+        { "chance":1, "table":[], "text":"[1d10] badgers." },
+        { "chance":1, "table":[], "text":"[1d10] giant rats." },
+        { "chance":1, "table":[], "text":"[1d10] goblins and 1 orc." },
+        { "chance":1, "table":[], "text":"A wight." },
+        { "chance":1, "table":[152], "text":"[1d10] goblins and 1 orc with treasure." }
+      ]
+    },
+	{
+      "id":139,
+      "name":"M-E.E3.3: WANDERING MONSTER LEVEL 3",
+      "options":[
+        { "chance":1, "table":[], "text":"[1d5] orcs." },
+        { "chance":1, "table":[], "text":"[1d10] skeletons." },
+        { "chance":1, "table":[], "text":"A harpy." },
+        { "chance":1, "table":[], "text":"[1d5] goblins and a harpy." },
+        { "chance":1, "table":[], "text":"[1d10] goblins and 3 orcs." },
+        { "chance":1, "table":[], "text":"[1d10] skeletons and a wight." },
+        { "chance":1, "table":[], "text":"[1d10] goblins and a harpy." },
+        { "chance":1, "table":[], "text":"[1d5] bears." },
+        { "chance":1, "table":[], "text":"[1d10] goblins and a harpy." },
+        { "chance":1, "table":[153], "text":"[1d10] goblins and a harpy with treasure." }
+      ]
+    },
+    {
+      "id":140,
+      "name":"M-E.E3.4: WANDERING MONSTER LEVEL 4",
+      "options":[
+        { "chance":1, "table":[], "text":"[1d5] harpies." },
+        { "chance":1, "table":[], "text":"[1d5] wolves and a giant wolf." },
+        { "chance":1, "table":[], "text":"A troll." },
+        { "chance":1, "table":[], "text":"[1d10] skeletons and a specter." },
+        { "chance":1, "table":[], "text":"[1d10] goblins and a troll." },
+        { "chance":1, "table":[], "text":"A griffin." },
+        { "chance":1, "table":[], "text":"A manticore." },
+        { "chance":1, "table":[], "text":"[1d5] griffins." },
+        { "chance":1, "table":[153], "text":"A giant with treasure." },
+        { "chance":1, "table":[153], "text":"A giant and [1d5] goblins with treasure." }
+      ]
+    },
+    {
+      "id":141,
+      "name":"M-E.E3.5: WANDERING MONSTER LEVEL 5",
+      "options":[
+        { "chance":1, "table":[], "text":"[1d10] orcs and [1d10] goblins." },
+        { "chance":1, "table":[], "text":"[1d10] skeletons and [1d5] wights." },
+        { "chance":1, "table":[], "text":"An ogre." },
+        { "chance":1, "table":[], "text":"An ogre and [1d10] goblins." },
+        { "chance":1, "table":[], "text":"An Ogre and [1d5] orcs." },
+        { "chance":1, "table":[], "text":"[1d5] trolls." },
+        { "chance":1, "table":[], "text":"[1d10] griffins." },
+        { "chance":1, "table":[154], "text":"A giant and [1d10] goblins with treasure." },
+        { "chance":1, "table":[154], "text":"A dragon with treasure." },
+        { "chance":1, "table":[154], "text":"A dragon and [1d10] goblins with treasure." }
+      ]
+    },
+    {
+      "id":150,
+      "name":"Mountains TREASURES",
+      "options":[
+        { "chance":7, "table":[], "text":"No treasure." },
+        { "chance":3, "table":[151], "text":"" }
+      ]
+    },
+    {
+      "id":151,
+      "name":"M-T: TREASURES",
+      "options":[
+        { "chance":5, "table":[152], "text":"" },
+        { "chance":2, "table":[153], "text":"" },
+        { "chance":2, "table":[154], "text":"" },
+        { "chance":1, "table":[155], "text":"" }
+      ]
+    },
+    {
+      "id":152,
+      "name":"M-T.1: TREASURE LEVEL 1",
+      "options":[
+        { "chance":1, "table":[], "text":"A shortsword." },
+        { "chance":1, "table":[], "text":"A leather pouch with 6 silver coins." },
+        { "chance":1, "table":[], "text":"A shorsword and 3 silver coins." },
+        { "chance":1, "table":[], "text":"A sabre." },
+        { "chance":1, "table":[], "text":"A leather pouch with 7 silver coins." },
+        { "chance":1, "table":[], "text":"A sabre and 2 copper coins." },
+        { "chance":1, "table":[], "text":"A warhammer." },
+        { "chance":1, "table":[], "text":"A leather pouch with 8 silver coins." },
+        { "chance":1, "table":[], "text":"A flail." },
+        { "chance":1, "table":[152, 152], "text":"" }
+      ]
+    },
+    {
+      "id":153,
+      "name":"M-T.2: TREASURE LEVEL 2",
+      "options":[
+        { "chance":1, "table":[], "text":"A locked chest with 360 copper coins." },
+        { "chance":1, "table":[], "text":"A longsword." },
+        { "chance":1, "table":[], "text":"A longsword and a small shield." },
+        { "chance":1, "table":[], "text":"A leather pouch with 28 silver coins." },
+        { "chance":1, "table":[], "text":"A two-handed sword." },
+        { "chance":1, "table":[], "text":"A two-handed sword and a padded armor." },
+        { "chance":1, "table":[], "text":"A leather pouch with 29 silver coins." },
+        { "chance":1, "table":[], "text":"A two-handed axe." },
+        { "chance":1, "table":[], "text":"A two-handed axe and a large shield." },
+        { "chance":1, "table":[153,152], "text":"" }
+      ]
+    },
+    {
+      "id":154,
+      "name":"M-T.3: TREASURE LEVEL 3",
+      "options":[
+        { "chance":1, "table":[], "text":"A locket chest with 1440 copper coins." },
+        { "chance":1, "table":[], "text":"A master-made long sword and a ring mail." },
+        { "chance":1, "table":[], "text":"A scale mail and a large shield." },
+        { "chance":1, "table":[], "text":"A locket chest with 100 silver coins." },
+        { "chance":1, "table":[], "text":"A chain mail and a master-made two-handed sword." },
+        { "chance":1, "table":[], "text":"A ring mail, battle axe and 3 silver coins." },
+        { "chance":1, "table":[], "text":"A chain mail, master-made broadsword, small shield and 4 silver coins." },
+        { "chance":1, "table":[], "text":"A locket chest with a silver dagger wrapped in velvet worth 140 sc." },
+        { "chance":1, "table":[], "text":"A scale mail, bastard sword, 2 master-made daggers and 4 silver coins." },
+        { "chance":1, "table":[154, 152, 152], "text":"" }
+      ]
+    },
+    {
+      "id":155,
+      "name":"M-T.4: TREASURE LEVEL 4",
+      "options":[
+        { "chance":1, "table":[], "text":"A banded mail and a master-made two-handed sword." },
+        { "chance":1, "table":[], "text":"A plate mail and a master-made large shield." },
+        { "chance":1, "table":[], "text":"A banded mail, chain mail, twohanded sword, 2 daggers and a leather pouch with 200 silver coins." },
+        { "chance":1, "table":[], "text":"A magical padded armor." },
+        { "chance":1, "table":[], "text":"A plate mail, large shield, longsword, 3 handaxes and a leather pouch with 240 silver coins." },
+        { "chance":1, "table":[], "text":"A diamond worth 500 silver coins." },
+        { "chance":1, "table":[], "text":"A golden statue showing a regal knight, worth 600 silver coins." },
+        { "chance":1, "table":[], "text":"A magical throwing axe." },
+        { "chance":1, "table":[], "text":"A magical dagger." },
+        { "chance":1, "table":[155, 153], "text":"" }
+      ]
+    }
+  ]
+}
