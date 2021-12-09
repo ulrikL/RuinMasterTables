@@ -195,9 +195,9 @@
       "id":130,
       "name":"W-E.E2: WANDERING MONSTER",
       "options":[
-        { "chance":5, "table":[131], "text":"" },
-        { "chance":2, "table":[132], "text":"" },
-        { "chance":1, "table":[133], "text":"" },
+        { "chance":2, "table":[131], "text":"" },
+        { "chance":3, "table":[132], "text":"" },
+        { "chance":3, "table":[133], "text":"" },
         { "chance":1, "table":[134], "text":"" },
         { "chance":1, "table":[135], "text":"" }
       ]

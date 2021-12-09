@@ -135,7 +135,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 }
             }
             if (sumOfChance != DEFAULT_CHANCE_SUM) {
-                warning("'${table.name}' (${table.id}) in '${getConfigFileName(table.id)}' does not use a default chance (sum is $sumOfChance).")
+                warning("'${table.name}' (${getActualTableId(table.id)}) in '${getConfigFileName(table.id)}' does not use a default chance (sum is $sumOfChance).")
             }
         }
     }

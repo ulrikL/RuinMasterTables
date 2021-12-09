@@ -351,7 +351,6 @@
         { "chance":1, "table":[], "text":"A golden statue showing a regal knight, worth 600 silver coins." },
         { "chance":1, "table":[], "text":"A magical throwing spear." },
         { "chance":1, "table":[], "text":"An iron crown with rubies, worth 750 silver coins." },
-        { "chance":1, "table":[], "text":"silver coins." },
         { "chance":1, "table":[], "text":"A magical small shield." },
         { "chance":1, "table":[], "text":"A magical short spear." },
         { "chance":1, "table":[154, 152, 152], "text":"" }
