@@ -6,6 +6,7 @@ package com.example.ruinmasterstables
 
 import android.content.res.Resources
 import android.graphics.Rect
+import android.graphics.Typeface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -41,12 +42,29 @@ class DisplayResultFragment : DialogFragment() {
     ): View {
         // Inflate the layout for this fragment
         val v: View = inflater.inflate(R.layout.fragment_display_result, container, false)
+        val headlineFont = Typeface.createFromAsset(this.requireContext().assets, "BarcelonaITCStd-Bold.otf")
+        val textFont = Typeface.createFromAsset(this.requireContext().assets, "BarcelonaITCStd-Book.otf")
+        val buttonFont = Typeface.createFromAsset(this.requireContext().assets, "BarcelonaITCStd-Medium.otf")
+        val header = v.findViewById<TextView>(R.id.tvHeaderText)
+        val terrain = v.findViewById<TextView>(R.id.tvTerrainText)
+        val encounter = v.findViewById<TextView>(R.id.tvEncounterText)
+        val treasure = v.findViewById<TextView>(R.id.tvTreasureText)
+        val dismissButton = v.findViewById<AppCompatButton>(R.id.btnDismiss)
 
-        (v.findViewById<View>(R.id.tvHeaderText) as TextView).text = arguments?.getString(ARG_HEADER)
-        (v.findViewById<View>(R.id.tvTerrainText) as TextView).text = arguments?.getString(ARG_TERRAIN)
-        (v.findViewById<View>(R.id.tvEncounterText) as TextView).text = arguments?.getString(ARG_ENCOUNTER)
-        (v.findViewById<View>(R.id.tvTreasureText) as TextView).text = arguments?.getString(ARG_TREASURE)
-        (v.findViewById<View>(R.id.btnDismiss) as AppCompatButton).setOnClickListener { dismiss() }
+        header.text = arguments?.getString(ARG_HEADER)
+        header.typeface = headlineFont
+        v.findViewById<TextView>(R.id.tvTerrain).typeface = headlineFont
+        terrain.text = arguments?.getString(ARG_TERRAIN)
+        terrain.typeface = textFont
+        v.findViewById<TextView>(R.id.tvEncounter).typeface = headlineFont
+        encounter.text = arguments?.getString(ARG_ENCOUNTER)
+        encounter.typeface = textFont
+        v.findViewById<TextView>(R.id.tvTreasure).typeface = headlineFont
+        treasure.text = arguments?.getString(ARG_TREASURE)
+        treasure.typeface = textFont
+        dismissButton.typeface = buttonFont
+        dismissButton.textSize = 20.0F
+        dismissButton.setOnClickListener { dismiss() }
 
         return v
     }

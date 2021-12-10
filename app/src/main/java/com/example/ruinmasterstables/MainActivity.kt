@@ -4,6 +4,9 @@
 
 package com.example.ruinmasterstables
 
+import android.content.res.Resources
+import android.graphics.ColorFilter
+import android.graphics.PorterDuff
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,6 +16,9 @@ import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.module.kotlin.*
 import android.view.View
 import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 import com.fasterxml.jackson.core.type.TypeReference
 import com.fasterxml.jackson.databind.ObjectMapper
 import java.io.BufferedReader
@@ -57,6 +63,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        (findViewById<TextView>(R.id.custom_title)).typeface = Typeface.createFromAsset(assets, "Becker.ttf")
+        (findViewById<TextView>(R.id.tvIntro)).typeface = Typeface.createFromAsset(assets, "BarcelonaITCStd-Book.otf")
 
         val files = assets.list("data")
         if (files != null) {
@@ -189,7 +198,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun createButtons(buttons : List<Buttons>) {
-        val linearLayout = findViewById<View>(R.id.buttons_layout) as LinearLayout //a constraint layout pre-made in design view
+        val linearLayout = findViewById<LinearLayout>(R.id.buttons_layout)
 
         buttons.forEach { button ->
             val dynamicButton = Button(this)
@@ -197,9 +206,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             dynamicButton.text = button.text
             dynamicButton.id = buttonId
             dynamicButton.tag = button.table
-            dynamicButton.minimumWidth = 600
-            dynamicButton.textSize = 18.0F
+            dynamicButton.minimumWidth = 700
+            dynamicButton.setPadding(0, 40, 0, 40)
+            dynamicButton.textSize = 20.0F
             dynamicButton.typeface = Typeface.createFromAsset(assets, "BarcelonaITCStd-Medium.otf")
+            dynamicButton.backgroundTintList = ContextCompat.getColorStateList(this, R.color.rm_table_dark)
             dynamicButton.setOnClickListener(this)
             linearLayout.addView(dynamicButton)
         }
