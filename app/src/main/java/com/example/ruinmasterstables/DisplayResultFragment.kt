@@ -42,9 +42,9 @@ class DisplayResultFragment : DialogFragment() {
     ): View {
         // Inflate the layout for this fragment
         val v: View = inflater.inflate(R.layout.fragment_display_result, container, false)
-        val headlineFont = Typeface.createFromAsset(this.requireContext().assets, "BarcelonaITCStd-Bold.otf")
-        val textFont = Typeface.createFromAsset(this.requireContext().assets, "BarcelonaITCStd-Book.otf")
-        val buttonFont = Typeface.createFromAsset(this.requireContext().assets, "BarcelonaITCStd-Medium.otf")
+        val headlineFont = Typeface.createFromAsset(this.requireContext().assets, "fonts/BarcelonaITCStd-Bold.otf")
+        val textFont = Typeface.createFromAsset(this.requireContext().assets, "fonts/BarcelonaITCStd-Book.otf")
+        val buttonFont = Typeface.createFromAsset(this.requireContext().assets, "fonts/BarcelonaITCStd-Medium.otf")
         val header = v.findViewById<TextView>(R.id.tvHeaderText)
         val terrain = v.findViewById<TextView>(R.id.tvTerrainText)
         val encounter = v.findViewById<TextView>(R.id.tvEncounterText)
