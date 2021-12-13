@@ -10,7 +10,6 @@
     <color name="rm_text_dark">#FF362805</color>
     <color name="rm_text_red">#FF840000</color>
     <color name="rm_table_dark">#d1d699</color>
-    <color name="rm_table_light">#FFFFFFFF</color>
     <color name="rm_table_header">#768c6c</color>
     <color name="rm_background">#f7f3ed</color>
 </resources>

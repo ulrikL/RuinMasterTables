@@ -141,8 +141,8 @@
       "options":[
         { "chance":3, "table":[], "text":"A townlet with a lighthouse and 50 inhabitants, no inn." },
 		{ "chance":3, "table":[], "text":"A townlet with a lighthouse and 100 inhabitants, decent inn." },
-		{ "chance":2, "table":[], "text":"A townlet with a lighthouse and 100 habitants, decent inn and docks." },
-		{ "chance":2, "table":[], "text":"A townlet with a lighthouse and 150 habitants, decent inn, shop and docks." }
+		{ "chance":2, "table":[], "text":"A townlet with a lighthouse and 100 inhabitants, decent inn and docks." },
+		{ "chance":2, "table":[], "text":"A townlet with a lighthouse and 150 inhabitants, decent inn, shop and docks." }
       ]
     },
     {
@@ -152,7 +152,7 @@
         { "chance":5, "table":[112, 113, 114], "text":"Ruins, already explored." },
         { "chance":3, "table":[112, 113, 114], "text":"Ruins, partially explored." },
         { "chance":1, "table":[112, 113, 114], "text":"Ruins, not explored." },
-		{ "chance":1, "table":[112, 113, 114, 139], "text":"Ruins, not explored and inhabitated." }
+		{ "chance":1, "table":[112, 113, 114, 139], "text":"Ruins, not explored and inhabited." }
       ]
     },
     {
@@ -469,7 +469,7 @@
       "id":153,
       "name":"CL-T.2: TREASURE LEVEL 2",
       "options":[
-        { "chance":1, "table":[], "text":"A shorsword and 3 silver coins." },
+        { "chance":1, "table":[], "text":"A shortsword and 3 silver coins." },
         { "chance":1, "table":[], "text":"A sabre and 2 copper coins." },
         { "chance":1, "table":[], "text":"A flail." },
         { "chance":1, "table":[], "text":"A long spear and 4 silver coins." },

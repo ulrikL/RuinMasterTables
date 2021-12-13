@@ -405,7 +405,7 @@
       "options":[
         { "chance":1, "table":[], "text":"A lion." },
         { "chance":1, "table":[], "text":"[1d10] goblins and 3 orcs." },
-        { "chance":1, "table":[], "text":"[1d10] deers." },
+        { "chance":1, "table":[], "text":"[1d10] deer." },
         { "chance":1, "table":[], "text":"[1d10] skeletons and a wight." },
         { "chance":1, "table":[], "text":"A harpy." },
         { "chance":1, "table":[], "text":"[1d10] goblins and [1d5] orcs." },

@@ -191,7 +191,7 @@
         { "chance":1, "table":[], "text":"A depressed adventurer after losing everything on the last adventure." },
         { "chance":1, "table":[], "text":"An exhausted adventurer after the last ruin exploration in the nearest forest hex." },
         { "chance":1, "table":[], "text":"An adventurer on edge, after betraying his former comrades and running off with everything they found exploring ruins in the nearest borderlands hex." },
-        { "chance":1, "table":[], "text":"An adventurer on edge, after murdering his former comrades and running off with everything they found exploring ruins in the nearest wildeness hex." }
+        { "chance":1, "table":[], "text":"An adventurer on edge, after murdering his former comrades and running off with everything they found exploring ruins in the nearest wilderness hex." }
       ]
     },
     {

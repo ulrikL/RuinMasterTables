@@ -2,7 +2,7 @@
      Part of RuinMastersTables
      MIT License, see LICENSE file -->
 <resources>
-    <string name="app_name">RuinMasters - Large Scale Hex</string>
+    <string name="app_name">RuinMasters</string>
     <string name="app_intro">To generate a random hex press \nthe corresponding button.</string>
     <string name="terrain">Terrain</string>
     <string name="encounter">Encounter</string>

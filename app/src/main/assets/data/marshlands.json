@@ -97,7 +97,7 @@
         { "chance":2, "table":[108, 109, 110], "text":"Ruins, already explored." },
         { "chance":3, "table":[108, 109, 110], "text":"Ruins, partially explored." },
         { "chance":3, "table":[108, 109, 110], "text":"Ruins, not explored." },
-		{ "chance":2, "table":[108, 109, 110, 133], "text":"Ruins, not explored and inhabitated." }
+		{ "chance":2, "table":[108, 109, 110, 133], "text":"Ruins, not explored and inhabited." }
       ]
     },
     {
