@@ -75,13 +75,13 @@
       "id":127,
       "name":"S-E.E1.1: SIGHTS",
       "options":[
-        { "chance":1, "table":[], "text":"A pair of griffons soaring above." },
+        { "chance":1, "table":[], "text":"A pair of griffins soaring above." },
         { "chance":1, "table":[], "text":"A large underwater monster breaks the water." },
         { "chance":1, "table":[], "text":"Ghost ship follows the heroes’ ship during the night." },
         { "chance":1, "table":[], "text":"Sharks chase the heroes’ ship." },
         { "chance":1, "table":[], "text":"A dragon circles above the ship but leaves." },
         { "chance":1, "table":[], "text":"A sperm whale cow with calf breaks the water, chased by orcas." },
-        { "chance":1, "table":[], "text":"A dead griffon falls from the sky." },
+        { "chance":1, "table":[], "text":"A dead griffin falls from the sky." },
         { "chance":3, "table":[], "text":"A pirate ship on the horizon." }
       ]
     },
@@ -96,7 +96,7 @@
         { "chance":1, "table":[], "text":"A pirates’ song." },
         { "chance":1, "table":[], "text":"Strange arcane murmurings on the wind." },
         { "chance":1, "table":[], "text":"A harpy’s wailing." },
-        { "chance":1, "table":[], "text":"A griffon’s screech." },
+        { "chance":1, "table":[], "text":"A griffin’s screech." },
         { "chance":1, "table":[], "text":"A manticore’s roar." },
         { "chance":1, "table":[], "text":"Something heavy hits the water." }
       ]
@@ -108,7 +108,7 @@
         { "chance":1, "table":[], "text":"A sinking merchant’s ship." },
         { "chance":1, "table":[], "text":"A dead whale." },
         { "chance":1, "table":[], "text":"Large blood stain in the water." },
-        { "chance":1, "table":[], "text":"Seabirds feasting on a dead griffon." },
+        { "chance":1, "table":[], "text":"Seabirds feasting on a dead griffin." },
         { "chance":1, "table":[], "text":"Human bodies floating in the water." },
         { "chance":1, "table":[], "text":"A single flag bearing the crest of the nearest city." },
         { "chance":4, "table":[151], "text":"Debris in the water." }

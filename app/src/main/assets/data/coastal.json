@@ -215,7 +215,7 @@
         { "chance":1, "table":[], "text":"A dragon attacking a ship." },
         { "chance":1, "table":[], "text":"A large sea monster attacking a merchant vessel." },
         { "chance":1, "table":[], "text":"A pirate ship attacking a merchant vessel." },
-        { "chance":1, "table":[], "text":"Three griffons soar above, heading inland." },
+        { "chance":1, "table":[], "text":"Three griffins soar above, heading inland." },
         { "chance":1, "table":[], "text":"A tribe of goblins cutting open and eating the carcass of a beached whale." },
         { "chance":1, "table":[], "text":"An orc warband planning on attacking the nearest settlement." },
         { "chance":1, "table":[], "text":"Two trolls attacking a tribe of goblins, that is feasting on the carcass of a beached whale." },
@@ -233,7 +233,7 @@
         { "chance":1, "table":[], "text":"Many creatures marching away from the heroes." },
         { "chance":1, "table":[], "text":"A hollow laughter fills the air." },
         { "chance":1, "table":[], "text":"The echo of a large predator’s roar." },
-        { "chance":1, "table":[], "text":"The dying screech of a griffon." },
+        { "chance":1, "table":[], "text":"The dying screech of a griffin." },
         { "chance":1, "table":[], "text":"Orc horns being sounded." },
         { "chance":1, "table":[], "text":"A fiery explosion somewhere near." },
         { "chance":1, "table":[], "text":"Strange arcane mutterings on the wind." }

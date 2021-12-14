@@ -153,7 +153,7 @@
         { "chance":1, "table":[], "text":"A pack of wolves pick up the heroes’ scent and follow them for a while, before losing interest." },
         { "chance":1, "table":[], "text":"Grimwings fly low across the horizon and circle for a short while over the heroes before moving on." },
         { "chance":1, "table":[], "text":"Two orc hunters spot the heroes from a distance and run off." },
-        { "chance":1, "table":[], "text":"A mother bear with two cups raises her self up on two legs and roars at the heroes alarmingly, before moving on." },
+        { "chance":1, "table":[], "text":"A mother bear with two cubs raises her self up on two legs and roars at the heroes alarmingly, before moving on." },
         { "chance":1, "table":[], "text":"A group of wolf-riding orcs chase an unlucky adventurer, chase him down and run him through with spears. When they notice the heroes, they turn around and gallop away laughing." },
         { "chance":1, "table":[], "text":"A dragon flies lazily across the sky." },
         { "chance":1, "table":[], "text":"A dragon picks up a goblin wolf rider and tears the wolf apart, the goblin falls screaming to the ground next to the heroes. The dragon flies on." }
@@ -170,7 +170,7 @@
         { "chance":1, "table":[], "text":"Strange words uttered somewhere near in the guttural tongue of the dark breeds." },
         { "chance":1, "table":[], "text":"Heavy footsteps moving closer to the heroes." },
         { "chance":1, "table":[], "text":"Heavy footsteps moving away from the heroes." },
-        { "chance":1, "table":[], "text":"The roar of a griffon." },
+        { "chance":1, "table":[], "text":"The roar of a griffin." },
         { "chance":1, "table":[], "text":"Fiery explosions somewhere near." },
         { "chance":1, "table":[], "text":"The dying screech of a troll." }
       ]

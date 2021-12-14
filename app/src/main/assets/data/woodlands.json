@@ -211,7 +211,7 @@
       "id":127,
       "name":"WL-E.E1.1: SIGHTS",
       "options":[
-        { "chance":1, "table":[], "text":"The shadow of a flying griffon passes over the heroes." },
+        { "chance":1, "table":[], "text":"The shadow of a flying griffin passes over the heroes." },
         { "chance":1, "table":[], "text":"A white stag appears on the path, then disappears into the woods." },
         { "chance":1, "table":[], "text":"A mother bear with two cups feasts on honey." },
         { "chance":1, "table":[], "text":"Thousands of orange butterflies hang in a single tree." },

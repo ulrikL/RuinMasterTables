@@ -214,7 +214,7 @@
         { "chance":1, "table":[], "text":"A large eagle crashes to the ground not far from the heroes. It spreads it wings again and takes off, without noticing the heroes." },
         { "chance":1, "table":[], "text":"Three orcs spot the heroes across a gorge. They shake their fists at the heroes, before turning back the way they came." },
         { "chance":1, "table":[], "text":"A cave lion feasts on a goblin, it growls angrily and warns the heroes to come any closer." },
-        { "chance":1, "table":[], "text":"A pair of griffons flying high in the sky, miles away from the heroes." },
+        { "chance":1, "table":[], "text":"A pair of griffins flying high in the sky, miles away from the heroes." },
         { "chance":1, "table":[], "text":"Two goblins chase down a goat far below the heroes." },
         { "chance":1, "table":[], "text":"A troll comes crashing down the mountain side and falls dead at the heroes’ feet." },
         { "chance":1, "table":[], "text":"A black arrow thuds in the ground not far from the heroes, obviously made by orcs, though none are in sight." },
@@ -245,7 +245,7 @@
       "options":[
         { "chance":1, "table":[], "text":"A bloody human handprint on a large stone, still wet." },
         { "chance":1, "table":[], "text":"Tracks left by a very large humanoid." },
-        { "chance":1, "table":[], "text":"Large griffon feathers on a bloody ground." },
+        { "chance":1, "table":[], "text":"Large griffin feathers on a bloody ground." },
         { "chance":1, "table":[], "text":"An abandoned orc camp." },
         { "chance":1, "table":[], "text":"A dead goat, killed by a cave lion." },
         { "chance":1, "table":[], "text":"The mutilated corpse of a troll." },

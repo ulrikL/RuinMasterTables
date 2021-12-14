@@ -161,11 +161,11 @@
         { "chance":1, "table":[], "text":"A giant eagle passes by overhead, looking for prey." },
         { "chance":1, "table":[], "text":"A troll shakes its fist at the heroes, then turns around and runs off." },
         { "chance":1, "table":[], "text":"A pack of wolves follow the heroes for a while, before losing interest." },
-        { "chance":1, "table":[], "text":"A pair of griffons soar high in the sky, looking for prey." },
+        { "chance":1, "table":[], "text":"A pair of griffins soar high in the sky, looking for prey." },
         { "chance":1, "table":[], "text":"Two dragons battle fiercely far away." },
         { "chance":1, "table":[], "text":"A large bear feasts on honey and warns the heroes to come any closer." },
         { "chance":1, "table":[], "text":"Three goblin riders pass the heroes, shouting curses at them." },
-        { "chance":1, "table":[], "text":"A chimera fights a young griffon, tearing it to pieces on a hill not far from the heroes." },
+        { "chance":1, "table":[], "text":"A chimera fights a young griffin, tearing it to pieces on a hill not far from the heroes." },
         { "chance":1, "table":[], "text":"Twelve zombies wander aimlessly away from the heroes." },
         { "chance":1, "table":[], "text":"A giant passes by the heroes, not noticing them." }
       ]
@@ -193,7 +193,7 @@
         { "chance":1, "table":[], "text":"A dead orc, his head has been bitten off by a dragon." },
         { "chance":1, "table":[], "text":"A tree stump on which a dead goblin has been nailed." },
         { "chance":1, "table":[], "text":"A large stone with deep claw marks." },
-        { "chance":1, "table":[], "text":"A single claw of a griffon." },
+        { "chance":1, "table":[], "text":"A single claw of a griffin." },
         { "chance":1, "table":[], "text":"Three rotting limbs of a zombie." },
         { "chance":1, "table":[], "text":"A broken skull of a troll." },
         { "chance":1, "table":[], "text":"A dozen of human heads on spears." },
@@ -255,7 +255,7 @@
         { "chance":1, "table":[], "text":"A hooded man that tells the heroes where to find an unexplored dungeon (false)." },
         { "chance":1, "table":[], "text":"A hooded woman that tells the heroes where to find a dragon’s lair (true)." },
         { "chance":1, "table":[], "text":"A hooded woman that tells the heroes where to find a dragon’s lair (false)." },
-        { "chance":1, "table":[], "text":"A hooded man that was attacked by a griffon, but is remarkably unharmed." },
+        { "chance":1, "table":[], "text":"A hooded man that was attacked by a griffin, but is remarkably unharmed." },
         { "chance":1, "table":[], "text":"A hooded woman that was attacked by a harpy, but is unharmed." },
         { "chance":1, "table":[], "text":"A hooded man that was attacked by wildknechts but refuses all healing. Warns the heroes to go near the nearest mountain hex." },
         { "chance":1, "table":[], "text":"A hooded woman that was attacked by a troll, but as soon as the heroes touch her, she turns to ash." }

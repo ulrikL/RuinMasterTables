@@ -167,7 +167,7 @@
       "name":"F-E.E1.3: FARMER",
       "options":[
         { "chance":1, "table":[], "text":"A local farmer’s son who saw a dragon fly by three days ago, headed towards the nearest forest hex." },
-        { "chance":1, "table":[], "text":"A local farmer’s daughter who saw a griffon swoop a horse off the road yesterday." },
+        { "chance":1, "table":[], "text":"A local farmer’s daughter who saw a griffin swoop a horse off the road yesterday." },
         { "chance":1, "table":[], "text":"A local farmer that saw an ogre pass through his field yesterday, headed towards the nearest borderland hex." },
         { "chance":1, "table":[], "text":"A local farmer’s son who has heard stories about a ruined castle in the nearest mountain hex." },
         { "chance":1, "table":[], "text":"A local farmer’s daughter who has heard stories about an unexplored barrow in the nearest wilderness hex." },
