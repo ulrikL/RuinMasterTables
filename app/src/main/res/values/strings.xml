@@ -8,4 +8,8 @@
     <string name="encounter">Encounter</string>
     <string name="treasure">Treasure</string>
     <string name="btnDismiss">DISMISS</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
