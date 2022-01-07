@@ -95,7 +95,7 @@ class TableFragment : Fragment(), View.OnClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        myView = inflater.inflate(R.layout.fragment_table, container, false)
+        myView = inflater.inflate(R.layout.fragment_tables, container, false)
 
         //Draw the UI based on the loaded data
         createButtons(configData.buttons)
