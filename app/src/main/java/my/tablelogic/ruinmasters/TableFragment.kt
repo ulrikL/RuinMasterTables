@@ -49,13 +49,13 @@ class TableFragment : Fragment(), View.OnClickListener {
         if (myAssets != null) {
             (view?.findViewById<TextView>(R.id.tvIntro))?.typeface = Typeface.createFromAsset(myAssets, "fonts/BarcelonaITCStd-Book.otf")
 
-            val files = myAssets.list("data")
+            val files = myAssets.list("tables")
             if (files != null) {
                 for ((index, file) in files.withIndex()) {
                     if (file.endsWith(".json")) {
                         debug("Found configuration file named '$file'")
                         configFiles += file.toString()
-                        val tempConfigData = loadConfiguration(myAssets.open("data/$file"))
+                        val tempConfigData = loadConfiguration(myAssets.open("tables/$file"))
                         //Each file get an offset to allow multiple files. This is done to make it easy to split the files
                         tempConfigData.buttons.forEach { button ->
                             button.table += index*CONFIG_FILE_TABLE_ID_OFFSET
