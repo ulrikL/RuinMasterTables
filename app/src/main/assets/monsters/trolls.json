@@ -1,0 +1,59 @@
+{
+  "monster":[
+    { "id":1, "name":"Troll", "tags": [ "Troll", "troll", "Trolls", "trolls" ],
+      "stats": {
+        "traits": { "phy": "30", "min": "15", "int": "10", "cha":  "5" },
+        "skills": { "bur": 48, "kno": 29, "mag": 27, "mel": 63, "soc": 18, "sur": 43 },
+        "other":  { "siz": 1.5, "hp": "75",  "car": "30", "db": "3", "act": "1", "arm": "2" }
+      },
+      "combat": {
+        "body": "humanoid",
+        "attacks": [
+          { "type": "Distance",     "skill": 43, "damage": "1d10 (OR9-10)", "db": false},
+          { "type": "Unarmed",      "skill": 63, "damage": "1d5",           "db": true},
+          { "type": "Close combat", "skill": 63, "damage": "1d10 (OR8-10)", "db": true}
+        ],
+        "abilities": [
+          { "type": "Low-light vision", "description": "Trolls live in the dark and have excellent vision in darkness. They see up to Intelligence x3 meters in pitch-black darkness."},
+          { "type": "Regeneration", "description": "Some trolls heal damage very quickly. Every turn, the troll heals 1 (or more) damage point in each body part caused by physical trauma. Damage caused by magical weapons and fire is healed normally."},
+          { "type": "Horrifying Stench", "description": "Trolls smell so bad, and look so hideous, that everyone within a number of meters equal to the troll's Physique must pass a Mind x2 check to not receive a 1d5x5 penalty on all skills as long as they remain in range."}
+        ]
+      },
+      "notes": [
+        { "header": "Sunrays", "text": "Some trolls are petrified by sunlight. For this reason, few trolls venture out during the day and if they have to, they cover themselves in thick hides and resist exposing any of their skin to the daylight. Due to their fear of the sun, their skill values are halved when outside during daytime."},
+        { "header": "Troll Treasure", "text": "Like dragons, trolls love treasure of all kinds. They amass hoards of coins and gemstones, with amulets being most precious to them. Some troll kings have large chambers with chests filled to the brim with glittering coin, rings and amulets."},
+        { "header": "Equipment", "text": "Trolls arm themselves with different types of weapons and protect themselves with the armour that is available and provides the best protection."}
+      ]
+    },
+    {
+      "id":2,
+      "name":"Random troll",
+      "tags": [ ],
+      "stats":
+      {
+        "traits": { "phy": "[4d10+10]", "min": "[2d10+5]", "int": "[2d10]", "cha":  "[1d10]" },
+        "skills": { "bur": 48, "kno": 29, "mag": 27, "mel": 63, "soc": 18, "sur": 43 },
+        "other":  { "siz": 1.5, "hp": "",  "car": "", "db": "", "act": "1", "arm": "2" }
+      },
+      "combat":
+      {
+        "body": "humanoid",
+        "attacks": [
+          { "type": "Distance",     "skill": 43, "damage": "1d10 (OR9-10)", "db": false},
+          { "type": "Unarmed",      "skill": 63, "damage": "1d5",           "db": true},
+          { "type": "Close combat", "skill": 63, "damage": "1d10 (OR8-10)", "db": true}
+        ],
+        "abilities": [
+          { "type": "Low-light vision", "description": "Trolls live in the dark and have excellent vision in darkness. They see up to Intelligence x3 meters in pitch-black darkness."},
+          { "type": "Regeneration", "description": "Some trolls heal damage very quickly. Every turn, the troll heals 1 (or more) damage point in each body part caused by physical trauma. Damage caused by magical weapons and fire is healed normally."},
+          { "type": "Horrifying Stench", "description": "Trolls smell so bad, and look so hideous, that everyone within a number of meters equal to the troll's Physique must pass a Mind x2 check to not receive a 1d5x5 penalty on all skills as long as they remain in range."}
+        ]
+      },
+      "notes": [
+        { "header": "Sunrays", "text": "Some trolls are petrified by sunlight. For this reason, few trolls venture out during the day and if they have to, they cover themselves in thick hides and resist exposing any of their skin to the daylight. Due to their fear of the sun, their skill values are halved when outside during daytime."},
+        { "header": "Troll Treasure", "text": "Like dragons, trolls love treasure of all kinds. They amass hoards of coins and gemstones, with amulets being most precious to them. Some troll kings have large chambers with chests filled to the brim with glittering coin, rings and amulets."},
+        { "header": "Equipment", "text": "Trolls arm themselves with different types of weapons and protect themselves with the armour that is available and provides the best protection."}
+      ]
+    }
+  ]
+}
