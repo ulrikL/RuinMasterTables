@@ -4,7 +4,8 @@
       "stats": {
         "traits": { "phy": "30", "min": "15", "int": "10", "cha":  "5" },
         "skills": { "bur": 48, "kno": 29, "mag": 27, "mel": 63, "soc": 18, "sur": 43 },
-        "other":  { "siz": 1.5, "hp": "75",  "car": "30", "db": "3", "act": "1", "arm": "2" }
+        "other":  { "siz": 1.5, "hp": "75",  "car": "30", "db": "3", "act": "1", "arm": "2" },
+        "move": { "land": 15, "air": -1 }
       },
       "combat": {
         "body": "humanoid",
@@ -33,7 +34,8 @@
       {
         "traits": { "phy": "[4d10+10]", "min": "[2d10+5]", "int": "[2d10]", "cha":  "[1d10]" },
         "skills": { "bur": 48, "kno": 29, "mag": 27, "mel": 63, "soc": 18, "sur": 43 },
-        "other":  { "siz": 1.5, "hp": "",  "car": "", "db": "", "act": "1", "arm": "2" }
+        "other":  { "siz": 1.5, "hp": "",  "car": "", "db": "", "act": "1", "arm": "2" },
+        "move": { "land": 15, "air": -1 }
       },
       "combat":
       {

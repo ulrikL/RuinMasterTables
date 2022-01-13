@@ -15,18 +15,13 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
-import com.fasterxml.jackson.core.type.TypeReference
-import com.fasterxml.jackson.databind.DeserializationFeature
-import com.fasterxml.jackson.databind.ObjectMapper
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import java.io.BufferedReader
-import java.io.InputStream
 import java.io.Serializable
 import kotlin.random.Random
 
 data class MonsterData (var monster : List<Monster>) : Serializable
-data class Monster (var id : Int, var name : String, var tags : List<String>, var stats : Stats, var combat : Combat, var notes : List<Notes>)
-data class Stats (var traits : Traits, var skills : Skills, var other : Other)
+data class Monster (var id : Int, var name : String, var tags : List<String>, var stats : Stats, var combat : Combat, var notes : List<Notes>) : Serializable
+data class Stats (var traits : Traits, var skills : Skills, var other : Other, var move : Move)
+data class Move (var land : Int, var air : Int)
 data class Traits (var phy : String, var min : String, var int : String, var cha : String)
 data class Skills (var bur : Int, var kno : Int, var mag : Int, var mel : Int, var soc : Int, var sur : Int)
 data class Other (var siz : Double, var hp : Int, var car : Int, var db : Int, var act : Int, var arm : Int)
@@ -39,6 +34,15 @@ const val MONSTER_FILE_ID_OFFSET = 10
 
 private const val ARG_MONSTER_DATA =  "ARG_MONSTER_DATA"
 private const val ARG_MONSTER_DATA_FILES =  "ARG_MONSTER_DATA_FILES"
+
+const val HUMANOID = "humanoid"
+const val QUADRUPED = "quadruped"
+const val GIANT = "giant"
+const val WINGED_QUADRUPED = "winged_quadruped"
+const val SNAKE = "snake"
+const val SPIRIT = "spirit"
+const val CENTAUR = "centaur"
+const val WINGED_HUMANOID = "winged_humanoid"
 
 class MonstersFragment(monsters: MonsterData, files: ArrayList<String>) : Fragment(), View.OnClickListener {
     private val buttonId : Int =  View.generateViewId()
@@ -76,19 +80,14 @@ class MonstersFragment(monsters: MonsterData, files: ArrayList<String>) : Fragme
     override fun onClick(v: View) {
         if (v.id == buttonId) {
             debug("Clicked button to show monster ${getActualMonsterId(v.tag as Int)} in '${getMonsterFileName(v.tag as Int)}'.")
-//            var terrainText : String = triggerTable(monsterData.tables, v.tag as Int)
-//            terrainText = terrainText.trimStart()
-//            if (terrainText.isNotBlank()) terrainText = replaceDieRolls(terrainText)
-//
-//            var encounterText : String = triggerTable(monsterData.tables, ((v.tag as Int)+ENCOUNTER_TABLE_OFFSET))
-//            encounterText = encounterText.trimStart()
-//            if (encounterText.isNotBlank()) encounterText = replaceDieRolls(encounterText)
-//
-//            var treasureText : String = triggerTable(monsterData.tables, ((v.tag as Int)+TREASURE_TABLE_OFFSET))
-//            treasureText = treasureText.trimStart()
-//            if (treasureText.isNotBlank()) treasureText = replaceDieRolls(treasureText)
-//
-//            showEditDialog((v as Button).text.toString(), terrainText, encounterText, treasureText)
+            monsterData.monster.forEach { monster ->
+                if (monster.id == v.tag) {
+                    val localMonster = monster.copy()
+                    showMonsterDialog(rollRandomValues(localMonster))
+                    return
+                }
+            }
+            error("Did not find id='${v.tag}' monsterData. Should be '${getActualMonsterId(v.tag as Int)}' in '${getMonsterFileName(v.tag as Int)}'.")
         }
     }
 
@@ -168,10 +167,14 @@ class MonstersFragment(monsters: MonsterData, files: ArrayList<String>) : Fragme
         return localText
     }
 
+    private fun rollRandomValues(monster: Monster) : Monster {
+        return monster
+    }
+
     private fun showMonsterDialog(monster: Monster) {
-        debug("Show monster with id=${monster.id} and name=${monster.name}")
-//        val displayMonsterFragment: DisplayMonsterFragment = DisplayMonsterFragment.newInstance(monster)
-//        displayMonsterFragment.show(requireActivity().supportFragmentManager, "fragment_monster_result")
+        debug("Show monster with id=${monster.id} and name='${monster.name}'")
+        val displayMonsterFragment: DisplayMonsterFragment = DisplayMonsterFragment.newInstance(monster)
+        displayMonsterFragment.show(requireActivity().supportFragmentManager, "fragment_display_monster")
     }
 
     private fun error(message: String) {

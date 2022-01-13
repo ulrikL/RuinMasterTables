@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2021 Ulrik Laurén
+     Part of RuinMastersTables
+     MIT License, see LICENSE file -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TableLayout
+        android:id="@+id/monsterStatsTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:weightSum="6" >
+        <TableRow android:background="@color/rm_table_dark" android:padding="5dp" >
+            <TextView android:layout_weight="6" android:gravity="center_horizontal" android:textStyle="bold" android:textSize="18sp"
+                android:text="@string/s_att"  />
+        </TableRow>
+        <TableRow android:background="@color/rm_table_light" android:padding="5dp">
+            <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold" android:text="@string/s_phy" />
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:id="@+id/phy_stat" />
+            <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold" android:text="@string/s_min" />
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:id="@+id/min_stat" />
+        </TableRow>
+        <TableRow android:background="@color/rm_table_dark" android:padding="5dp">
+            <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold" android:text="@string/s_int" />
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:id="@+id/int_stat" />
+            <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold" android:text="@string/s_cha" />
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:id="@+id/cha_stat" />
+        </TableRow>
+        <TableRow android:background="@color/rm_table_dark" android:layout_marginTop="15dp" android:padding="5dp">
+            <TextView android:layout_weight="6" android:gravity="center_horizontal" android:textStyle="bold" android:textSize="18sp"
+                android:text="@string/s_ski" />
+        </TableRow>
+        <TableRow android:background="@color/rm_table_light" android:padding="5dp">
+            <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold" android:text="@string/s_bur" />
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:id="@+id/bur_skill" />
+            <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold" android:text="@string/s_mel" />
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:id="@+id/mel_skill" />
+        </TableRow>
+        <TableRow android:background="@color/rm_table_dark" android:padding="5dp">
+            <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold" android:text="@string/s_kno" />
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:id="@+id/kno_skill" />
+            <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold" android:text="@string/s_soc" />
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:id="@+id/soc_skill" />
+        </TableRow>
+        <TableRow android:background="@color/rm_table_light" android:padding="5dp">
+            <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold" android:text="@string/s_mag" />
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:id="@+id/mag_skill" />
+            <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold" android:text="@string/s_sur" />
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:id="@+id/sur_skill" />
+        </TableRow>
+        <TableRow android:background="@color/rm_table_dark" android:layout_marginTop="15dp" android:padding="5dp">
+            <TextView android:layout_width="0dp" android:layout_weight="3" android:textStyle="bold" android:text="@string/s_car" />
+            <TextView android:layout_width="0dp" android:layout_weight="3" android:id="@+id/car_value" />
+        </TableRow>
+        <TableRow android:background="@color/rm_table_light" android:padding="5dp">
+            <TextView android:layout_width="0dp" android:layout_weight="3" android:textStyle="bold" android:text="@string/s_siz" />
+            <TextView android:layout_width="0dp" android:layout_weight="3" android:id="@+id/siz_value" />
+        </TableRow>
+        <TableRow android:background="@color/rm_table_dark" android:padding="5dp">
+            <TextView android:layout_width="0dp" android:layout_weight="3" android:textStyle="bold" android:text="@string/s_mov_l" />
+            <TextView android:layout_width="0dp" android:layout_weight="3" android:id="@+id/mov_land" />
+        </TableRow>
+        <TableRow android:background="@color/rm_table_light" android:padding="5dp">
+            <TextView android:layout_width="0dp" android:layout_weight="3" android:textStyle="bold" android:text="@string/s_mov_a" />
+            <TextView android:layout_width="0dp" android:layout_weight="3" android:id="@+id/mov_air" />
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

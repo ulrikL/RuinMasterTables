@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2021 Ulrik Laurén
+     Part of RuinMastersTables
+     MIT License, see LICENSE file -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableLayout
+            android:id="@+id/monsterCombatBodyTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:weightSum="6" >
+            <TableRow android:background="@color/rm_table_dark" android:padding="5dp" >
+                <TextView android:layout_weight="6" android:gravity="center_horizontal" android:textStyle="bold" android:textSize="18sp"
+                    android:text="@string/c_bod_hdr" android:id="@+id/bod_stat" />
+            </TableRow>
+            <TableRow android:background="@color/rm_table_dark" android:padding="5dp" >
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold" android:text="@string/c_bp" />
+                <TextView android:layout_width="0dp" android:layout_weight="1" android:textStyle="bold" android:text="@string/c_bp_d10" android:id="@+id/bod_hit_die"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1" android:textStyle="bold" android:text="@string/c_bp_p" />
+                <TextView android:layout_width="0dp" android:layout_weight="1" android:textStyle="bold" android:text="@string/c_bp_a" />
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/bp_0">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/bp_1">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/bp_2">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/bp_3">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/bp_4">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/bp_5">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/bp_6">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/bp_7">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/bp_8">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/bp_9">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+            </TableRow>
+        </TableLayout>
+        <TableLayout
+            android:id="@+id/monsterCombatAttackTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/monsterCombatBodyTable"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:weightSum="6" >
+            <TableRow android:background="@color/rm_table_dark" android:layout_marginTop="15dp" android:padding="5dp">
+                <TextView android:layout_weight="6" android:gravity="center_horizontal" android:textStyle="bold" android:textSize="18sp"
+                    android:text="@string/c_att_hdr" android:id="@+id/attacks" />
+            </TableRow>
+            <TableRow android:background="@color/rm_table_dark" android:padding="5dp" >
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold" android:text="@string/c_att" />
+                <TextView android:layout_width="0dp" android:layout_weight="1" android:textStyle="bold" android:text="@string/c_att_sv" />
+                <TextView android:layout_width="0dp" android:layout_weight="3" android:textStyle="bold" android:text="@string/c_att_d" />
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/at_0">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="3"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/at_1">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="3"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/at_2">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="3"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/at_3">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="3"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/at_4">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="3"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/at_5">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="0dp" android:layout_weight="3"/>
+            </TableRow>
+        </TableLayout>
+        <TableLayout
+            android:id="@+id/monsterCombatAbilityTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/monsterCombatAttackTable"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:weightSum="6" >
+            <TableRow android:background="@color/rm_table_dark" android:layout_marginTop="15dp" android:padding="5dp">
+                <TextView android:layout_weight="6" android:gravity="center_horizontal" android:textStyle="bold" android:textSize="18sp"
+                    android:text="@string/c_ab" android:id="@+id/abilities" />
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/ab_0">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="4"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/ab_1">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="4"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/ab_2">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="4"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/ab_3">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="4"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/ab_4">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="4"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/ab_5">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="4"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/ab_6">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="4"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/ab_7">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="4"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/ab_8">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="4"/>
+            </TableRow>
+            <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/ab_9">
+                <TextView android:layout_width="0dp" android:layout_weight="2" android:textStyle="bold"/>
+                <TextView android:layout_width="0dp" android:layout_weight="4"/>
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+</ScrollView>

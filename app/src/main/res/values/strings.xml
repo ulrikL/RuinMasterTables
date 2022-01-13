@@ -8,8 +8,42 @@
     <string name="encounter">Encounter</string>
     <string name="treasure">Treasure</string>
     <string name="btnDismiss">DISMISS</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="skill">%d%%</string>
+    <string name="carry">%d kg</string>
+    <string name="move">%d m/t  %d hex/t</string>
+    <string name="none">None</string>
+
+    <string name="s_att">Attributes</string>
+    <string name="s_phy">Physique</string>
+    <string name="s_min">Mind</string>
+    <string name="s_int">Intelligence</string>
+    <string name="s_cha">Charisma</string>
+    <string name="s_ski">Skills</string>
+    <string name="s_bur">Burgling</string>
+    <string name="s_mel">Melee</string>
+    <string name="s_kno">Knowledge</string>
+    <string name="s_soc">Social</string>
+    <string name="s_mag">Magic</string>
+    <string name="s_sur">Survival</string>
+    <string name="s_car">Carrying capacity</string>
+    <string name="s_siz">Size</string>
+    <string name="s_mov_l">Movement (Land)</string>
+    <string name="s_mov_a">Movement (Air)</string>
+
+    <string name="c_bod_hdr">Body parts</string>
+    <string name="c_bp">Body part</string>
+    <string name="c_bp_d10">1D10</string>
+    <string name="c_bp_d20">1D20</string>
+    <string name="c_bp_p">BpP</string>
+    <string name="c_bp_a">Armor</string>
+
+    <string name="c_att_hdr">Attacks</string>
+    <string name="c_att">Attack</string>
+    <string name="c_att_sv">SV</string>
+    <string name="c_att_d">Damage</string>
+
+    <string name="c_ab">Abilities</string>
+
+    <string name="n_n">Notes</string>
 </resources>
