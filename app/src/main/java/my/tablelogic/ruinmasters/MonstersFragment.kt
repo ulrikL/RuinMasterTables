@@ -15,11 +15,18 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import java.io.Serializable
+import kotlin.math.roundToInt
 import kotlin.random.Random
 
 data class MonsterData (var monster : List<Monster>) : Serializable
-data class Monster (var id : Int, var name : String, var tags : List<String>, var stats : Stats, var combat : Combat, var notes : List<Notes>) : Serializable
+data class Monster (var id : Int, var name : String, var tags : List<String>, var stats : Stats, var combat : Combat, var notes : List<Notes>) : Serializable {
+    fun deepCopy():Monster {
+        val mapper = jacksonObjectMapper()
+        return mapper.readValue(mapper.writeValueAsString(this), Monster::class.java)
+    }
+}
 data class Stats (var traits : Traits, var skills : Skills, var other : Other, var move : Move)
 data class Move (var land : Int, var air : Int)
 data class Traits (var phy : String, var min : String, var int : String, var cha : String)
@@ -82,8 +89,7 @@ class MonstersFragment(monsters: MonsterData, files: ArrayList<String>) : Fragme
             debug("Clicked button to show monster ${getActualMonsterId(v.tag as Int)} in '${getMonsterFileName(v.tag as Int)}'.")
             monsterData.monster.forEach { monster ->
                 if (monster.id == v.tag) {
-                    val localMonster = monster.copy()
-                    showMonsterDialog(rollRandomValues(localMonster))
+                    showMonsterDialog(rollRandomValues(monster.deepCopy()))
                     return
                 }
             }
@@ -143,7 +149,7 @@ class MonstersFragment(monsters: MonsterData, files: ArrayList<String>) : Fragme
 
     private fun replaceDieRollsWithModifier(text : String): String {
         var localText : String = text
-        val regex = "\\[\\b(\\d*)d(\\d*)([\\+\\-]*)(\\d*)]".toRegex()
+        val regex = "\\[\\b(\\d*)d(\\d*)([+\\-]*)(\\d*)]".toRegex()
         var match = regex.find(localText)
 
         while (match != null) {
@@ -168,6 +174,24 @@ class MonstersFragment(monsters: MonsterData, files: ArrayList<String>) : Fragme
     }
 
     private fun rollRandomValues(monster: Monster) : Monster {
+        monster.stats.traits.phy = replaceDieRollsWithModifier(monster.stats.traits.phy)
+        monster.stats.traits.min = replaceDieRollsWithModifier(monster.stats.traits.min)
+        monster.stats.traits.int = replaceDieRollsWithModifier(monster.stats.traits.int)
+        monster.stats.traits.cha = replaceDieRollsWithModifier(monster.stats.traits.cha)
+
+        if (monster.stats.other.hp == 0) {
+            monster.stats.other.hp =
+                (((monster.stats.traits.phy.toInt() + monster.stats.traits.min.toInt() + getRandomInt(1,10)).toDouble()) * monster.stats.other.siz).roundToInt()
+        }
+        if (monster.stats.other.car == 0) {
+            monster.stats.other.car = (monster.stats.traits.phy.toDouble() * monster.stats.other.siz * monster.stats.other.siz).roundToInt()
+        }
+        monster.stats.other.db = when {
+            monster.stats.traits.phy.toInt() in 21..25 -> 1
+            monster.stats.traits.phy.toInt() in 26..28 -> 2
+            monster.stats.traits.phy.toInt() > 28 -> 3
+            else -> 0
+        }
         return monster
     }
 
