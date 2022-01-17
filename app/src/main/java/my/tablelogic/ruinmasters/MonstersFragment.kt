@@ -162,9 +162,15 @@ class MonstersFragment(monsters: MonsterData, files: ArrayList<String>) : Fragme
                 var dieResult = 0
                 debug("Found '${match.value}' with group1=$numberOfDice and group2=$diceType in string.")
                 for (i in 1..numberOfDice) dieResult += getRandomInt(1, diceType)
-                if (modifyAdd) dieResult += modifier
-                if (modifyRemove) dieResult -= modifier
-                debug("Rolled $dieResult and replace $match with this value.")
+                if (modifyAdd) {
+                    debug("Found '${modifier}' to add to die result (${dieResult}).")
+                    dieResult += modifier
+                }
+                if (modifyRemove) {
+                    debug("Found '${modifier}' to remove from die result (${dieResult}).")
+                    dieResult -= modifier
+                }
+                debug("Got $dieResult and replace $match with this value.")
                 localText = localText.replaceRange(match.range, dieResult.toString())
                 debug("Updated text='$localText'")
             }
@@ -181,9 +187,11 @@ class MonstersFragment(monsters: MonsterData, files: ArrayList<String>) : Fragme
 
         if (monster.stats.other.hp == 0) {
             monster.stats.other.hp =
+                // Calculate HP=(Physique + Mind + 1D10) * size
                 (((monster.stats.traits.phy.toInt() + monster.stats.traits.min.toInt() + getRandomInt(1,10)).toDouble()) * monster.stats.other.siz).roundToInt()
         }
         if (monster.stats.other.car == 0) {
+            // Calculate carrying capacity as physique * size^2. No clear guidance in rules.
             monster.stats.other.car = (monster.stats.traits.phy.toDouble() * monster.stats.other.siz * monster.stats.other.siz).roundToInt()
         }
         monster.stats.other.db = when {
