@@ -46,10 +46,6 @@ class TablesFragment(tables: ConfigurationData, files: ArrayList<String>) : Frag
             tableData = it.getSerializable(ARG_TABLE_DATA) as ConfigurationData
             tableFiles = it.getStringArrayList(ARG_TABLE_DATA_FILES) as ArrayList<String>
         }
-
-        if (myContext.assets != null) {
-            (view?.findViewById<TextView>(R.id.tvIntro))?.typeface = Typeface.createFromAsset(myContext.assets, "fonts/BarcelonaITCStd-Book.otf")
-        }
     }
 
     override fun onAttach(context: Context) {
@@ -111,7 +107,7 @@ class TablesFragment(tables: ConfigurationData, files: ArrayList<String>) : Frag
                 dynamicButton.minimumWidth = 700
                 dynamicButton.setPadding(0, 40, 0, 40)
                 dynamicButton.textSize = 20.0F
-                dynamicButton.typeface = Typeface.createFromAsset(myView.context.assets, "fonts/BarcelonaITCStd-Medium.otf")
+                dynamicButton.typeface = resources.getFont(R.font.button)
                 dynamicButton.backgroundTintList = ContextCompat.getColorStateList(myView.context, R.color.rm_table_dark)
                 dynamicButton.setOnClickListener(this)
                 linearLayout.addView(dynamicButton)

@@ -131,7 +131,7 @@ class MonstersFragment(monsters: MonsterData, files: ArrayList<String>) : Fragme
                 dynamicButton.minimumWidth = 700
                 dynamicButton.setPadding(0, 40, 0, 40)
                 dynamicButton.textSize = 20.0F
-                dynamicButton.typeface = Typeface.createFromAsset(myView.context.assets, "fonts/BarcelonaITCStd-Medium.otf")
+                dynamicButton.typeface = resources.getFont(R.font.button)
                 dynamicButton.backgroundTintList = ContextCompat.getColorStateList(myView.context, R.color.rm_table_dark)
                 dynamicButton.setOnClickListener(this)
                 linearLayout.addView(dynamicButton)

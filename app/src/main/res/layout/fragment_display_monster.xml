@@ -23,6 +23,7 @@
             android:paddingHorizontal="24dp"
             android:textSize="32sp"
             android:textColor="@color/rm_text_dark"
+            android:fontFamily="@font/header"
             android:gravity="center_horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -58,6 +59,8 @@
             android:layout_marginTop="32dp"
             android:text="@string/btnDismiss"
             android:backgroundTint="@color/rm_table_dark"
+            android:textSize="20sp"
+            android:fontFamily="@font/button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/viewPagerMonster" />

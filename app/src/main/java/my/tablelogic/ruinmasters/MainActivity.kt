@@ -57,8 +57,6 @@ class MainActivity : AppCompatActivity() {
         isConfigurationDataValid(tables.first, tables.second)
         monsters = loadMonsterData()
 
-        (findViewById<TextView>(R.id.custom_title)).typeface = Typeface.createFromAsset(assets, "fonts/Becker.ttf")
-
         val viewPager = findViewById<ViewPager2>(R.id.viewPager)
         viewPager.adapter = PageAdapter(supportFragmentManager, lifecycle, tables.first, tables.second, monsters.first, monsters.second)
 
@@ -239,7 +237,7 @@ class MainActivity : AppCompatActivity() {
             for (i in 0 until tabChildCount) {
                 val tabViewChild = viewGroupChildAt.getChildAt(i)
                 if (tabViewChild is TextView) {
-                    tabViewChild.typeface = Typeface.createFromAsset(assets, "fonts/BarcelonaITCStd-Bold.otf")
+                    tabViewChild.typeface = resources.getFont(R.font.header)
                 }
             }
         }

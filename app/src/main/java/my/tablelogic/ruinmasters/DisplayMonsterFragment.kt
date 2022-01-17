@@ -64,9 +64,6 @@ class DisplayMonsterFragment(var monster: Monster) : DialogFragment() {
     ): View {
         // Inflate the layout for this fragment
         myView = inflater.inflate(R.layout.fragment_display_monster, container, false)
-        val nameFont = Typeface.createFromAsset(this.requireContext().assets, "fonts/BarcelonaITCStd-Bold.otf")
-        val textFont = Typeface.createFromAsset(this.requireContext().assets, "fonts/BarcelonaITCStd-Book.otf")
-        val buttonFont = Typeface.createFromAsset(this.requireContext().assets, "fonts/BarcelonaITCStd-Medium.otf")
         val monsterName = myView.findViewById<TextView>(R.id.tvMonsterName)
         val dismissButton = myView.findViewById<AppCompatButton>(R.id.btnMonsterDismiss)
 
@@ -81,18 +78,15 @@ class DisplayMonsterFragment(var monster: Monster) : DialogFragment() {
                 2 -> tab.text = "Notes"
             }
         }.attach()
-        tabLayoutMonster.setFont(nameFont)
+        tabLayoutMonster.setFont()
 
         monsterName.text = monster.name
-        monsterName.typeface = nameFont
-        dismissButton.typeface = buttonFont
-        dismissButton.textSize = 20.0F
         dismissButton.setOnClickListener { dismiss() }
 
         return myView
     }
 
-    private fun TabLayout.setFont(font: Typeface) {
+    private fun TabLayout.setFont() {
         val viewGroup = getChildAt(0) as ViewGroup
         val tabsCount = viewGroup.childCount
         for (j in 0 until tabsCount) {
@@ -101,7 +95,7 @@ class DisplayMonsterFragment(var monster: Monster) : DialogFragment() {
             for (i in 0 until tabChildCount) {
                 val tabViewChild = viewGroupChildAt.getChildAt(i)
                 if (tabViewChild is TextView) {
-                    tabViewChild.typeface = font
+                    tabViewChild.typeface = resources.getFont(R.font.header)
                 }
             }
         }
