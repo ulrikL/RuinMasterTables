@@ -34,9 +34,10 @@
     <string name="s_sur">Survival</string>
     <string name="s_car">Carrying capacity</string>
     <string name="s_siz">Size</string>
+    <string name="s_hp">Hit Points</string>
+    <string name="s_arm">Natural armor</string>
     <string name="s_mov_l">Movement (Land)</string>
     <string name="s_mov_a">Movement (Air)</string>
-
 
     <string name="c_bod_hdr">Body parts</string>
     <string name="c_bp">Body part</string>
@@ -44,6 +45,7 @@
     <string name="c_bp_d20">1D20</string>
     <string name="c_bp_p">BpP</string>
     <string name="c_bp_a">Armor</string>
+    <string name="c_bp_armor">%d+%d</string>
 
     <string name="c_att_hdr">Attacks</string>
     <string name="c_att">Attack</string>

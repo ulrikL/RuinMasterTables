@@ -10,7 +10,11 @@
         "move": { "land": 15, "air": -1 }
       },
       "combat": {
-        "body": "humanoid",
+        "body": {
+          "type": "humanoid",
+          "worn_armor": [ 0, 0, 0, 0, 0, 0 ],
+          "comment": "They protect themselves with the armour that is available and provides the best protection."
+        },
         "attacks": [
           { "type": "Distance",     "skill": 43, "damage": "1d10 (OR9-10)", "db": false, "comment": ""},
           { "type": "Unarmed",      "skill": 63, "damage": "1d5",           "db": true,  "comment": ""},
@@ -18,7 +22,7 @@
         ]
       },
       "abilities": [
-        { "type": "Horrifying Stench", "description": "Everyone within a number of meters equal to the troll's Physique must pass a Mind x2 check to not receive a 1d5x5 penalty on all skills as long as they remain in range."},
+        { "type": "Horrifying Stench", "description": "Everyone within troll's Physique meter must pass a Mind x2 check to not receive a 1d5x5 penalty on all skills as long as they remain in range."},
         { "type": "Low-light vision", "description": "They see up to Intelligence x3 meters in pitch-black darkness."},
         { "type": "Regeneration", "description": "Every turn, the troll heals 1 (or more) damage point in each body part caused by physical trauma. Damage caused by magical weapons and fire is healed normally."},
         { "type": "Sunrays", "description": "Due to their fear of the sun, their skill values are halved when outside during daytime."},
@@ -39,7 +43,11 @@
       },
       "combat":
       {
-        "body": "humanoid",
+        "body": {
+          "type": "humanoid",
+          "worn_armor": [ 0, 0, 0, 0, 0, 0 ],
+          "comment": "They protect themselves with the armour that is available and provides the best protection."
+        },
         "attacks": [
           { "type": "Distance",     "skill": 43, "damage": "1d10 (OR9-10)", "db": false, "comment": ""},
           { "type": "Unarmed",      "skill": 63, "damage": "1d5",           "db": true,  "comment": ""},
@@ -47,7 +55,7 @@
         ]
       },
       "abilities": [
-        { "type": "Horrifying Stench", "description": "Everyone within a number of meters equal to the troll's Physique must pass a Mind x2 check to not receive a 1d5x5 penalty on all skills as long as they remain in range."},
+        { "type": "Horrifying Stench", "description": "Everyone within troll's Physique meter must pass a Mind x2 check to not receive a 1d5x5 penalty on all skills as long as they remain in range."},
         { "type": "Low-light vision", "description": "They see up to Intelligence x3 meters in pitch-black darkness."},
         { "type": "Regeneration", "description": "Every turn, the troll heals 1 (or more) damage point in each body part caused by physical trauma. Damage caused by magical weapons and fire is healed normally."},
         { "type": "Sunrays", "description": "Due to their fear of the sun, their skill values are halved when outside during daytime."},

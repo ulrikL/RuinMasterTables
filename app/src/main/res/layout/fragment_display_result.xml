@@ -111,7 +111,7 @@
             android:id="@+id/btnDismiss"
             android:layout_width="200dp"
             android:layout_height="48dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:text="@string/btnDismiss"
             android:textSize="20sp"
             android:fontFamily="@font/button"

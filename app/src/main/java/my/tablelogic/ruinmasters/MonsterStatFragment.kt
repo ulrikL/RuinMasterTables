@@ -10,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import kotlin.math.roundToInt
 
 private const val ARG_MONSTER = "ARG_MONSTER"
 
@@ -42,7 +43,13 @@ class MonsterStatFragment(private var monster: Monster) : Fragment() {
         v.findViewById<TextView>(R.id.mag_skill).text = getString(R.string.skill, s.mag)
         v.findViewById<TextView>(R.id.sur_skill).text = getString(R.string.skill, s.sur)
         v.findViewById<TextView>(R.id.car_value).text = getString(R.string.carry, o.car)
-        v.findViewById<TextView>(R.id.siz_value).text = o.siz.toString()
+        if (o.siz.rem(1).equals(0.0)) {
+            v.findViewById<TextView>(R.id.siz_value).text = (o.siz.roundToInt()).toString()
+        } else {
+            v.findViewById<TextView>(R.id.siz_value).text = o.siz.toString()
+        }
+        v.findViewById<TextView>(R.id.hp_value).text = o.hp.toString()
+        v.findViewById<TextView>(R.id.arm_value).text = o.arm.toString()
         if (m.land > 0)
             v.findViewById<TextView>(R.id.mov_land).text = getString(R.string.move, m.land, (m.land/2))
         else
