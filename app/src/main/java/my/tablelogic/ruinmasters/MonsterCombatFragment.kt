@@ -134,18 +134,25 @@ class MonsterCombatFragment(private var monster: Monster) : Fragment() {
     }
 
     private fun showAttack(pos: Int, attack: Attacks, db: Int) {
-        val tr = myView.findViewById<TableLayout>(R.id.monsterCombatAttackTable).getChildAt(pos+2) as TableRow
+        val t = myView.findViewById<TableLayout>(R.id.monsterCombatAttackTable)
+        val trAtt = t.getChildAt((pos*2)+2) as TableRow
+        val trCom = t.getChildAt((pos*2+1)+2) as TableRow
         val dbValue = when {
             db > 0 -> "+${db}"
             db < 0 -> "-${db}"
             else -> ""
         }
-        tr.visibility = TableRow.VISIBLE
-        when { pos % 2 == 1 -> tr.backgroundTintList = ContextCompat.getColorStateList(myContext, R.color.rm_table_dark) }
-        (tr.getChildAt(0) as TextView).text = attack.type
-        (tr.getChildAt(1) as TextView).text = getString(R.string.skill, attack.skill)
+        trAtt.visibility = TableRow.VISIBLE
+        when { pos % 2 == 1 -> trAtt.backgroundTintList = ContextCompat.getColorStateList(myContext, R.color.rm_table_dark) }
+        (trAtt.getChildAt(0) as TextView).text = attack.type
+        (trAtt.getChildAt(1) as TextView).text = getString(R.string.skill, attack.skill)
         val damageString = if (attack.db) attack.damage+dbValue else attack.damage
-        (tr.getChildAt(2) as TextView).text = damageString
+        (trAtt.getChildAt(2) as TextView).text = damageString
+        if (attack.comment.isNotEmpty()) {
+            when { pos % 2 == 1 -> trCom.backgroundTintList = ContextCompat.getColorStateList(myContext, R.color.rm_table_dark) }
+            trCom.visibility = TableRow.VISIBLE
+            (trCom.getChildAt(0) as TextView).text = attack.comment
+        }
     }
 
     companion object {

@@ -32,7 +32,7 @@ data class Traits (var phy : String, var min : String, var int : String, var cha
 data class Skills (var bur : Int, var kno : Int, var mag : Int, var mel : Int, var soc : Int, var sur : Int)
 data class Other (var siz : Double, var hp : Int, var car : Int, var db : Int, var act : Int, var arm : Int)
 data class Combat (var body : String, var attacks : List<Attacks>)
-data class Attacks (var type : String, var skill : Int, var damage : String, var db : Boolean)
+data class Attacks (var type : String, var skill : Int, var damage : String, var db : Boolean, var comment : String)
 data class Abilities (var type : String, var description : String)
 
 const val MONSTER_FILE_ID_OFFSET = 10

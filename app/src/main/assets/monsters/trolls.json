@@ -12,9 +12,9 @@
       "combat": {
         "body": "humanoid",
         "attacks": [
-          { "type": "Distance",     "skill": 43, "damage": "1d10 (OR9-10)", "db": false},
-          { "type": "Unarmed",      "skill": 63, "damage": "1d5",           "db": true},
-          { "type": "Close combat", "skill": 63, "damage": "1d10 (OR8-10)", "db": true}
+          { "type": "Distance",     "skill": 43, "damage": "1d10 (OR9-10)", "db": false, "comment": ""},
+          { "type": "Unarmed",      "skill": 63, "damage": "1d5",           "db": true,  "comment": ""},
+          { "type": "Close combat", "skill": 63, "damage": "1d10 (OR8-10)", "db": true,  "comment": ""}
         ]
       },
       "abilities": [
@@ -42,9 +42,9 @@
       {
         "body": "humanoid",
         "attacks": [
-          { "type": "Distance",     "skill": 43, "damage": "1d10 (OR9-10)", "db": false},
-          { "type": "Unarmed",      "skill": 63, "damage": "1d5",           "db": true},
-          { "type": "Close combat", "skill": 63, "damage": "1d10 (OR8-10)", "db": true}
+          { "type": "Distance",     "skill": 43, "damage": "1d10 (OR9-10)", "db": false, "comment": ""},
+          { "type": "Unarmed",      "skill": 63, "damage": "1d5",           "db": true,  "comment": ""},
+          { "type": "Close combat", "skill": 63, "damage": "1d10 (OR8-10)", "db": true,  "comment": ""}
         ]
       },
       "abilities": [
