@@ -1,0 +1,81 @@
+{
+  "monster":[
+    { "id":1,
+      "name":"Orc",
+      "tags": [ "Orc", "orc", "Orcs", "orcs" ],
+      "stats": {
+        "traits": { "phy": "30", "min": "15", "int": "15", "cha":  "5" },
+        "skills": { "bur": 39, "kno": 27, "mag": 25, "mel": 60, "soc": 28, "sur": 52 },
+        "other":  { "siz": 1, "hp": "50",  "car": "30", "db": "3", "act": "2", "arm": "1" },
+        "move": { "land": 12, "air": -1 }
+      },
+      "combat": {
+        "body": {
+          "type": "humanoid",
+          "worn_armor": [ 0, 0, 0, 0, 0, 0 ],
+          "comment": "They protect themselves with the armour that is available and provides the best protection."
+        },
+        "attacks": [
+          { "type": "Distance",     "skill": 52, "damage": "1d10 (OR9-10)", "db": false, "comment": ""},
+          { "type": "Unarmed",      "skill": 60, "damage": "1d5",           "db": true,  "comment": ""},
+          { "type": "Close combat", "skill": 60, "damage": "1d10 (OR9-10)", "db": true,  "comment": "They arm themselves with different types of weapons."}
+        ]
+      },
+      "abilities": [
+        { "type": "Low-light vision", "description": "They see up to Intelligence x3 meters in pitch-black darkness."}
+      ]
+    },
+    { "id":2,
+      "name":"Orc leader",
+      "tags": [ ],
+      "stats": {
+        "traits": { "phy": "40", "min": "25", "int": "20", "cha":  "10" },
+        "skills": { "bur": 54, "kno": 42, "mag": 40, "mel": 80, "soc": 43, "sur": 72 },
+        "other":  { "siz": 1, "hp": "50",  "car": "40", "db": "3", "act": "3", "arm": "1" },
+        "move": { "land": 12, "air": -1 }
+      },
+      "combat": {
+        "body": {
+          "type": "humanoid",
+          "worn_armor": [ 0, 0, 0, 0, 0, 0 ],
+          "comment": "They protect themselves with the armour that is available and provides the best protection."
+        },
+        "attacks": [
+          { "type": "Distance",     "skill": 52, "damage": "1d10 (OR9-10)", "db": false, "comment": ""},
+          { "type": "Unarmed",      "skill": 60, "damage": "1d5",           "db": true,  "comment": ""},
+          { "type": "Close combat", "skill": 60, "damage": "1d10 (OR8-10)", "db": true,  "comment": "(Heavy weapons) They arm themselves with different types of weapons."}
+        ]
+      },
+      "abilities": [
+        { "type": "Low-light vision", "description": "They see up to Intelligence x3 meters in pitch-black darkness."}
+      ]
+    },
+    {
+      "id":3,
+      "name":"Orc (random)",
+      "tags": [ ],
+      "stats": {
+        "traits": { "phy": "5d10+5", "min": "3d10", "int": "2d10+5", "cha":  "1d10" },
+        "skills": { "bur": 39, "kno": 27, "mag": 25, "mel": 60, "soc": 28, "sur": 52 },
+        "other":  { "siz": 1, "hp": "",  "car": "", "db": "", "act": "2", "arm": "1" },
+        "move": { "land": 12, "air": -1 }
+      },
+      "combat": {
+        "body": {
+          "type": "humanoid",
+          "worn_armor": [ 0, 0, 0, 0, 0, 0 ],
+          "comment": "They protect themselves with the armour that is available and provides the best protection."
+        },
+        "attacks": [
+          { "type": "Distance",     "skill": 52, "damage": "1d10 (OR9-10)", "db": false, "comment": ""},
+          { "type": "Unarmed",      "skill": 60, "damage": "1d5",           "db": true,  "comment": ""},
+          { "type": "Close combat", "skill": 60, "damage": "1d10 (OR9-10)", "db": true,  "comment": "They arm themselves with different types of weapons."},
+          { "type": "Close combat", "skill": 60, "damage": "1d10 (OR8-10)", "db": true,  "comment": "(Heavy weapons)They arm themselves with different types of weapons."}
+        ]
+      },
+      "abilities": [
+        { "type": "Low-light vision", "description": "They see up to Intelligence x3 meters in pitch-black darkness."}
+      ]
+    }
+  ]
+}
