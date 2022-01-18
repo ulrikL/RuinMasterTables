@@ -36,3 +36,17 @@ an empty string.
 ## Text string format
 The logic will replace **'[\<int>d\<int>]'** in the text strings with random
 values according to the number of dice and die type.
+
+# Releasing
+
+1. In `app/build.gradle` update the following values.
+   Major step when doing non-backwards compatible changes or major extensions, e.g. changing json file formats, adding new tabs
+   Minor step when doing something smaller, e.g. adding monsters or fixing bugs
+
+>   versionCode 3
+>   versionName "3.0"
+
+2. In Android Studio select `Build->Generate Signed Bundle/APK`
+3. Select APK
+4. Create a folder for the release in `app\release\`
+5. Put the generated APK there

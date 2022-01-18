@@ -45,7 +45,7 @@
     <string name="c_bp_d20">1D20</string>
     <string name="c_bp_p">BpP</string>
     <string name="c_bp_a">Armor</string>
-    <string name="c_bp_armor">%d+%d</string>
+    <string name="c_bp_armor">%1$d+%2$d</string>
 
     <string name="c_att_hdr">Attacks</string>
     <string name="c_att">Attack</string>

@@ -30,7 +30,7 @@
       "name":"Goblin (random)",
       "tags": [ ],
       "stats": {
-        "traits": { "phy": "2d10+2", "min": "2d10", "int": "2d10", "cha":  "2d10" },
+        "traits": { "phy": "[2d10+2]", "min": "[2d10]", "int": "[2d10]", "cha":  "[2d10]" },
         "skills": { "bur": 69, "kno": 17, "mag": 15, "mel": 49, "soc": 38, "sur": 58 },
         "other":  { "siz": 0.5, "hp": "14",  "car": "12", "db": "0", "act": "2", "arm": "0" },
         "move": { "land": 10, "air": -1 }

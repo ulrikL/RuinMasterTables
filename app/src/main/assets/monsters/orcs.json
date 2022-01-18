@@ -55,7 +55,7 @@
       "name":"Orc (random)",
       "tags": [ ],
       "stats": {
-        "traits": { "phy": "5d10+5", "min": "3d10", "int": "2d10+5", "cha":  "1d10" },
+        "traits": { "phy": "[5d10+5]", "min": "[3d10]", "int": "[2d10+5]", "cha":  "[1d10]" },
         "skills": { "bur": 39, "kno": 27, "mag": 25, "mel": 60, "soc": 28, "sur": 52 },
         "other":  { "siz": 1, "hp": "",  "car": "", "db": "", "act": "2", "arm": "1" },
         "move": { "land": 12, "air": -1 }
