@@ -4,7 +4,6 @@
 
 package my.tablelogic.ruinmasters
 
-import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -63,8 +62,8 @@ class MainActivity : AppCompatActivity() {
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
                 when (position) {
-                0 -> tab.text = "Tables"
-                1 -> tab.text = "Monsters"
+                0 -> tab.text = resources.getString(R.string.app_tab_1)
+                1 -> tab.text = resources.getString(R.string.app_tab_2)
             }
         }.attach()
         tabLayout.setFont()

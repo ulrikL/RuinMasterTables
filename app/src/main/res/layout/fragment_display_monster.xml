@@ -31,7 +31,7 @@
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayoutMonster"
-            android:layout_width="409dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"
             android:layout_marginBottom="1dp"

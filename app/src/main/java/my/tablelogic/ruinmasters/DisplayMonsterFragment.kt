@@ -7,7 +7,6 @@ package my.tablelogic.ruinmasters
 import android.content.Context
 import android.content.res.Resources
 import android.graphics.Rect
-import android.graphics.Typeface
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -36,7 +35,7 @@ class PageAdapterMonster(fm: FragmentManager, lc: Lifecycle, m: Monster) : Fragm
         when (position) {
             0 -> { return MonsterStatFragment.newInstance(monster) }
             1 -> { return MonsterCombatFragment.newInstance(monster) }
-            2 -> { return MonsterNotesFragment.newInstance(monster) }
+            2 -> { return MonsterAbilityFragment.newInstance(monster) }
         }
         return MonsterStatFragment.newInstance(monster)
     }
@@ -73,9 +72,9 @@ class DisplayMonsterFragment(var monster: Monster) : DialogFragment() {
         val tabLayoutMonster = myView.findViewById<TabLayout>(R.id.tabLayoutMonster)
         TabLayoutMediator(tabLayoutMonster, viewPagerMonster) { tab, position ->
             when (position) {
-                0 -> tab.text = "Stats"
-                1 -> tab.text = "Combat"
-                2 -> tab.text = "Notes"
+                0 -> tab.text = resources.getString(R.string.m_tab_1)
+                1 -> tab.text = resources.getString(R.string.m_tab_2)
+                2 -> tab.text = resources.getString(R.string.m_tab_3)
             }
         }.attach()
         tabLayoutMonster.setFont()

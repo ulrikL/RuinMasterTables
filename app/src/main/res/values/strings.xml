@@ -4,6 +4,8 @@
 <resources>
     <string name="app_name">RuinMasters</string>
     <string name="app_intro">To generate a random hex press \nthe corresponding button.</string>
+    <string name="app_tab_1">Tables</string>
+    <string name="app_tab_2">Monsters</string>
     <string name="terrain">Terrain</string>
     <string name="encounter">Encounter</string>
     <string name="treasure">Treasure</string>
@@ -13,6 +15,10 @@
     <string name="carry">%d kg</string>
     <string name="move">%d m/t  %d hex/t</string>
     <string name="none">None</string>
+
+    <string name="m_tab_1">Stats</string>
+    <string name="m_tab_2">Combat</string>
+    <string name="m_tab_3">Abilities</string>
 
     <string name="s_att">Attributes</string>
     <string name="s_phy">Physique</string>
@@ -31,6 +37,7 @@
     <string name="s_mov_l">Movement (Land)</string>
     <string name="s_mov_a">Movement (Air)</string>
 
+
     <string name="c_bod_hdr">Body parts</string>
     <string name="c_bp">Body part</string>
     <string name="c_bp_d10">1D10</string>
@@ -43,7 +50,5 @@
     <string name="c_att_sv">SV</string>
     <string name="c_att_d">Damage</string>
 
-    <string name="c_ab">Abilities</string>
-
-    <string name="n_n">Notes</string>
+    <string name="a_hdr">Abilities</string>
 </resources>

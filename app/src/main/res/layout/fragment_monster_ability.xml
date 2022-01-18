@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <TableLayout
-        android:id="@+id/monsterNotesTable"
+        android:id="@+id/monsterAbilityTable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="10dp"
@@ -15,45 +15,45 @@
         android:weightSum="6" >
         <TableRow android:background="@color/rm_table_dark" android:layout_marginTop="15dp" android:padding="5dp">
             <TextView android:layout_weight="6" android:gravity="center_horizontal" android:fontFamily="@font/header" android:textSize="18sp"
-                android:text="@string/n_n" android:id="@+id/notes" />
+                android:text="@string/a_hdr" android:id="@+id/abilities" />
         </TableRow>
-        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/n_0">
+        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/a_0">
             <TextView android:layout_width="0dp" android:layout_weight="2" android:fontFamily="@font/bold_text"/>
             <TextView android:layout_width="0dp" android:layout_weight="4" android:fontFamily="@font/text"/>
         </TableRow>
-        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/n_1">
+        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/a_1">
             <TextView android:layout_width="0dp" android:layout_weight="2" android:fontFamily="@font/bold_text"/>
             <TextView android:layout_width="0dp" android:layout_weight="4" android:fontFamily="@font/text"/>
         </TableRow>
-        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/n_2">
+        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/a_2">
             <TextView android:layout_width="0dp" android:layout_weight="2" android:fontFamily="@font/bold_text"/>
             <TextView android:layout_width="0dp" android:layout_weight="4" android:fontFamily="@font/text"/>
         </TableRow>
-        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/n_3">
+        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/a_3">
             <TextView android:layout_width="0dp" android:layout_weight="2" android:fontFamily="@font/bold_text"/>
             <TextView android:layout_width="0dp" android:layout_weight="4" android:fontFamily="@font/text"/>
         </TableRow>
-        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/n_4">
+        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/a_4">
             <TextView android:layout_width="0dp" android:layout_weight="2" android:fontFamily="@font/bold_text"/>
             <TextView android:layout_width="0dp" android:layout_weight="4" android:fontFamily="@font/text"/>
         </TableRow>
-        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/n_5">
+        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/a_5">
             <TextView android:layout_width="0dp" android:layout_weight="2" android:fontFamily="@font/bold_text"/>
             <TextView android:layout_width="0dp" android:layout_weight="4" android:fontFamily="@font/text"/>
         </TableRow>
-        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/n_6">
+        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/a_6">
             <TextView android:layout_width="0dp" android:layout_weight="2" android:fontFamily="@font/bold_text"/>
             <TextView android:layout_width="0dp" android:layout_weight="4" android:fontFamily="@font/text"/>
         </TableRow>
-        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/n_7">
+        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/a_7">
             <TextView android:layout_width="0dp" android:layout_weight="2" android:fontFamily="@font/bold_text"/>
             <TextView android:layout_width="0dp" android:layout_weight="4" android:fontFamily="@font/text"/>
         </TableRow>
-        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/n_8">
+        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/a_8">
             <TextView android:layout_width="0dp" android:layout_weight="2" android:fontFamily="@font/bold_text"/>
             <TextView android:layout_width="0dp" android:layout_weight="4" android:fontFamily="@font/text"/>
         </TableRow>
-        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/n_9">
+        <TableRow android:background="@color/rm_table_light" android:padding="5dp" android:visibility="gone" android:id="@+id/a_9">
             <TextView android:layout_width="0dp" android:layout_weight="2" android:fontFamily="@font/bold_text"/>
             <TextView android:layout_width="0dp" android:layout_weight="4" android:fontFamily="@font/text"/>
         </TableRow>

@@ -5,7 +5,6 @@
 package my.tablelogic.ruinmasters
 
 import android.content.Context
-import android.graphics.Typeface
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -21,7 +20,7 @@ import kotlin.math.roundToInt
 import kotlin.random.Random
 
 data class MonsterData (var monster : List<Monster>) : Serializable
-data class Monster (var id : Int, var name : String, var tags : List<String>, var stats : Stats, var combat : Combat, var notes : List<Notes>) : Serializable {
+data class Monster (var id : Int, var name : String, var tags : List<String>, var stats : Stats, var combat : Combat, var abilities: List<Abilities>) : Serializable {
     fun deepCopy():Monster {
         val mapper = jacksonObjectMapper()
         return mapper.readValue(mapper.writeValueAsString(this), Monster::class.java)
@@ -32,10 +31,9 @@ data class Move (var land : Int, var air : Int)
 data class Traits (var phy : String, var min : String, var int : String, var cha : String)
 data class Skills (var bur : Int, var kno : Int, var mag : Int, var mel : Int, var soc : Int, var sur : Int)
 data class Other (var siz : Double, var hp : Int, var car : Int, var db : Int, var act : Int, var arm : Int)
-data class Combat (var body : String, var attacks : List<Attacks>, var abilities : List<Abilities>)
+data class Combat (var body : String, var attacks : List<Attacks>)
 data class Attacks (var type : String, var skill : Int, var damage : String, var db : Boolean)
 data class Abilities (var type : String, var description : String)
-data class Notes (var header : String, var text : String)
 
 const val MONSTER_FILE_ID_OFFSET = 10
 
@@ -161,7 +159,11 @@ class MonstersFragment(monsters: MonsterData, files: ArrayList<String>) : Fragme
                 val modifier : Int = if (match.groupValues[4] != "") match.groupValues[4].toInt() else 0
                 var dieResult = 0
                 debug("Found '${match.value}' with group1=$numberOfDice and group2=$diceType in string.")
-                for (i in 1..numberOfDice) dieResult += getRandomInt(1, diceType)
+                for (i in 1..numberOfDice) {
+                    val roll = getRandomInt(1, diceType)
+                    debug("Rolled 1D$diceType and got ${roll}.")
+                    dieResult += roll
+                }
                 if (modifyAdd) {
                     debug("Found '${modifier}' to add to die result (${dieResult}).")
                     dieResult += modifier
@@ -170,7 +172,7 @@ class MonstersFragment(monsters: MonsterData, files: ArrayList<String>) : Fragme
                     debug("Found '${modifier}' to remove from die result (${dieResult}).")
                     dieResult -= modifier
                 }
-                debug("Got $dieResult and replace $match with this value.")
+                debug("Got $dieResult and replace ${match.value} with this value.")
                 localText = localText.replaceRange(match.range, dieResult.toString())
                 debug("Updated text='$localText'")
             }

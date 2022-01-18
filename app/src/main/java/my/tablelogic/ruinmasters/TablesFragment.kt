@@ -171,19 +171,55 @@ class TablesFragment(tables: ConfigurationData, files: ArrayList<String>) : Frag
         return (start..end).random(rand)
     }
 
+//    private fun replaceDieRolls(text : String): String {
+//        var localText : String = text
+//        val regex = "\\[\\b(\\d*)d(\\d*)]".toRegex()
+//        var match = regex.find(localText)
+//
+//        while (match != null) {
+//            if (match.value.isNotBlank()) {
+//                val numberOfDice : Int = match.groupValues[1].toInt()
+//                val diceType : Int = match.groupValues[2].toInt()
+//                var dieResult = 0
+//                debug("Found '${match.value}' with group1=$numberOfDice and group2=$diceType in string.")
+//                for (i in 1..numberOfDice) dieResult += getRandomInt(1, diceType)
+//                debug("Rolled $dieResult and replace $match with this value.")
+//                localText = localText.replaceRange(match.range, dieResult.toString())
+//                debug("Updated text='$localText'")
+//            }
+//            match = regex.find(localText)
+//        }
+//        return localText
+//    }
+
     private fun replaceDieRolls(text : String): String {
         var localText : String = text
-        val regex = "\\[\\b(\\d*)d(\\d*)]".toRegex()
+        val regex = "\\[\\b(\\d*)d(\\d*)([+\\-]*)(\\d*)]".toRegex()
         var match = regex.find(localText)
 
         while (match != null) {
             if (match.value.isNotBlank()) {
                 val numberOfDice : Int = match.groupValues[1].toInt()
                 val diceType : Int = match.groupValues[2].toInt()
+                val modifyAdd : Boolean = (match.groupValues[3]=="+")
+                val modifyRemove : Boolean = (match.groupValues[3]=="-")
+                val modifier : Int = if (match.groupValues[4] != "") match.groupValues[4].toInt() else 0
                 var dieResult = 0
                 debug("Found '${match.value}' with group1=$numberOfDice and group2=$diceType in string.")
-                for (i in 1..numberOfDice) dieResult += getRandomInt(1, diceType)
-                debug("Rolled $dieResult and replace $match with this value.")
+                for (i in 1..numberOfDice) {
+                    val roll = getRandomInt(1, diceType)
+                    debug("Rolled 1D$diceType and got ${roll}.")
+                    dieResult += roll
+                }
+                if (modifyAdd) {
+                    debug("Found '${modifier}' to add to die result (${dieResult}).")
+                    dieResult += modifier
+                }
+                if (modifyRemove) {
+                    debug("Found '${modifier}' to remove from die result (${dieResult}).")
+                    dieResult -= modifier
+                }
+                debug("Got $dieResult and replace ${match.value} with this value.")
                 localText = localText.replaceRange(match.range, dieResult.toString())
                 debug("Updated text='$localText'")
             }

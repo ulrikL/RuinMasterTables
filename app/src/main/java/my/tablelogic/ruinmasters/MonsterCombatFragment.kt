@@ -45,7 +45,6 @@ class MonsterCombatFragment(private var monster: Monster) : Fragment() {
         myView = inflater.inflate(R.layout.fragment_monster_combat, container, false)
         val at = monster.combat.attacks
         val o = monster.stats.other
-        val ab = monster.combat.abilities
 
         when (monster.combat.body) {
             HUMANOID -> {
@@ -120,7 +119,6 @@ class MonsterCombatFragment(private var monster: Monster) : Fragment() {
         }
 
         at.forEachIndexed { pos, attack -> showAttack(pos, attack, o.db) }
-        ab.forEachIndexed { pos, ability ->  showAbility(pos, ability) }
 
         return myView
     }
@@ -148,14 +146,6 @@ class MonsterCombatFragment(private var monster: Monster) : Fragment() {
         (tr.getChildAt(1) as TextView).text = getString(R.string.skill, attack.skill)
         val damageString = if (attack.db) attack.damage+dbValue else attack.damage
         (tr.getChildAt(2) as TextView).text = damageString
-    }
-
-    private fun showAbility(pos: Int, ability: Abilities) {
-        val tr = myView.findViewById<TableLayout>(R.id.monsterCombatAbilityTable).getChildAt(pos+1) as TableRow
-        tr.visibility = TableRow.VISIBLE
-        when { pos % 2 == 1 -> tr.backgroundTintList = ContextCompat.getColorStateList(myContext, R.color.rm_table_dark) }
-        (tr.getChildAt(0) as TextView).text = ability.type
-        (tr.getChildAt(1) as TextView).text = ability.description
     }
 
     companion object {

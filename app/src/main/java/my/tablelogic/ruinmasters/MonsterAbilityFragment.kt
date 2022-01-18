@@ -17,7 +17,7 @@ import androidx.core.content.ContextCompat
 
 private const val ARG_MONSTER = "ARG_MONSTER"
 
-class MonsterNotesFragment(private var monster: Monster) : Fragment() {
+class MonsterAbilityFragment(private var monster: Monster) : Fragment() {
     private lateinit var myContext: Context
     private lateinit var myView: View
 
@@ -39,26 +39,26 @@ class MonsterNotesFragment(private var monster: Monster) : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        myView = inflater.inflate(R.layout.fragment_monster_notes, container, false)
-        val n = monster.notes
+        myView = inflater.inflate(R.layout.fragment_monster_ability, container, false)
+        val a = monster.abilities
 
-        n.forEachIndexed { pos, note ->  showNote(pos, note) }
+        a.forEachIndexed { pos, ability ->  showAbility(pos, ability) }
 
         return myView
     }
 
-    private fun showNote(pos: Int, note: Notes) {
-        val tr = myView.findViewById<TableLayout>(R.id.monsterNotesTable).getChildAt(pos+2) as TableRow
+    private fun showAbility(pos: Int, ability: Abilities) {
+        val tr = myView.findViewById<TableLayout>(R.id.monsterAbilityTable).getChildAt(pos+2) as TableRow
         tr.visibility = TableRow.VISIBLE
         when { pos % 2 == 1 -> tr.backgroundTintList = ContextCompat.getColorStateList(myContext, R.color.rm_table_dark) }
-        (tr.getChildAt(0) as TextView).text = note.header
-        (tr.getChildAt(1) as TextView).text = note.text
+        (tr.getChildAt(0) as TextView).text = ability.type
+        (tr.getChildAt(1) as TextView).text = ability.description
     }
 
     companion object {
         @JvmStatic
         fun newInstance(monster: Monster) =
-            MonsterNotesFragment(monster).apply {
+            MonsterAbilityFragment(monster).apply {
                 arguments = Bundle().apply {
                     putSerializable(ARG_MONSTER, monster)
                 }
