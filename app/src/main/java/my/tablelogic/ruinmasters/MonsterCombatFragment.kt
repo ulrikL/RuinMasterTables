@@ -14,6 +14,7 @@ import android.widget.TableLayout
 import android.widget.TextView
 import android.widget.TableRow
 import androidx.core.content.ContextCompat
+import androidx.core.view.updatePadding
 import kotlin.math.roundToInt
 
 private const val ARG_MONSTER = "ARG_MONSTER"
@@ -149,6 +150,8 @@ class MonsterCombatFragment(private var monster: Monster) : Fragment() {
         val damageString = if (attack.db) attack.damage+dbValue else attack.damage
         (trAtt.getChildAt(2) as TextView).text = damageString
         if (attack.comment.isNotEmpty()) {
+            trAtt.setPadding(trAtt.paddingLeft, trAtt.paddingTop, trAtt.paddingRight,0)
+            trCom.setPadding(trCom.paddingLeft,0, trCom.paddingRight, trCom.paddingBottom)
             when { pos % 2 == 1 -> trCom.backgroundTintList = ContextCompat.getColorStateList(myContext, R.color.rm_table_dark) }
             trCom.visibility = TableRow.VISIBLE
             (trCom.getChildAt(0) as TextView).text = attack.comment
