@@ -1,0 +1,55 @@
+{
+  "monster":[
+    { "id":1,
+      "name":"Goblin",
+      "tags": [ "Goblin", "goblin", "Goblins", "goblins" ],
+      "stats": {
+        "traits": { "phy": "12", "min": "10", "int": "10", "cha":  "10" },
+        "skills": { "bur": 69, "kno": 17, "mag": 15, "mel": 49, "soc": 38, "sur": 58 },
+        "other":  { "siz": 0.5, "hp": "14",  "car": "12", "db": "0", "act": "2", "arm": "0" },
+        "move": { "land": 10, "air": -1 }
+      },
+      "combat": {
+        "body": {
+          "type": "humanoid",
+          "worn_armor": [ 0, 0, 0, 0, 0, 0 ],
+          "comment": "They protect themselves with the armour that is available and provides the best protection."
+        },
+        "attacks": [
+          { "type": "Distance",     "skill": 58, "damage": "1d10 (OR9-10)", "db": false, "comment": ""},
+          { "type": "Unarmed",      "skill": 49, "damage": "1d5",           "db": true,  "comment": ""},
+          { "type": "Close combat", "skill": 60, "damage": "1d10 (OR9-10)", "db": true,  "comment": "They arm themselves with different types of weapons."}
+        ]
+      },
+      "abilities": [
+        { "type": "Low-light vision", "description": "They see up to Intelligence x3 meters in pitch-black darkness."}
+      ]
+    },
+    {
+      "id":2,
+      "name":"Goblin (random)",
+      "tags": [ ],
+      "stats": {
+        "traits": { "phy": "2d10+2", "min": "2d10", "int": "2d10", "cha":  "2d10" },
+        "skills": { "bur": 69, "kno": 17, "mag": 15, "mel": 49, "soc": 38, "sur": 58 },
+        "other":  { "siz": 0.5, "hp": "14",  "car": "12", "db": "0", "act": "2", "arm": "0" },
+        "move": { "land": 10, "air": -1 }
+      },
+      "combat": {
+        "body": {
+          "type": "humanoid",
+          "worn_armor": [ 0, 0, 0, 0, 0, 0 ],
+          "comment": "They protect themselves with the armour that is available and provides the best protection."
+        },
+        "attacks": [
+          { "type": "Distance",     "skill": 58, "damage": "1d10 (OR9-10)", "db": false, "comment": ""},
+          { "type": "Unarmed",      "skill": 49, "damage": "1d5",           "db": true,  "comment": ""},
+          { "type": "Close combat", "skill": 60, "damage": "1d10 (OR9-10)", "db": true,  "comment": "They arm themselves with different types of weapons."}
+        ]
+      },
+      "abilities": [
+        { "type": "Low-light vision", "description": "They see up to Intelligence x3 meters in pitch-black darkness."}
+      ]
+    }
+  ]
+}
