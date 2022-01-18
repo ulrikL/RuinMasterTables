@@ -8,9 +8,9 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/barcelona_tc_std_medium"
+        android:font="@font/barcelona_itc_std_medium"
         app:fontStyle="normal"
         app:fontWeight="400"
-        app:font="@font/barcelona_tc_std_medium"
+        app:font="@font/barcelona_itc_std_medium"
         />
 </font-family>
