@@ -23,7 +23,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import java.io.BufferedReader
 import java.io.InputStream
 
-class PageAdapter(fm:FragmentManager, lc:Lifecycle, td:ConfigurationData, tf:ArrayList<String>, md:MonsterData, mf:ArrayList<String>) : FragmentStateAdapter(fm, lc) {
+class PageAdapter(fm:FragmentManager, lc:Lifecycle, td:TableData, tf:ArrayList<String>, md:MonsterData, mf:ArrayList<String>) : FragmentStateAdapter(fm, lc) {
     private val tableData = td
     private val tableFiles = tf
     private val monsterData = md
@@ -45,7 +45,7 @@ class PageAdapter(fm:FragmentManager, lc:Lifecycle, td:ConfigurationData, tf:Arr
 class MainActivity : AppCompatActivity() {
     private inline fun <reified T> ObjectMapper.readValue(s: String): T = this.readValue(s, object : TypeReference<T>() {})
 
-    private lateinit var tables : Pair<ConfigurationData, ArrayList<String>>
+    private lateinit var tables : Pair<TableData, ArrayList<String>>
     private lateinit var monsters : Pair<MonsterData, ArrayList<String>>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,8 +53,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         tables = loadTableData()
-        isConfigurationDataValid(tables.first, tables.second)
+        isTableDataValid(tables.first, tables.second)
         monsters = loadMonsterData()
+        isMonsterDataValid(monsters.first, monsters.second)
 
         val viewPager = findViewById<ViewPager2>(R.id.viewPager)
         viewPager.adapter = PageAdapter(supportFragmentManager, lifecycle, tables.first, tables.second, monsters.first, monsters.second)
@@ -69,8 +70,8 @@ class MainActivity : AppCompatActivity() {
         tabLayout.setFont()
     }
 
-    private fun loadTableData() : Pair<ConfigurationData, ArrayList<String>> {
-        val loadedConfigurationData = ConfigurationData(emptyList(), emptyList())
+    private fun loadTableData() : Pair<TableData, ArrayList<String>> {
+        val loadedConfigurationData = TableData(emptyList(), emptyList())
         val loadedConfigurationFiles = ArrayList<String>()
 
         val files = assets.list("tables")
@@ -79,7 +80,7 @@ class MainActivity : AppCompatActivity() {
                 if (file.endsWith(".json")) {
                     debug("Found configuration file named '$file'")
                     loadedConfigurationFiles += file.toString()
-                    val tempConfigData = loadConfiguration(assets.open("tables/$file"))
+                    val tempConfigData = parseTableDataFile("tables/$file")
                     //Each file get an offset to allow multiple files. This is done to make it easy to split the files
                     tempConfigData.buttons.forEach { button ->
                         button.table += index*CONFIG_FILE_TABLE_ID_OFFSET
@@ -103,7 +104,7 @@ class MainActivity : AppCompatActivity() {
         return Pair(loadedConfigurationData, loadedConfigurationFiles)
     }
 
-    private fun isConfigurationDataValid( tableData : ConfigurationData, tableDataFiles: ArrayList<String>) {
+    private fun isTableDataValid(tableData : TableData, tableDataFiles: ArrayList<String>) {
         val allIds = ArrayList<Int>()
         val allTableOptions = ArrayList<Int>()
 
@@ -141,29 +142,29 @@ class MainActivity : AppCompatActivity() {
             table.options.forEach{ option ->
                 sumOfChance += option.chance
                 if (option.text.count { c -> c == '[' } > option.text.count { c -> c == ']' }) {
-                    error("'${table.name}' (${table.id}) in '${getConfigFileName(table.id, tableDataFiles)}' seem to miss a ']' in '${option.text}'.")
+                    error("'${table.name}' (${table.id}) in '${getTableFileName(table.id, tableDataFiles)}' seem to miss a ']' in '${option.text}'.")
                 } else if (option.text.count { c -> c == '[' } < option.text.count { c -> c == ']' }) {
-                    error("'${table.name}' (${table.id}) in '${getConfigFileName(table.id, tableDataFiles)}' seem to miss a '[' in '${option.text}'.")
+                    error("'${table.name}' (${table.id}) in '${getTableFileName(table.id, tableDataFiles)}' seem to miss a '[' in '${option.text}'.")
                 }
             }
             if (sumOfChance != DEFAULT_CHANCE_SUM) {
-                warning("'${table.name}' (${getActualTableId(table.id)}) in '${getConfigFileName(table.id, tableDataFiles)}' does not use a default chance (sum is $sumOfChance).")
+                warning("'${table.name}' (${getActualTableId(table.id)}) in '${getTableFileName(table.id, tableDataFiles)}' does not use a default chance (sum is $sumOfChance).")
             }
         }
     }
 
-    private fun getTableNameFromId(id : Int, tableData : ConfigurationData, tableDataFiles: ArrayList<String>) : String {
+    private fun getTableNameFromId(id : Int, tableData : TableData, tableDataFiles: ArrayList<String>) : String {
         var foundNames = "ID ${getActualTableId(id)} is used by "
         tableData.tables.forEach{ table ->
             if (table.id == id) {
                 foundNames += "'${table.name}' "
             }
         }
-        foundNames += "in '${getConfigFileName(id, tableDataFiles)}'."
+        foundNames += "in '${getTableFileName(id, tableDataFiles)}'."
         return foundNames
     }
 
-    private fun getTableNameFromUsedOptionsTableReferences(tableId : Int, tableData: ConfigurationData, tableDataFiles: ArrayList<String>) : String {
+    private fun getTableNameFromUsedOptionsTableReferences(tableId : Int, tableData: TableData, tableDataFiles: ArrayList<String>) : String {
         var foundNames = "Undefined ID ${getActualTableId(tableId)} is used by "
         tableData.tables.forEach{ table ->
             table.options.forEach { option ->
@@ -174,7 +175,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        foundNames += "in '${getConfigFileName(tableId, tableDataFiles)}'."
+        foundNames += "in '${getTableFileName(tableId, tableDataFiles)}'."
         return foundNames
     }
 
@@ -183,15 +184,16 @@ class MainActivity : AppCompatActivity() {
         return (tableId - CONFIG_FILE_TABLE_ID_OFFSET * configFileIndex)
     }
 
-    private fun getConfigFileName(tableId : Int, tableDataFiles: ArrayList<String>) : String {
+    private fun getTableFileName(tableId : Int, tableDataFiles: ArrayList<String>) : String {
         val configFileIndex = (tableId / CONFIG_FILE_TABLE_ID_OFFSET) - 1
         return tableDataFiles.elementAtOrElse(configFileIndex){"unknown file"}
     }
 
-    private fun loadConfiguration( configStream: InputStream) : ConfigurationData {
+    private fun parseTableDataFile(fileName : String) : TableData {
+        val dataStream = assets.open(fileName)
         val mapper = jacksonObjectMapper()
         mapper.configure( DeserializationFeature.ACCEPT_EMPTY_ARRAY_AS_NULL_OBJECT, true )
-        return mapper.readValue(configStream.bufferedReader().use(BufferedReader::readText))
+        return mapper.readValue(dataStream.bufferedReader().use(BufferedReader::readText))
     }
 
     private fun loadMonsterData() : Pair<MonsterData, ArrayList<String>> {
@@ -204,7 +206,7 @@ class MainActivity : AppCompatActivity() {
                 if (file.endsWith(".json")) {
                     debug("Found monster file named '$file'")
                     loadedMonsterFiles += file.toString()
-                    val tempMonsterData = loadMonsterData(assets.open("monsters/$file"))
+                    val tempMonsterData = parseMonsterDataFile("monsters/$file")
                     //Each file get an offset to allow multiple files. This is done to make it easy to split the files
                     tempMonsterData.monster.forEach { monster ->
                         monster.id += index*MONSTER_FILE_ID_OFFSET
@@ -221,10 +223,80 @@ class MainActivity : AppCompatActivity() {
         return Pair(loadedMonsterData, loadedMonsterFiles)
     }
 
-    private fun loadMonsterData( monsterStream: InputStream) : MonsterData {
+    private fun isMonsterDataValid(monsterData : MonsterData, monsterDataFiles: ArrayList<String>) {
+        val allIds = ArrayList<Int>()
+
+        monsterData.monster.forEach{ monster ->
+            allIds += monster.id
+
+            if (monster.combat.body.type != HUMANOID &&
+                monster.combat.body.type != QUADRUPED &&
+                monster.combat.body.type != GIANT &&
+                monster.combat.body.type != WINGED_QUADRUPED &&
+                monster.combat.body.type != SNAKE &&
+                monster.combat.body.type != SPIRIT &&
+                monster.combat.body.type != CENTAUR &&
+                monster.combat.body.type != WINGED_HUMANOID) {
+                error("Unknown body type (${monster.combat.body.type}) used by id=${getActualMonsterId(monster.id)} in ${getMonsterFileName(monster.id, monsterDataFiles)}")
+            }
+
+            if (monster.combat.body.worn_armor.isNotEmpty()) {
+                if (monster.combat.body.type == HUMANOID && monster.combat.body.worn_armor.size != HUMANOID_PARTS ||
+                    monster.combat.body.type == QUADRUPED && monster.combat.body.worn_armor.size != QUADRUPED_PARTS ||
+                    monster.combat.body.type == GIANT && monster.combat.body.worn_armor.size != GIANT_PARTS ||
+                    monster.combat.body.type == WINGED_QUADRUPED && monster.combat.body.worn_armor.size != WINGED_QUADRUPED_PARTS ||
+                    monster.combat.body.type == SNAKE && monster.combat.body.worn_armor.size != SNAKE_PARTS ||
+                    monster.combat.body.type == SPIRIT && monster.combat.body.worn_armor.size != SPIRIT_PARTS ||
+                    monster.combat.body.type == CENTAUR && monster.combat.body.worn_armor.size != CENTAUR_PARTS ||
+                    monster.combat.body.type == WINGED_HUMANOID && monster.combat.body.worn_armor.size != WINGED_HUMANOID_PARTS) {
+                    error("Invalid number of body parts (${monster.combat.body.worn_armor.size}) used by id=${getActualMonsterId(monster.id)} in ${getMonsterFileName(monster.id, monsterDataFiles)}")
+                }
+            }
+
+            if (monster.combat.attacks.size > 6) {
+                error("To many attacks defined (${monster.combat.attacks.size}) used by id=${getActualMonsterId(monster.id)} in ${getMonsterFileName(monster.id, monsterDataFiles)}")
+            }
+
+            if (monster.abilities.size > 10) {
+                error("To many abilities defined (${monster.combat.attacks.size}) used by id=${getActualMonsterId(monster.id)} in ${getMonsterFileName(monster.id, monsterDataFiles)}")
+            }
+        }
+        if (allIds.size != allIds.distinct().count()) {
+            val duplicatedIds = allIds.groupingBy { it }.eachCount().filter { it.value > 1 }
+
+            error("There are duplicated monster IDs!")
+            duplicatedIds.forEach {
+                error(getMonsterFileName(it.key, monsterDataFiles))
+            }
+        }
+    }
+
+    private fun getActualMonsterId(monsterId : Int) : Int {
+        var id : Int = monsterId
+
+        if (monsterId > MONSTER_FILE_ID_OFFSET) {
+            val monsterFileIndex = (monsterId / MONSTER_FILE_ID_OFFSET)
+            id = (monsterId - MONSTER_FILE_ID_OFFSET * monsterFileIndex)
+        }
+
+        return id
+    }
+
+    private fun getMonsterFileName(monsterId : Int, monsterDataFiles: ArrayList<String>) : String {
+        var monsterFileIndex = 0
+
+        if (monsterId > MONSTER_FILE_ID_OFFSET) {
+            monsterFileIndex = (monsterId / MONSTER_FILE_ID_OFFSET)
+        }
+
+        return monsterDataFiles.elementAtOrElse(monsterFileIndex) { "unknown file" }
+    }
+
+    private fun parseMonsterDataFile(fileName : String) : MonsterData {
+        val dataStream = assets.open(fileName)
         val mapper = jacksonObjectMapper()
         mapper.configure( DeserializationFeature.ACCEPT_EMPTY_ARRAY_AS_NULL_OBJECT, true )
-        return mapper.readValue(monsterStream.bufferedReader().use(BufferedReader::readText))
+        return mapper.readValue(dataStream.bufferedReader().use(BufferedReader::readText))
     }
 
     private fun TabLayout.setFont() {

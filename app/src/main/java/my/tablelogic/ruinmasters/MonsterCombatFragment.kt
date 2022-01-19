@@ -143,9 +143,9 @@ class MonsterCombatFragment(private var monster: Monster) : Fragment() {
         (tr.getChildAt(2) as TextView).text = hp.toString()
 
         val armorString = when {
-            natural_armor > 0 && worn_armor[pos] > 0 -> "${worn_armor[pos]}+${natural_armor}"
-            natural_armor > 0 -> "${natural_armor}"
-            worn_armor[pos] > 0 -> "${worn_armor[pos]}"
+            worn_armor.isNotEmpty() && natural_armor > 0 && worn_armor[pos] > 0 -> "${worn_armor[pos]}+$natural_armor"
+            worn_armor.isNotEmpty() && worn_armor[pos] > 0 -> "${worn_armor[pos]}"
+            natural_armor > 0 -> "$natural_armor"
             else -> ""
         }
         (tr.getChildAt(3) as TextView).text = armorString

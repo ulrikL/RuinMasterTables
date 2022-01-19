@@ -5,7 +5,6 @@
 package my.tablelogic.ruinmasters
 
 import android.content.Context
-import android.graphics.Typeface
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -14,12 +13,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.core.content.ContextCompat
 import java.io.Serializable
 import kotlin.random.Random
 
-data class ConfigurationData (var buttons : List<Buttons>, var tables : List<Tables>) : Serializable
+data class TableData (var buttons : List<Buttons>, var tables : List<Tables>) : Serializable
 data class Buttons (var text : String, var table : Int)
 data class Tables (var id : Int, var name : String, var options : List<Options>)
 data class Options (var chance : Int, var table : ArrayList<Int>, var text : String)
@@ -32,9 +30,9 @@ const val DEFAULT_CHANCE_SUM = 10
 private const val ARG_TABLE_DATA =  "ARG_TABLE_DATA"
 private const val ARG_TABLE_DATA_FILES =  "ARG_TABLE_DATA_FILES"
 
-class TablesFragment(tables: ConfigurationData, files: ArrayList<String>) : Fragment(), View.OnClickListener {
+class TablesFragment(tables: TableData, files: ArrayList<String>) : Fragment(), View.OnClickListener {
     private val buttonId : Int =  View.generateViewId()
-    private var tableData : ConfigurationData = tables
+    private var tableData : TableData = tables
     private var tableFiles = files
     private lateinit var myContext: Context
     private lateinit var myView: View
@@ -43,7 +41,7 @@ class TablesFragment(tables: ConfigurationData, files: ArrayList<String>) : Frag
         super.onCreate(savedInstanceState)
 
         arguments?.let {
-            tableData = it.getSerializable(ARG_TABLE_DATA) as ConfigurationData
+            tableData = it.getSerializable(ARG_TABLE_DATA) as TableData
             tableFiles = it.getStringArrayList(ARG_TABLE_DATA_FILES) as ArrayList<String>
         }
     }
@@ -171,27 +169,6 @@ class TablesFragment(tables: ConfigurationData, files: ArrayList<String>) : Frag
         return (start..end).random(rand)
     }
 
-//    private fun replaceDieRolls(text : String): String {
-//        var localText : String = text
-//        val regex = "\\[\\b(\\d*)d(\\d*)]".toRegex()
-//        var match = regex.find(localText)
-//
-//        while (match != null) {
-//            if (match.value.isNotBlank()) {
-//                val numberOfDice : Int = match.groupValues[1].toInt()
-//                val diceType : Int = match.groupValues[2].toInt()
-//                var dieResult = 0
-//                debug("Found '${match.value}' with group1=$numberOfDice and group2=$diceType in string.")
-//                for (i in 1..numberOfDice) dieResult += getRandomInt(1, diceType)
-//                debug("Rolled $dieResult and replace $match with this value.")
-//                localText = localText.replaceRange(match.range, dieResult.toString())
-//                debug("Updated text='$localText'")
-//            }
-//            match = regex.find(localText)
-//        }
-//        return localText
-//    }
-
     private fun replaceDieRolls(text : String): String {
         var localText : String = text
         val regex = "\\[\\b(\\d*)d(\\d*)([+\\-]*)(\\d*)]".toRegex()
@@ -252,7 +229,7 @@ class TablesFragment(tables: ConfigurationData, files: ArrayList<String>) : Frag
          * @return A new instance of fragment TableFragment.
          */
         @JvmStatic
-        fun newInstance(tables : ConfigurationData, files : ArrayList<String>) =
+        fun newInstance(tables : TableData, files : ArrayList<String>) =
             TablesFragment(tables, files).apply {
                 arguments = Bundle().apply {
                     putSerializable(ARG_TABLE_DATA, tables)

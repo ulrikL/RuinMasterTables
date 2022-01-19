@@ -12,7 +12,7 @@
       "combat": {
         "body": {
           "type": "humanoid",
-          "worn_armor": [ 0, 0, 0, 0, 0, 0 ],
+          "worn_armor": [ ],
           "comment": "They protect themselves with the armour that is available and provides the best protection."
         },
         "attacks": [
@@ -38,7 +38,7 @@
       "combat": {
         "body": {
           "type": "humanoid",
-          "worn_armor": [ 0, 0, 0, 0, 0, 0 ],
+          "worn_armor": [ ],
           "comment": "They protect themselves with the armour that is available and provides the best protection."
         },
         "attacks": [

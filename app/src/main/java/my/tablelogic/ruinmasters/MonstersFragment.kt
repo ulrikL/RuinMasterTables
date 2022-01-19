@@ -42,13 +42,22 @@ private const val ARG_MONSTER_DATA =  "ARG_MONSTER_DATA"
 private const val ARG_MONSTER_DATA_FILES =  "ARG_MONSTER_DATA_FILES"
 
 const val HUMANOID = "humanoid"
+const val HUMANOID_PARTS = 6
 const val QUADRUPED = "quadruped"
+const val QUADRUPED_PARTS = 6
 const val GIANT = "giant"
+const val GIANT_PARTS = 6
 const val WINGED_QUADRUPED = "winged_quadruped"
+const val WINGED_QUADRUPED_PARTS = 9
 const val SNAKE = "snake"
+const val SNAKE_PARTS = 4
 const val SPIRIT = "spirit"
+const val SPIRIT_PARTS = 1
 const val CENTAUR = "centaur"
+const val CENTAUR_PARTS = 9
 const val WINGED_HUMANOID = "winged_humanoid"
+const val WINGED_HUMANOID_PARTS = 8
+
 
 class MonstersFragment(monsters: MonsterData, files: ArrayList<String>) : Fragment(), View.OnClickListener {
     private val buttonId : Int =  View.generateViewId()
