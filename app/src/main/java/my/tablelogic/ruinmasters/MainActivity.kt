@@ -47,6 +47,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var tables : Pair<TableData, ArrayList<String>>
     private lateinit var monsters : Pair<MonsterData, ArrayList<String>>
+    private lateinit var monsterTagMap : Map<String, Int>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,6 +57,7 @@ class MainActivity : AppCompatActivity() {
         isTableDataValid(tables.first, tables.second)
         monsters = loadMonsterData()
         isMonsterDataValid(monsters.first, monsters.second)
+        monsterTagMap = createMonsterTagMap(monsters.first)
 
         val viewPager = findViewById<ViewPager2>(R.id.viewPager)
         viewPager.adapter = PageAdapter(supportFragmentManager, lifecycle, tables.first, tables.second, monsters.first, monsters.second)
@@ -225,10 +227,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun isMonsterDataValid(monsterData : MonsterData, monsterDataFiles: ArrayList<String>) {
         val allIds = ArrayList<Int>()
+        val allTags = ArrayList<String>()
 
         monsterData.monster.forEach{ monster ->
             allIds += monster.id
 
+            if (monster.tags.isNotEmpty()) {
+                monster.tags.forEach { tag ->
+                    allTags += tag
+                }
+            }
             if (monster.combat.body.type != HUMANOID &&
                 monster.combat.body.type != QUADRUPED &&
                 monster.combat.body.type != GIANT &&
@@ -269,6 +277,26 @@ class MainActivity : AppCompatActivity() {
                 error(getMonsterFileName(it.key, monsterDataFiles))
             }
         }
+        if (allTags.size != allTags.distinct().count()) {
+            val duplicatedAllTags = allTags.groupingBy { it }.eachCount().filter { it.value > 1 }
+
+            error("There are duplicated monster tags!")
+            duplicatedAllTags.forEach {
+                error(it.key)
+            }
+        }
+    }
+
+    private fun createMonsterTagMap(monsterData : MonsterData) : Map<String, Int>{
+        val idTagMap = emptyMap<String, Int>().toMutableMap()
+        monsterData.monster.forEach { monster ->
+            if (monster.tags.isNotEmpty()) {
+                monster.tags.forEach { tag ->
+                    idTagMap += mapOf(Pair(tag, monster.id))
+                }
+            }
+        }
+        return idTagMap.toSortedMap()
     }
 
     private fun getActualMonsterId(monsterId : Int) : Int {
