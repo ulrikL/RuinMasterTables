@@ -11,7 +11,7 @@ android {
         minSdk 26
         targetSdk 31
         versionCode 3
-        versionName "3.0"
+        versionName "3.1"
         archivesBaseName = "RuinMastersTables" + "-" + versionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         minSdkVersion 26
