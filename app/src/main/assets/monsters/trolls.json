@@ -2,7 +2,7 @@
   "monster":[
     { "id":1,
       "name":"Troll",
-      "tags": [ "Troll", "troll", "Trolls", "trolls" ],
+      "tags": [ "troll", "trolls" ],
       "stats": {
         "traits": { "phy": "30", "min": "15", "int": "10", "cha":  "5" },
         "skills": { "bur": 48, "kno": 29, "mag": 27, "mel": 63, "soc": 18, "sur": 43 },

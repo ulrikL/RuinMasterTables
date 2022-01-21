@@ -225,6 +225,8 @@ class MainActivity : AppCompatActivity() {
         return Pair(loadedMonsterData, loadedMonsterFiles)
     }
 
+    private fun isInteger(input: String) = input.all { it in '0'..'9' }
+
     private fun isMonsterDataValid(monsterData : MonsterData, monsterDataFiles: ArrayList<String>) {
         val allIds = ArrayList<Int>()
         val allTags = ArrayList<String>()
@@ -268,6 +270,15 @@ class MainActivity : AppCompatActivity() {
             if (monster.abilities.size > 10) {
                 error("To many abilities defined (${monster.combat.attacks.size}) used by id=${getActualMonsterId(monster.id)} in ${getMonsterFileName(monster.id, monsterDataFiles)}")
             }
+
+            if (monster.tags.isNotEmpty()) {
+                if (!isInteger(monster.stats.traits.phy) ||
+                    !isInteger(monster.stats.traits.min) ||
+                    !isInteger(monster.stats.traits.int) ||
+                    !isInteger(monster.stats.traits.cha)) {
+                    error("Tags are only supported for monsters not using random values, issue with id=${getActualMonsterId(monster.id)} in ${getMonsterFileName(monster.id, monsterDataFiles)}!")
+                }
+            }
         }
         if (allIds.size != allIds.distinct().count()) {
             val duplicatedIds = allIds.groupingBy { it }.eachCount().filter { it.value > 1 }
@@ -288,15 +299,25 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun createMonsterTagMap(monsterData : MonsterData) : Map<String, Int>{
-        val idTagMap = emptyMap<String, Int>().toMutableMap()
+        val tagIdMap = emptyMap<String, Int>().toMutableMap()
         monsterData.monster.forEach { monster ->
             if (monster.tags.isNotEmpty()) {
                 monster.tags.forEach { tag ->
-                    idTagMap += mapOf(Pair(tag, monster.id))
+                    if (!tagIdMap.containsKey(tag)) {
+                        tagIdMap += mapOf(Pair(tag, monster.id))
+                    } else {
+                        error("Already found tag=$tag in the tagIdMap! Duplicates not allowed")
+                        val existingId = tagIdMap.getOrDefault(tag,-1)
+                        if (existingId > 0) {
+                            error("Collision between id=${getActualMonsterId(existingId)} in ${getMonsterFileName(existingId,monsters.second)}" +
+                                  " and id=${getActualMonsterId(monster.id)} in ${getMonsterFileName(monster.id,monsters.second)}")
+                        }
+                    }
                 }
+                tagIdMap.toSortedMap()
             }
         }
-        return idTagMap.toSortedMap()
+        return tagIdMap
     }
 
     private fun getActualMonsterId(monsterId : Int) : Int {
@@ -340,6 +361,23 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    fun getMonster(id: Int) : Monster? {
+        debug("Try to get monster with id=$id.")
+        monsters.first.monster.forEach { monster ->
+            if (monster.id == id) {
+                return monster.deepCopy()
+            }
+        }
+        error("Did not find id='$id'in  monsterData.")
+        return null
+    }
+
+    fun getMonsterTagMap() : Map<String, Int> {
+        debug("Get monsterTagMap, it has ${monsterTagMap.size} number of entries.")
+
+        return monsterTagMap
     }
 
     private fun error(message: String) {

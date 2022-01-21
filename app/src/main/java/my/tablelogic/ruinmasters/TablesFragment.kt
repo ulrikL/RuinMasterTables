@@ -78,7 +78,7 @@ class TablesFragment(tables: TableData, files: ArrayList<String>) : Fragment(), 
             treasureText = treasureText.trimStart()
             if (treasureText.isNotBlank()) treasureText = replaceDieRolls(treasureText)
 
-            showEditDialog((v as Button).text.toString(), terrainText, encounterText, treasureText)
+            showTableResultDialog((v as Button).text.toString(), terrainText, encounterText, treasureText)
         }
     }
 
@@ -205,9 +205,9 @@ class TablesFragment(tables: TableData, files: ArrayList<String>) : Fragment(), 
         return localText
     }
 
-    private fun showEditDialog(headerText: String, terrainText: String, encounterText: String, treasureText: String) {
-        val displayResultFragment: DisplayResultFragment = DisplayResultFragment.newInstance(headerText, terrainText, encounterText, treasureText)
-        displayResultFragment.show(requireActivity().supportFragmentManager, "fragment_display_result")
+    private fun showTableResultDialog(headerText: String, terrainText: String, encounterText: String, treasureText: String) {
+        val displayResultResultFragment: DisplayTableResultFragment = DisplayTableResultFragment.newInstance(headerText, terrainText, encounterText, treasureText)
+        displayResultResultFragment.show(requireActivity().supportFragmentManager, "fragment_display_result")
     }
 
     private fun error(message: String) {

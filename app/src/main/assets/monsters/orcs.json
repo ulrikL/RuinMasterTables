@@ -2,7 +2,7 @@
   "monster":[
     { "id":1,
       "name":"Orc",
-      "tags": [ "Orc", "orc", "Orcs", "orcs" ],
+      "tags": [ "orc", "orcs" ],
       "stats": {
         "traits": { "phy": "30", "min": "15", "int": "15", "cha":  "5" },
         "skills": { "bur": 39, "kno": 27, "mag": 25, "mel": 60, "soc": 28, "sur": 52 },

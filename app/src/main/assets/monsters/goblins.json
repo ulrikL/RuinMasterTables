@@ -2,7 +2,7 @@
   "monster":[
     { "id":1,
       "name":"Goblin",
-      "tags": [ "Goblin", "goblin", "Goblins", "goblins" ],
+      "tags": [ "goblin", "goblins" ],
       "stats": {
         "traits": { "phy": "12", "min": "10", "int": "10", "cha":  "10" },
         "skills": { "bur": 69, "kno": 17, "mag": 15, "mel": 49, "soc": 38, "sur": 58 },
