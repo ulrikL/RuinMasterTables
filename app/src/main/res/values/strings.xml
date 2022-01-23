@@ -36,6 +36,7 @@
     <string name="s_siz">Size</string>
     <string name="s_hp">Hit Points</string>
     <string name="s_arm">Natural armor</string>
+    <string name="s_act">Actions</string>
     <string name="s_mov_l">Movement (Land)</string>
     <string name="s_mov_a">Movement (Air)</string>
 

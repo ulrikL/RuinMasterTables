@@ -57,5 +57,8 @@
             <TextView android:layout_width="0dp" android:layout_weight="2" android:fontFamily="@font/bold_text"/>
             <TextView android:layout_width="0dp" android:layout_weight="4" android:fontFamily="@font/text"/>
         </TableRow>
+        <TableRow android:background="@color/rm_table_light" android:padding="4dp" android:visibility="gone" android:id="@+id/a_none">
+            <TextView android:layout_width="0dp" android:layout_weight="6" android:fontFamily="@font/italic_text" android:text="@string/none"/>
+        </TableRow>
     </TableLayout>
 </ScrollView>

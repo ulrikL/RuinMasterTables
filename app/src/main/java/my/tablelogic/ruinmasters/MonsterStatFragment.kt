@@ -50,6 +50,7 @@ class MonsterStatFragment(private var monster: Monster) : Fragment() {
         }
         v.findViewById<TextView>(R.id.hp_value).text = o.hp.toString()
         v.findViewById<TextView>(R.id.arm_value).text = o.arm.toString()
+        v.findViewById<TextView>(R.id.act_value).text = o.act
         if (m.land > 0)
             v.findViewById<TextView>(R.id.mov_land).text = getString(R.string.move, m.land, (m.land/2))
         else

@@ -345,6 +345,7 @@ class MainActivity : AppCompatActivity() {
         val dataStream = assets.open(fileName)
         val mapper = jacksonObjectMapper()
         mapper.configure( DeserializationFeature.ACCEPT_EMPTY_ARRAY_AS_NULL_OBJECT, true )
+        mapper.configure( DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true )
         return mapper.readValue(dataStream.bufferedReader().use(BufferedReader::readText))
     }
 

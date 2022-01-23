@@ -42,7 +42,12 @@ class MonsterAbilityFragment(private var monster: Monster) : Fragment() {
         myView = inflater.inflate(R.layout.fragment_monster_ability, container, false)
         val a = monster.abilities
 
-        a.forEachIndexed { pos, ability ->  showAbility(pos, ability) }
+        if (a.isNotEmpty()) {
+            a.forEachIndexed { pos, ability ->  showAbility(pos, ability) }
+        } else {
+            myView.findViewById<TableRow>(R.id.a_none).visibility = TableRow.VISIBLE
+        }
+
 
         return myView
     }
