@@ -1,0 +1,52 @@
+{
+  "monster":[
+    { "id":1,
+      "name":"Giant",
+      "tags": [ "giant", "giants" ],
+      "stats": {
+        "traits": { "phy": "60", "min": "15", "int": "15", "cha":  "15" },
+        "skills": { "bur": 59, "kno": 47, "mag": 12, "mel": 59, "soc": 38, "sur": 58 },
+        "other":  { "siz": 4, "hp": "320",  "car": "400", "db": "3", "act": "1/3rd round", "arm": "2" },
+        "move": { "land": 32, "air": -1 }
+      },
+      "combat": {
+        "body": {
+          "type": "giant",
+          "worn_armor": [ ],
+          "comment": "They protect themselves with the armour that is available and provides the best protection."
+        },
+        "attacks": [
+          { "type": "Rock",       "skill": 58, "damage": "2d10 (OR10)",   "db": false, "comment": "Range Physique x 2 meters"},
+          { "type": "Large rock", "skill": 58, "damage": "4d10 (OR8-10)", "db": false, "comment": "Range Physique x 1 meters"},
+          { "type": "Unarmed",    "skill": 60, "damage": "2d10",          "db": true,  "comment": ""},
+          { "type": "Large club", "skill": 60, "damage": "4d10 (OR8-10)", "db": true,  "comment": "Heavy weapon. They arm themselves with different types of weapons."}
+        ]
+      },
+      "abilities": [ ]
+    },
+    { "id":2,
+      "name":"Giant (Random)",
+      "tags": [ ],
+      "stats": {
+        "traits": { "phy": "[10d10+10]", "min": "[3d10]", "int": "[3d10]", "cha":  "[3d10]" },
+        "skills": { "bur": 59, "kno": 47, "mag": 12, "mel": 59, "soc": 38, "sur": 58 },
+        "other":  { "siz": 4, "hp": "",  "car": "", "db": "", "act": "1/3rd round", "arm": "2" },
+        "move": { "land": 18, "air": -1 }
+      },
+      "combat": {
+        "body": {
+          "type": "giant",
+          "worn_armor": [ ],
+          "comment": "They protect themselves with the armour that is available and provides the best protection."
+        },
+        "attacks": [
+          { "type": "Rock",       "skill": 58, "damage": "2d10 (OR10)",   "db": false, "comment": "Range Physique x 2 meters"},
+          { "type": "Large rock", "skill": 58, "damage": "4d10 (OR8-10)", "db": false, "comment": "Range Physique x 1 meters"},
+          { "type": "Unarmed",    "skill": 60, "damage": "2d10",          "db": true,  "comment": ""},
+          { "type": "Large club", "skill": 60, "damage": "4d10 (OR8-10)", "db": true,  "comment": "Heavy weapon. They arm themselves with different types of weapons."}
+        ]
+      },
+      "abilities": [ ]
+    }
+  ]
+}

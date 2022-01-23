@@ -1,0 +1,56 @@
+{
+  "monster":[
+    { "id":1,
+      "name":"Ogre",
+      "tags": [ "ogre", "ogres" ],
+      "stats": {
+        "traits": { "phy": "35", "min": "15", "int": "10", "cha":  "5" },
+        "skills": { "bur": 36, "kno": 25, "mag": 1, "mel": 65, "soc": 30, "sur": 43 },
+        "other":  { "siz": 2, "hp": "110",  "car": "35", "db": "3", "act": "1", "arm": "2" },
+        "move": { "land": 18, "air": -1 }
+      },
+      "combat": {
+        "body": {
+          "type": "humanoid",
+          "worn_armor": [ ],
+          "comment": "They protect themselves with the armour that is available and provides the best protection."
+        },
+        "attacks": [
+          { "type": "Distance",     "skill": 43, "damage": "2d10 (OR9-10)", "db": false, "comment": ""},
+          { "type": "Unarmed",      "skill": 60, "damage": "1d10",           "db": true,  "comment": ""},
+          { "type": "Close combat", "skill": 60, "damage": "2d10 (OR9-10)", "db": true,  "comment": "They arm themselves with different types of weapons."}
+        ]
+      },
+      "abilities": [
+        { "type": "Low-light vision", "description": "They see up to Intelligence x2 meters in pitch-black darkness."}
+      ]
+    },
+    {
+      "id":2,
+      "name":"Ogre (random)",
+      "tags": [ ],
+      "stats": {
+        "traits": { "phy": "[5d10+10]", "min": "[3d10]", "int": "[2d10]", "cha":  "[1d10]" },
+        "skills": { "bur": 36, "kno": 25, "mag": 1, "mel": 65, "soc": 30, "sur": 43 },
+        "other":  { "siz": 2, "hp": "",  "car": "", "db": "", "act": "1", "arm": "2" },
+        "move": { "land": 18, "air": -1 }
+      },
+      "combat": {
+        "body": {
+          "type": "humanoid",
+          "worn_armor": [ ],
+          "comment": "They protect themselves with the armour that is available and provides the best protection."
+        },
+        "attacks": [
+          { "type": "Distance",     "skill": 52, "damage": "1d10 (OR9-10)", "db": false, "comment": ""},
+          { "type": "Unarmed",      "skill": 60, "damage": "1d5",           "db": true,  "comment": ""},
+          { "type": "Close combat", "skill": 60, "damage": "1d10 (OR9-10)", "db": true,  "comment": "They arm themselves with different types of weapons."},
+          { "type": "Close combat", "skill": 60, "damage": "1d10 (OR8-10)", "db": true,  "comment": "(Heavy weapons)They arm themselves with different types of weapons."}
+        ]
+      },
+      "abilities": [
+        { "type": "Low-light vision", "description": "They see up to Intelligence x3 meters in pitch-black darkness."}
+      ]
+    }
+  ]
+}
