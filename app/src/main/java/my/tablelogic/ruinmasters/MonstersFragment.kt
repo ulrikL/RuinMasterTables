@@ -16,8 +16,6 @@ import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import java.io.Serializable
-import kotlin.math.roundToInt
-import kotlin.random.Random
 
 data class MonsterData (var monster : List<Monster>) : Serializable
 data class Monster (var id : Int, var name : String, var tags : List<String>, var stats : Stats, var combat : Combat, var abilities: List<Abilities>) : Serializable {
@@ -28,7 +26,7 @@ data class Monster (var id : Int, var name : String, var tags : List<String>, va
 }
 data class Stats (var traits : Traits, var skills : Skills, var other : Other, var move : Move)
 data class Move (var land : Int, var air : Int)
-data class Traits (var phy : String, var min : String, var int : String, var cha : String)
+data class Traits (var phy : Int, var phy_die : String,  var min : Int, var min_die : String, var int : Int, var int_die : String, var cha : Int, var cha_die : String)
 data class Skills (var bur : Int, var kno : Int, var mag : Int, var mel : Int, var soc : Int, var sur : Int)
 data class Other (var siz : Double, var hp : Int, var car : Int, var db : Int, var act : String, var arm : Int)
 data class Combat (var body : Body, var attacks : List<Attacks>)
@@ -97,7 +95,7 @@ class MonstersFragment(monsters: MonsterData, files: ArrayList<String>) : Fragme
             debug("Clicked button to show monster ${getActualMonsterId(v.tag as Int)} in '${getMonsterFileName(v.tag as Int)}'.")
             monsterData.monster.forEach { monster ->
                 if (monster.id == v.tag) {
-                    showMonsterDialog(rollRandomValues(monster.deepCopy()))
+                    showMonsterDialog(monster.deepCopy())
                     return
                 }
             }
@@ -147,72 +145,6 @@ class MonstersFragment(monsters: MonsterData, files: ArrayList<String>) : Fragme
         } else {
             error("Cannot find the layout ot add buttons to!")
         }
-    }
-
-    private fun getRandomInt(start: Int, end: Int): Int {
-        require(start <= end) { "Illegal Argument" }
-        val rand = Random(System.nanoTime())
-        return (start..end).random(rand)
-    }
-
-    private fun replaceDieRollsWithModifier(text : String): String {
-        var localText : String = text
-        val regex = "\\[\\b(\\d*)d(\\d*)([+\\-]*)(\\d*)]".toRegex()
-        var match = regex.find(localText)
-
-        while (match != null) {
-            if (match.value.isNotBlank()) {
-                val numberOfDice : Int = match.groupValues[1].toInt()
-                val diceType : Int = match.groupValues[2].toInt()
-                val modifyAdd : Boolean = (match.groupValues[3]=="+")
-                val modifyRemove : Boolean = (match.groupValues[3]=="-")
-                val modifier : Int = if (match.groupValues[4] != "") match.groupValues[4].toInt() else 0
-                var dieResult = 0
-                debug("Found '${match.value}' with group1=$numberOfDice and group2=$diceType in string.")
-                for (i in 1..numberOfDice) {
-                    val roll = getRandomInt(1, diceType)
-                    debug("Rolled 1D$diceType and got ${roll}.")
-                    dieResult += roll
-                }
-                if (modifyAdd) {
-                    debug("Found '${modifier}' to add to die result (${dieResult}).")
-                    dieResult += modifier
-                }
-                if (modifyRemove) {
-                    debug("Found '${modifier}' to remove from die result (${dieResult}).")
-                    dieResult -= modifier
-                }
-                debug("Got $dieResult and replace ${match.value} with this value.")
-                localText = localText.replaceRange(match.range, dieResult.toString())
-                debug("Updated text='$localText'")
-            }
-            match = regex.find(localText)
-        }
-        return localText
-    }
-
-    private fun rollRandomValues(monster: Monster) : Monster {
-        monster.stats.traits.phy = replaceDieRollsWithModifier(monster.stats.traits.phy)
-        monster.stats.traits.min = replaceDieRollsWithModifier(monster.stats.traits.min)
-        monster.stats.traits.int = replaceDieRollsWithModifier(monster.stats.traits.int)
-        monster.stats.traits.cha = replaceDieRollsWithModifier(monster.stats.traits.cha)
-
-        if (monster.stats.other.hp == 0) {
-            monster.stats.other.hp =
-                // Calculate HP=(Physique + Mind + 1D10) * size
-                (((monster.stats.traits.phy.toInt() + monster.stats.traits.min.toInt() + getRandomInt(1,10)).toDouble()) * monster.stats.other.siz).roundToInt()
-        }
-        if (monster.stats.other.car == 0) {
-            // Calculate carrying capacity as physique * size^2. No clear guidance in rules.
-            monster.stats.other.car = (monster.stats.traits.phy.toDouble() * monster.stats.other.siz * monster.stats.other.siz).roundToInt()
-        }
-        monster.stats.other.db = when {
-            monster.stats.traits.phy.toInt() in 21..25 -> 1
-            monster.stats.traits.phy.toInt() in 26..28 -> 2
-            monster.stats.traits.phy.toInt() > 28 -> 3
-            else -> 0
-        }
-        return monster
     }
 
     private fun showMonsterDialog(monster: Monster) {

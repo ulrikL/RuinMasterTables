@@ -6,16 +6,15 @@ package my.tablelogic.ruinmasters
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.TableLayout
 import android.widget.TextView
 import android.widget.TableRow
 import androidx.core.content.ContextCompat
-import androidx.core.view.updatePadding
 import kotlin.math.roundToInt
 
 private const val ARG_MONSTER = "ARG_MONSTER"
@@ -46,10 +45,19 @@ class MonsterCombatFragment(private var monster: Monster) : Fragment() {
         // Inflate the layout for this fragment
         myView = inflater.inflate(R.layout.fragment_monster_combat, container, false)
         val at = monster.combat.attacks
+        val o = monster.stats.other
+
+        setHitPoints(monster)
+        at.forEachIndexed { pos, attack -> showAttack(pos, attack, o.db) }
+
+        return myView
+    }
+
+    private fun setHitPoints(monster: Monster) {
         val b = monster.combat.body
         val o = monster.stats.other
 
-        when (monster.combat.body.type) {
+        when (b.type) {
             HUMANOID -> {
                 showBodyPart(0,"Head", "1", (o.hp fdiv 4), o.arm, b.worn_armor)
                 showBodyPart(1,"Right arm", "2", (o.hp fdiv 4), o.arm, b.worn_armor)
@@ -128,10 +136,6 @@ class MonsterCombatFragment(private var monster: Monster) : Fragment() {
             }
             else -> error("Unknown type of body defined! Found ${monster.combat.body.type}.")
         }
-
-        at.forEachIndexed { pos, attack -> showAttack(pos, attack, o.db) }
-
-        return myView
     }
 
     private fun showBodyPart(pos: Int, part: String, chance: String, hp: Int, natural_armor: Int, worn_armor: List<Int>) {
@@ -180,6 +184,38 @@ class MonsterCombatFragment(private var monster: Monster) : Fragment() {
             trCom.visibility = TableRow.VISIBLE
             (trCom.getChildAt(0) as TextView).text = attack.comment
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val at = monster.combat.attacks
+        val o = monster.stats.other
+
+        setHitPoints(monster)
+        at.forEachIndexed { pos, attack -> showAttack(pos, attack, o.db) }
+    }
+
+    fun updateMonster() {
+        debug("Update displayed monster data")
+        if (this::myView.isInitialized) {
+            val at = monster.combat.attacks
+            val o = monster.stats.other
+
+            setHitPoints(monster)
+            at.forEachIndexed { pos, attack -> showAttack(pos, attack, o.db) }
+        }
+    }
+
+    private fun error(message: String) {
+        Log.e("RuinMastersTables::MonsterCombatFragment", message)
+    }
+
+    private fun warning(message: String) {
+        if (BuildConfig.DEBUG) Log.w("RuinMastersTables::MonsterCombatFragment", message)
+    }
+
+    private fun debug(message: String) {
+        if (BuildConfig.DEBUG) Log.d("RuinMastersTables::MonsterCombatFragment", message)
     }
 
     companion object {

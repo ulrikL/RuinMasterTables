@@ -4,7 +4,7 @@
       "name":"Troll",
       "tags": [ "troll", "trolls" ],
       "stats": {
-        "traits": { "phy": "30", "min": "15", "int": "10", "cha":  "5" },
+        "traits": { "phy": 30, "phy_die":"4d10+10", "min": 15, "min_die": "2d10+5", "int": 10, "int_die":"2d10", "cha": 5, "cha_die": "1d10" },
         "skills": { "bur": 48, "kno": 29, "mag": 27, "mel": 63, "soc": 18, "sur": 43 },
         "other":  { "siz": 1.5, "hp": "75",  "car": "30", "db": "3", "act": "1", "arm": "2" },
         "move": { "land": 15, "air": -1 }
@@ -28,38 +28,6 @@
         { "type": "Sunrays", "description": "Due to their fear of the sun, their skill values are halved when outside during daytime."},
         { "type": "Troll Treasure", "description": "They amass hoards of coins and gemstones, with amulets being most precious to them. Some troll kings have large chambers with chests filled to the brim with glittering coin, rings and amulets."}
 
-      ]
-    },
-    {
-      "id":2,
-      "name":"Troll (random)",
-      "tags": [ ],
-      "stats":
-      {
-        "traits": { "phy": "[4d10+10]", "min": "[2d10+5]", "int": "[2d10]", "cha":  "[1d10]" },
-        "skills": { "bur": 48, "kno": 29, "mag": 27, "mel": 63, "soc": 18, "sur": 43 },
-        "other":  { "siz": 1.5, "hp": "",  "car": "", "db": "", "act": "1", "arm": "2" },
-        "move": { "land": 15, "air": -1 }
-      },
-      "combat":
-      {
-        "body": {
-          "type": "humanoid",
-          "worn_armor": [ ],
-          "comment": "They protect themselves with the armour that is available and provides the best protection."
-        },
-        "attacks": [
-          { "type": "Distance",     "skill": 43, "damage": "1d10 (OR9-10)", "db": false, "comment": ""},
-          { "type": "Unarmed",      "skill": 63, "damage": "1d5",           "db": true,  "comment": ""},
-          { "type": "Close combat", "skill": 63, "damage": "1d10 (OR8-10)", "db": true,  "comment": "They arm themselves with different types of weapons."}
-        ]
-      },
-      "abilities": [
-        { "type": "Horrifying Stench", "description": "Everyone within troll's Physique meter must pass a Mind x2 check to not receive a 1d5x5 penalty on all skills as long as they remain in range."},
-        { "type": "Low-light vision", "description": "They see up to Intelligence x3 meters in pitch-black darkness."},
-        { "type": "Regeneration", "description": "Every turn, the troll heals 1 (or more) damage point in each body part caused by physical trauma. Damage caused by magical weapons and fire is healed normally."},
-        { "type": "Sunrays", "description": "Due to their fear of the sun, their skill values are halved when outside during daytime."},
-        { "type": "Troll Treasure", "description": "They amass hoards of coins and gemstones, with amulets being most precious to them. Some troll kings have large chambers with chests filled to the brim with glittering coin, rings and amulets."}
       ]
     }
   ]

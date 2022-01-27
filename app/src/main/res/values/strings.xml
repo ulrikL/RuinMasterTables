@@ -10,6 +10,7 @@
     <string name="encounter">Encounter</string>
     <string name="treasure">Treasure</string>
     <string name="btnDismiss">DISMISS</string>
+    <string name="btnRandomize">RANDOMIZE</string>
 
     <string name="skill">%d%%</string>
     <string name="carry">%d kg</string>

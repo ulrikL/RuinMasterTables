@@ -113,7 +113,7 @@ class DisplayTableResultFragment : DialogFragment() {
                                 val monster = (activity as MainActivity).getMonster(monsterId)
                                 if (monster != null) {
                                     debug("Show monster with id=${monster.id} and name='${monster.name}'")
-                                    val displayMonsterFragment: DisplayMonsterFragment = DisplayMonsterFragment.newInstance(monster)
+                                    val displayMonsterFragment: DisplayMonsterFragment = DisplayMonsterFragment.newInstance(monster.deepCopy())
                                     displayMonsterFragment.show(requireActivity().supportFragmentManager, "fragment_display_monster")
                                 } else {
                                     Log.d("RuinMastersTables::DisplayTableResultFragment","Failed to get monster.")

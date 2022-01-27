@@ -21,7 +21,6 @@ import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import java.io.BufferedReader
-import java.io.InputStream
 
 class PageAdapter(fm:FragmentManager, lc:Lifecycle, td:TableData, tf:ArrayList<String>, md:MonsterData, mf:ArrayList<String>) : FragmentStateAdapter(fm, lc) {
     private val tableData = td
@@ -60,6 +59,7 @@ class MainActivity : AppCompatActivity() {
         monsterTagMap = createMonsterTagMap(monsters.first)
 
         val viewPager = findViewById<ViewPager2>(R.id.viewPager)
+        viewPager.offscreenPageLimit=3
         viewPager.adapter = PageAdapter(supportFragmentManager, lifecycle, tables.first, tables.second, monsters.first, monsters.second)
 
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
@@ -225,8 +225,6 @@ class MainActivity : AppCompatActivity() {
         return Pair(loadedMonsterData, loadedMonsterFiles)
     }
 
-    private fun isInteger(input: String) = input.all { it in '0'..'9' }
-
     private fun isMonsterDataValid(monsterData : MonsterData, monsterDataFiles: ArrayList<String>) {
         val allIds = ArrayList<Int>()
         val allTags = ArrayList<String>()
@@ -269,15 +267,6 @@ class MainActivity : AppCompatActivity() {
 
             if (monster.abilities.size > 10) {
                 error("To many abilities defined (${monster.combat.attacks.size}) used by id=${getActualMonsterId(monster.id)} in ${getMonsterFileName(monster.id, monsterDataFiles)}")
-            }
-
-            if (monster.tags.isNotEmpty()) {
-                if (!isInteger(monster.stats.traits.phy) ||
-                    !isInteger(monster.stats.traits.min) ||
-                    !isInteger(monster.stats.traits.int) ||
-                    !isInteger(monster.stats.traits.cha)) {
-                    error("Tags are only supported for monsters not using random values, issue with id=${getActualMonsterId(monster.id)} in ${getMonsterFileName(monster.id, monsterDataFiles)}!")
-                }
             }
         }
         if (allIds.size != allIds.distinct().count()) {
@@ -368,7 +357,7 @@ class MainActivity : AppCompatActivity() {
         debug("Try to get monster with id=$id.")
         monsters.first.monster.forEach { monster ->
             if (monster.id == id) {
-                return monster.deepCopy()
+                return monster
             }
         }
         error("Did not find id='$id'in  monsterData.")

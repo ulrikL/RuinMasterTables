@@ -4,34 +4,9 @@
       "name":"Minotaur",
       "tags": [ "minotaur", "minotaurs" ],
       "stats": {
-        "traits": { "phy": "30", "min": "15", "int": "10", "cha":  "10" },
+        "traits": { "phy": 30, "phy_die": "4d10+10", "min": 15, "min_die": "2d10+5", "int": 10, "int_die": "2d10", "cha":  10, "cha_die":  "2d10" },
         "skills": { "bur": 59, "kno": 42, "mag": 37, "mel": 65, "soc": 38, "sur": 58 },
         "other":  { "siz": 2, "hp": "100",  "car": "30", "db": "3", "act": "2", "arm": "2" },
-        "move": { "land": 12, "air": -1 }
-      },
-      "combat": {
-        "body": {
-          "type": "humanoid",
-          "worn_armor": [ ],
-          "comment": "They protect themselves with the armour that is available and provides the best protection."
-        },
-        "attacks": [
-          { "type": "Distance",     "skill": 58, "damage": "2d10 (OR9-10)", "db": false, "comment": ""},
-          { "type": "Unarmed",      "skill": 65, "damage": "1d10",           "db": true,  "comment": ""},
-          { "type": "Heavy weapon", "skill": 65, "damage": "2d10 (OR8-10)", "db": true,  "comment": "They arm themselves with different types of heavy weapons."},
-          { "type": "Horns",        "skill": 70, "damage": "2d10 (OR8-10)", "db": true,  "comment": ""}
-        ]
-      },
-      "abilities": [ ]
-    },
-    {
-      "id":2,
-      "name":"Minotaur (random)",
-      "tags": [ ],
-      "stats": {
-        "traits": { "phy": "[4d10+10]", "min": "[2d10+5]", "int": "[2d10]", "cha":  "[2d10]" },
-        "skills": { "bur": 36, "kno": 25, "mag": 1, "mel": 65, "soc": 30, "sur": 43 },
-        "other":  { "siz": 2, "hp": "",  "car": "", "db": "", "act": "2", "arm": "2" },
         "move": { "land": 12, "air": -1 }
       },
       "combat": {
