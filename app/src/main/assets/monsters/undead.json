@@ -1,0 +1,58 @@
+{
+  "monster":[
+    { "id":1,
+      "name":"Wight",
+      "tags": [ "wight", "wights" ],
+      "stats": {
+        "traits": { "phy": 30, "phy_die": "4d10+10", "min": 30, "min_die": "4d10+10", "int": 15, "int_die": "3d10", "cha": 15, "cha_die": "3d10" },
+        "skills": { "bur": 63, "kno": 49, "mag": 47, "mel": 69, "soc": 18, "sur": 58 },
+        "other":  { "siz": 1, "hp": "65",  "car": "30", "db": "3", "act": "2", "arm": "2" },
+        "move": { "land": 10, "air": -1 }
+      },
+      "combat": {
+        "body": {
+          "type": "humanoid",
+          "worn_armor": [ ],
+          "comment": "They protect themselves with the armour that they carried at their death."
+        },
+        "attacks": [
+          { "type": "Distance",     "skill": 58, "damage": "1d10 (OR9-10)", "db": false, "comment": ""},
+          { "type": "Unarmed",      "skill": 69, "damage": "1d5",           "db": true,  "comment": ""},
+          { "type": "Close combat", "skill": 69, "damage": "1d10 (OR8-10)", "db": true,  "comment": "Heavy weapon. They arm themselves with the weapon that they carried at their death."},
+		  { "type": "Close combat", "skill": 69, "damage": "1d10 (OR9-10)", "db": true,  "comment": "They arm themselves with the weapon that they carried at their death."}
+        ]
+      },
+      "abilities": [ 
+		{ "type": "Undead", "description": "Some may use magic to summon fog, or shoot lightning around them, while others may instill such horrifying terror in a soul it deals physical damage. Most, however, are quite primitive apparitions and lack abilities altogether."}
+	  ]
+    },
+	{ "id":2,
+      "name":"Skeleton",
+      "tags": [ "skeleton", "skeletons" ],
+      "stats": {
+        "traits": { "phy": 15, "phy_die": "2d10+5", "min": 10, "min_die": "2d10", "int": 10, "int_die": "2d10", "cha": 5, "cha_die": "1d10" },
+        "skills": { "bur": 59, "kno": 12, "mag": 38, "mel": 59, "soc": 8, "sur": 48 },
+        "other":  { "siz": 1, "hp": "30",  "car": "15", "db": "", "act": "1", "arm": "2" },
+        "move": { "land": 6, "air": -1 }
+      },
+      "combat": {
+        "body": {
+          "type": "humanoid",
+          "worn_armor": [ ],
+          "comment": "They protect themselves with the armour that they carried at their death."
+        },
+        "attacks": [
+          { "type": "Distance",     "skill": 48, "damage": "1d10 (OR9-10)", "db": false, "comment": ""},
+          { "type": "Unarmed",      "skill": 59, "damage": "1d5",           "db": true,  "comment": ""},
+          { "type": "Close combat", "skill": 59, "damage": "1d10 (OR8-10)", "db": true,  "comment": "Heavy weapon. They arm themselves with the weapon that they carried at their death."},
+		  { "type": "Close combat", "skill": 59, "damage": "1d10 (OR9-10)", "db": true,  "comment": "They arm themselves with the weapon that they carried at their death."}
+        ]
+      },
+      "abilities": [ 
+		{ "type": "Undead", "description": "Some may use magic to summon fog, or shoot lightning around them, while others may instill such horrifying terror in a soul it deals physical damage. Most, however, are quite primitive apparitions and lack abilities altogether."},
+		{ "type": "Conjured", "description": "When the magic that brought them to this world is broken, the skeletons will crumble into a heap of bones and slowly disintegrate until all that remains is dust"},
+		{ "type": "Only bones", "description": "Skeletons are immune to projectile weapons."}
+	  ]
+    }
+  ]
+}

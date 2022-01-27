@@ -62,7 +62,6 @@ class MonsterStatFragment(private var monster: Monster) : Fragment() {
         else
             myView.findViewById<TextView>(R.id.mov_air).text = getString(R.string.none)
 
-        debug("onCreateView!")
         return myView
     }
 
