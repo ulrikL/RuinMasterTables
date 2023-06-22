@@ -1,6 +1,6 @@
 // Copyright (c) 2021 Ulrik Laurén
 // Part of RuinMastersTables
-// MIT License, see LICENSE file
+// CC BY-NC-SA License, see LICENSE file
 
 package my.tablelogic.ruinmasters
 

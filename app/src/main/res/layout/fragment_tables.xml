@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (c) 2021 Ulrik Laurén
      Part of RuinMastersTables
-     MIT License, see LICENSE file -->
+     CC BY-NC-SA License, see LICENSE file -->
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
